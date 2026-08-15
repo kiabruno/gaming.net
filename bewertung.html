@@ -1,1 +1,589 @@
+<!DOCTYPE html>
+<html lang="de">
 
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GAMING.LUXUS Bewertung</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #111827;
+            color: white;
+        }
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        nav {
+            background: #1f2937;
+            padding: 14px 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            padding: 14px 20px;
+            border-radius: 10px;
+            transition: 0.2s;
+        }
+
+        nav a:hover {
+            background: #374151;
+        }
+
+        nav a.active {
+            background: #374151;
+        }
+
+        /* =========================
+           HAUPTBEREICH
+        ========================= */
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: #d1d5db;
+        }
+
+        /* =========================
+           BEWERTUNGSBOX
+        ========================= */
+
+        .rating-box {
+            background: #1f2937;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+        }
+
+        .rating-box h2 {
+            margin-top: 0;
+        }
+
+        /* =========================
+           STERNE
+        ========================= */
+
+        .stars {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin: 25px 0;
+        }
+
+        .star {
+            font-size: 50px;
+            color: #4b5563;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .star:hover {
+            color: #facc15;
+            transform: scale(1.1);
+        }
+
+        .star.selected {
+            color: #facc15;
+        }
+
+        /* =========================
+           TEXT
+        ========================= */
+
+        #ratingText {
+            color: #d1d5db;
+            margin-bottom: 20px;
+        }
+
+        /* =========================
+           BUTTON
+        ========================= */
+
+        .bewertung-button {
+            padding: 13px 25px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 9px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .bewertung-button:hover {
+            background: #1d4ed8;
+        }
+
+        /* =========================
+           DURCHSCHNITT
+        ========================= */
+
+        .result-box {
+            margin-top: 30px;
+            background: #374151;
+            padding: 25px;
+            border-radius: 12px;
+        }
+
+        .result-stars {
+            color: #facc15;
+            font-size: 35px;
+            margin: 10px 0;
+        }
+
+        .result-number {
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        #anzahlBewertungen {
+            color: #9ca3af;
+            margin-top: 5px;
+        }
+
+        /* =========================
+           ZURÜCK
+        ========================= */
+
+        .back-button {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 20px;
+            background: #374151;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: 0.2s;
+        }
+
+        .back-button:hover {
+            background: #4b5563;
+        }
+
+        /* =========================
+           HANDY
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            nav {
+                padding: 10px;
+            }
+
+            nav a {
+                font-size: 16px;
+                padding: 11px 13px;
+            }
+
+            .container {
+                padding: 25px 15px;
+            }
+
+            .header h1 {
+                font-size: 30px;
+            }
+
+            .star {
+                font-size: 40px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav>
+
+    <a href="index.html">
+        🏠 Startseite
+    </a>
+
+    <a href="wartung.html">
+        ⚠️ Wartungszeiten
+    </a>
+
+    <a href="regeln.html">
+        ❗ Regeln
+    </a>
+
+    <a href="status.html">
+        ℹ️ Server Status
+    </a>
+
+    <a href="bewertung.html" class="active">
+        ⭐ Bewertung
+    </a>
+
+</nav>
+
+
+<!-- =========================
+     HAUPTINHALT
+========================= -->
+
+<main class="container">
+
+
+    <div class="header">
+
+        <h1>
+            ⭐ GAMING.LUXUS Bewertung
+        </h1>
+
+        <p>
+            Wie findest du unseren Minecraft-Server?
+        </p>
+
+    </div>
+
+
+    <!-- =========================
+         BEWERTUNG
+    ========================= -->
+
+    <div class="rating-box">
+
+        <h2>
+            ⭐ Bewerte GAMING.LUXUS
+        </h2>
+
+        <p>
+            Wähle zwischen 1 und 5 Sternen.
+        </p>
+
+
+        <div class="stars">
+
+            <span class="star" onclick="bewerten(1)">★</span>
+            <span class="star" onclick="bewerten(2)">★</span>
+            <span class="star" onclick="bewerten(3)">★</span>
+            <span class="star" onclick="bewerten(4)">★</span>
+            <span class="star" onclick="bewerten(5)">★</span>
+
+        </div>
+
+
+        <div id="ratingText">
+
+            Bitte wähle zuerst eine Bewertung aus.
+
+        </div>
+
+
+        <button
+            class="bewertung-button"
+            onclick="bewertungAbsenden()"
+        >
+
+            ⭐ Bewertung absenden
+
+        </button>
+
+
+        <!-- =========================
+             ERGEBNIS
+        ========================= -->
+
+        <div class="result-box">
+
+            <h2>
+                Aktuelle Bewertung
+            </h2>
+
+            <div
+                id="resultStars"
+                class="result-stars"
+            >
+                ☆☆☆☆☆
+            </div>
+
+            <div
+                id="resultNumber"
+                class="result-number"
+            >
+                0,0 / 5
+            </div>
+
+            <div id="anzahlBewertungen">
+
+                0 Bewertungen
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <a
+        href="index.html"
+        class="back-button"
+    >
+        ⬅️ Zurück zur Startseite
+    </a>
+
+
+</main>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+    let ausgewählteBewertung = 0;
+
+
+    /* =========================
+       STERNE AUSWÄHLEN
+    ========================= */
+
+    function bewerten(sterne) {
+
+        ausgewählteBewertung = sterne;
+
+        const sterneElemente =
+            document.querySelectorAll(".star");
+
+
+        sterneElemente.forEach(function(stern, index) {
+
+            if (index < sterne) {
+
+                stern.classList.add("selected");
+
+            } else {
+
+                stern.classList.remove("selected");
+
+            }
+
+        });
+
+
+        document.getElementById("ratingText").innerText =
+            "Du hast " +
+            sterne +
+            " von 5 Sternen ausgewählt.";
+
+    }
+
+
+    /* =========================
+       BEWERTUNG ABSENDEN
+    ========================= */
+
+    function bewertungAbsenden() {
+
+        if (ausgewählteBewertung === 0) {
+
+            alert(
+                "Bitte wähle zuerst eine Bewertung aus!"
+            );
+
+            return;
+
+        }
+
+
+        let bewertungen =
+            JSON.parse(
+                localStorage.getItem(
+                    "gamingLuxusBewertungen"
+                )
+            ) || [];
+
+
+        bewertungen.push(
+            ausgewählteBewertung
+        );
+
+
+        localStorage.setItem(
+            "gamingLuxusBewertungen",
+            JSON.stringify(bewertungen)
+        );
+
+
+        document.getElementById("ratingText").innerText =
+            "Danke für deine Bewertung! ⭐";
+
+
+        ausgewählteBewertung = 0;
+
+
+        document
+            .querySelectorAll(".star")
+            .forEach(function(stern) {
+
+                stern.classList.remove(
+                    "selected"
+                );
+
+            });
+
+
+        bewertungenAnzeigen();
+
+    }
+
+
+    /* =========================
+       BEWERTUNGEN ANZEIGEN
+    ========================= */
+
+    function bewertungenAnzeigen() {
+
+        const bewertungen =
+            JSON.parse(
+                localStorage.getItem(
+                    "gamingLuxusBewertungen"
+                )
+            ) || [];
+
+
+        if (bewertungen.length === 0) {
+
+            document.getElementById(
+                "resultNumber"
+            ).innerText = "0,0 / 5";
+
+
+            document.getElementById(
+                "resultStars"
+            ).innerText = "☆☆☆☆☆";
+
+
+            document.getElementById(
+                "anzahlBewertungen"
+            ).innerText =
+                "0 Bewertungen";
+
+
+            return;
+
+        }
+
+
+        let summe = 0;
+
+
+        bewertungen.forEach(function(wert) {
+
+            summe += wert;
+
+        });
+
+
+        const durchschnitt =
+            summe / bewertungen.length;
+
+
+        document.getElementById(
+            "resultNumber"
+        ).innerText =
+            durchschnitt
+                .toFixed(1)
+                .replace(".", ",") +
+            " / 5";
+
+
+        let volleSterne =
+            Math.round(durchschnitt);
+
+
+        let sternAnzeige = "";
+
+
+        for (
+            let i = 1;
+            i <= 5;
+            i++
+        ) {
+
+            if (i <= volleSterne) {
+
+                sternAnzeige += "★";
+
+            } else {
+
+                sternAnzeige += "☆";
+
+            }
+
+        }
+
+
+        document.getElementById(
+            "resultStars"
+        ).innerText =
+            sternAnzeige;
+
+
+        document.getElementById(
+            "anzahlBewertungen"
+        ).innerText =
+            bewertungen.length +
+            (
+                bewertungen.length === 1
+                    ? " Bewertung"
+                    : " Bewertungen"
+            );
+
+    }
+
+
+    /* =========================
+       BEWERTUNGEN LADEN
+    ========================= */
+
+    bewertungenAnzeigen();
+
+</script>
+
+
+</body>
+
+</html>
