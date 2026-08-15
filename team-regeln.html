@@ -1,43 +1,50 @@
-.team-button {
-    padding: 12px 20px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 16px;
-}
+<button onclick="openPasswordBox()" class="team-button">
+    🔒 Team-Bereich
+</button>
 
-.password-box {
-    position: fixed;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(0, 0, 0, 0.7);
-    z-index: 9999;
-}
+<div id="passwordBox" class="password-box" style="display: none;">
+    <div class="password-content">
+        <h2>🔒 Geschützter Bereich</h2>
+        <p>Bitte gib das Passwort ein:</p>
 
-.password-content {
-    background: white;
-    padding: 30px;
-    border-radius: 12px;
-    text-align: center;
-    min-width: 280px;
-}
+        <input
+            type="password"
+            id="passwordInput"
+            placeholder="Passwort"
+            onkeydown="if(event.key === 'Enter') checkPassword()"
+        >
 
-.password-content input {
-    display: block;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 10px;
-    margin: 15px 0;
-}
+        <button onclick="checkPassword()">Anmelden</button>
+        <button onclick="closePasswordBox()">Abbrechen</button>
 
-.password-content button {
-    padding: 10px 15px;
-    margin: 5px;
-    cursor: pointer;
-}
+        <p id="passwordError"></p>
+    </div>
+</div>
+<script>
+    // HIER dein Passwort eintragen
+    const correctPassword = "DEIN_PASSWORT";
 
-#passwordError {
-    color: red;
-}
+    function openPasswordBox() {
+        document.getElementById("passwordBox").style.display = "flex";
+        document.getElementById("passwordInput").focus();
+    }
+
+    function closePasswordBox() {
+        document.getElementById("passwordBox").style.display = "none";
+        document.getElementById("passwordInput").value = "";
+        document.getElementById("passwordError").textContent = "";
+    }
+
+    function checkPassword() {
+        const enteredPassword =
+            document.getElementById("passwordInput").value;
+
+        if (enteredPassword === correctPassword) {
+            // Erfolgreich eingeloggt
+            window.location.href = "team.html";
+        } else {
+            document.getElementById("passwordError").textContent =
+                "❌ Falsches Passwort!";
+        }
+    }
+</script>
