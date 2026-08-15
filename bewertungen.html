@@ -1,1 +1,246 @@
+<!DOCTYPE html>
+<html lang="de">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GAMING.LUXUS Bewertungen</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #111827;
+            color: white;
+        }
+
+        .login-box {
+            position: fixed;
+            inset: 0;
+            background: #111827;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .login-content {
+            width: 100%;
+            max-width: 420px;
+            background: #1f2937;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+        }
+
+        .login-content h1 {
+            margin-top: 0;
+        }
+
+        .login-content p {
+            color: #d1d5db;
+        }
+
+        input {
+            width: 100%;
+            padding: 13px;
+            margin-top: 15px;
+            background: #374151;
+            border: 1px solid #4b5563;
+            border-radius: 8px;
+            color: white;
+            font-size: 16px;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #2563eb;
+        }
+
+        button {
+            width: 100%;
+            padding: 13px;
+            margin-top: 15px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+
+        .error {
+            display: none;
+            margin-top: 15px;
+            padding: 10px;
+            background: #7f1d1d;
+            border-radius: 8px;
+        }
+
+        #bewertungen {
+            display: none;
+        }
+
+        nav {
+            background: #1f2937;
+            padding: 14px 18px;
+            display: flex;
+            gap: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 12px 18px;
+            border-radius: 8px;
+        }
+
+        nav a:hover {
+            background: #374151;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 30px 20px;
+        }
+
+        .box {
+            background: #1f2937;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+<!-- =========================
+     PASSWORT
+========================= -->
+
+<div id="loginBox" class="login-box">
+
+    <div class="login-content">
+
+        <h1>🔒 Geschützter Bereich</h1>
+
+        <p>
+            Bitte Passwort eingeben, um die Bewertungen zu sehen.
+        </p>
+
+        <input
+            type="password"
+            id="password"
+            placeholder="Passwort eingeben"
+            onkeydown="if(event.key === 'Enter') pruefen()"
+        >
+
+        <button onclick="pruefen()">
+            🔓 Öffnen
+        </button>
+
+        <div id="error" class="error">
+            ❌ Falsches Passwort!
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     BEWERTUNGEN
+========================= -->
+
+<div id="bewertungen">
+
+    <nav>
+
+        <a href="index.html">
+            🏠 Startseite
+        </a>
+
+        <a href="bewertung.html">
+            ⭐ Bewertung abgeben
+        </a>
+
+    </nav>
+
+
+    <main class="container">
+
+        <div class="box">
+
+            <h1>
+                ⭐ GAMING.LUXUS Bewertungen
+            </h1>
+
+            <p>
+                Hier werden später die eingegangenen Bewertungen angezeigt.
+            </p>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<script>
+
+    /* =========================
+       PASSWORT
+    ========================= */
+
+    const PASSWORT = "4155";
+
+
+    /* =========================
+       PASSWORT PRÜFEN
+    ========================= */
+
+    function pruefen() {
+
+        const eingegeben =
+            document.getElementById("password").value;
+
+        if (eingegeben === PASSWORT) {
+
+            document.getElementById("loginBox").style.display = "none";
+
+            document.getElementById("bewertungen").style.display = "block";
+
+        } else {
+
+            document.getElementById("error").style.display = "block";
+
+            document.getElementById("password").value = "";
+
+            document.getElementById("password").focus();
+
+        }
+
+    }
+
+</script>
+
+
+</body>
+
+</html>
