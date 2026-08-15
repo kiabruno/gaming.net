@@ -2,8 +2,303 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>GAMING.LUXUS Bereich</title>
-<head>
-<body style="background-color: yellow;">
-    <h1>GAMING.LUXUS Bereich</h1>
-    <p>Was mache ich wen ich ein user nicht bannen kan?</p>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GAMING.LUXUS – Team-Regeln</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            background: #111827;
+            color: white;
+        }
+
+        /* Passwort-Bereich */
+        #loginScreen {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .login-box {
+            width: 100%;
+            max-width: 400px;
+            background: #1f2937;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+        }
+
+        .login-box h1 {
+            margin-top: 0;
+        }
+
+        .login-box input {
+            width: 100%;
+            padding: 12px;
+            margin: 15px 0;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        .login-box button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            background: #2563eb;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .login-box button:hover {
+            background: #1d4ed8;
+        }
+
+        #error {
+            color: #f87171;
+            margin-top: 15px;
+        }
+
+        /* Eigentliche Seite */
+        #teamContent {
+            display: none;
+            max-width: 900px;
+            margin: auto;
+            padding: 30px 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .rule-box {
+            background: #1f2937;
+            margin-bottom: 15px;
+            padding: 20px;
+            border-radius: 12px;
+        }
+
+        .rule-box h2 {
+            margin-top: 0;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 20px;
+            background: #374151;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
+        .back-button:hover {
+            background: #4b5563;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- PASSWORTABFRAGE -->
+    <div id="loginScreen">
+
+        <div class="login-box">
+
+            <h1>🔒 Team-Bereich</h1>
+
+            <p>
+                Dieser Bereich ist nur für das GAMING.LUXUS-Team.
+            </p>
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Passwort eingeben"
+                onkeydown="if(event.key === 'Enter') login()"
+            >
+
+            <button onclick="login()">
+                🔓 Anmelden
+            </button>
+
+            <p id="error"></p>
+
+        </div>
+
+    </div>
+
+
+    <!-- GESCHÜTZTER INHALT -->
+    <main id="teamContent">
+
+        <div class="header">
+            <h1>🛡️ GAMING.LUXUS Team-Regeln</h1>
+
+            <p>
+                Dieser Bereich enthält die internen Regeln für das Team.
+            </p>
+        </div>
+
+
+        <div class="rule-box">
+            <h2>1. Verhalten</h2>
+
+            <p>
+                Teammitglieder müssen sich gegenüber Spielern,
+                anderen Teammitgliedern und Gästen respektvoll verhalten.
+            </p>
+        </div>
+
+
+        <div class="rule-box">
+            <h2>2. Teamrechte</h2>
+
+            <p>
+                Teamrechte dürfen ausschließlich für ihre vorgesehenen
+                Aufgaben verwendet werden.
+            </p>
+        </div>
+
+
+        <div class="rule-box">
+            <h2>3. Kein Machtmissbrauch</h2>
+
+            <p>
+                Teammitglieder dürfen ihre Rechte nicht verwenden,
+                um sich selbst oder anderen Spielern Vorteile zu verschaffen.
+            </p>
+        </div>
+
+
+        <div class="rule-box">
+            <h2>4. Umgang mit Spielern</h2>
+
+            <p>
+                Spieler sind fair und respektvoll zu behandeln.
+                Persönliche Streitigkeiten dürfen keinen Einfluss
+                auf Teamentscheidungen haben.
+            </p>
+        </div>
+
+
+        <div class="rule-box">
+            <h2>5. Interne Informationen</h2>
+
+            <p>
+                Interne Teaminformationen dürfen nicht ohne Erlaubnis
+                an normale Spieler weitergegeben werden.
+            </p>
+        </div>
+
+
+        <div class="rule-box">
+            <h2>6. Entscheidungen</h2>
+
+            <p>
+                Bei schwierigen Situationen sollte das Team gemeinsam
+                nach einer fairen Lösung suchen.
+            </p>
+        </div>
+
+
+        <div class="rule-box">
+            <h2>7. Strafen</h2>
+
+            <p>
+                Strafen müssen nachvollziehbar und angemessen sein.
+                Teammitglieder dürfen Strafen nicht aus persönlichen
+                Gründen vergeben.
+            </p>
+        </div>
+
+
+        <div class="rule-box">
+            <h2>8. Bugs und Fehler</h2>
+
+            <p>
+                Fehler oder Sicherheitsprobleme des Servers sollten
+                möglichst schnell an die zuständigen Teammitglieder
+                weitergegeben werden.
+            </p>
+        </div>
+
+
+        <div class="rule-box">
+            <h2>9. Aktivität</h2>
+
+            <p>
+                Teammitglieder sollten ihre Aufgaben zuverlässig
+                erledigen und bei längerer Abwesenheit Bescheid geben.
+            </p>
+        </div>
+
+
+        <div class="rule-box">
+            <h2>10. Teamentscheidungen</h2>
+
+            <p>
+                Interne Teamentscheidungen sollten respektiert werden.
+                Bei Problemen kann eine Entscheidung mit einem
+                zuständigen Teamleiter besprochen werden.
+            </p>
+        </div>
+
+
+        <a href="index.html" class="back-button">
+            ⬅️ Zurück
+        </a>
+
+    </main>
+
+
+    <script>
+
+
+        const correctPassword = "DEIN_PASSWORT";
+
+
+        function login() {
+
+            const enteredPassword =
+                document.getElementById("password").value;
+
+            const error =
+                document.getElementById("error");
+
+
+            if (enteredPassword === correctPassword) {
+
+                // Passwort richtig
+                document.getElementById("loginScreen").style.display = "none";
+
+                document.getElementById("teamContent").style.display = "block";
+
+            } else {
+
+                // Passwort falsch
+                error.textContent = "❌ Falsches Passwort!";
+
+                document.getElementById("password").value = "";
+
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>
