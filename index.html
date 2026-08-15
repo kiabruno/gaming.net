@@ -19,9 +19,7 @@
             font-family: Arial, sans-serif;
             background: #111827;
             color: white;
-            transition: background 0.3s ease, color 0.3s ease;
         }
-
 
         /* =========================
            NAVIGATION
@@ -35,7 +33,6 @@
             gap: 10px;
             flex-wrap: wrap;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-            transition: 0.3s;
         }
 
         nav a {
@@ -49,34 +46,12 @@
 
         nav a:hover {
             background: #374151;
+            transform: translateY(-2px);
         }
 
         nav a.active {
             background: #374151;
         }
-
-
-        /* =========================
-           THEME BUTTON
-        ========================= */
-
-        .theme-button {
-            margin-left: auto;
-            padding: 12px 18px;
-            border: none;
-            border-radius: 10px;
-            background: #374151;
-            color: white;
-            font-size: 16px;
-            cursor: pointer;
-            transition: 0.2s;
-        }
-
-        .theme-button:hover {
-            background: #4b5563;
-            transform: translateY(-2px);
-        }
-
 
         /* =========================
            LOGO
@@ -87,8 +62,20 @@
             font-weight: bold;
             text-align: center;
             padding: 35px 20px 20px;
+            animation: logoGlow 3s infinite;
         }
 
+        @keyframes logoGlow {
+
+            0%, 100% {
+                text-shadow: 0 0 5px rgba(255,255,255,0.2);
+            }
+
+            50% {
+                text-shadow: 0 0 20px rgba(59,130,246,0.8);
+            }
+
+        }
 
         /* =========================
            HAUPTBEREICH
@@ -105,8 +92,7 @@
             padding: 25px;
             border-radius: 15px;
             margin-bottom: 25px;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
-            transition: 0.3s;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.25);
         }
 
         .info-box h1 {
@@ -117,7 +103,6 @@
             color: #d1d5db;
             line-height: 1.6;
         }
-
 
         /* =========================
            SPIELMODI
@@ -135,12 +120,12 @@
             padding: 25px;
             border-radius: 15px;
             text-align: center;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
-            transition: 0.2s;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+            transition: 0.25s;
         }
 
         .gamemode:hover {
-            transform: translateY(-5px);
+            transform: translateY(-5px) scale(1.02);
             background: #273449;
         }
 
@@ -157,7 +142,6 @@
             color: #9ca3af;
         }
 
-
         /* =========================
            SERVER STATUS
         ========================= */
@@ -167,17 +151,13 @@
             padding: 25px;
             border-radius: 15px;
             margin-bottom: 25px;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.25);
             text-align: center;
-            transition: 0.3s;
         }
 
         .server-status h1 {
             margin-top: 0;
         }
-
-
-        /* OFFLINE */
 
         .status-offline {
             display: inline-block;
@@ -189,7 +169,6 @@
             margin: 10px 0 20px;
         }
 
-
         .server-info {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -200,7 +179,6 @@
             background: #111827;
             padding: 18px;
             border-radius: 10px;
-            transition: 0.3s;
         }
 
         .server-card h3 {
@@ -210,11 +188,6 @@
         .server-card p {
             color: #d1d5db;
         }
-
-
-        /* =========================
-           IP BUTTON
-        ========================= */
 
         .copy-button {
             padding: 10px 18px;
@@ -229,7 +202,7 @@
 
         .copy-button:hover {
             background: #1d4ed8;
-            transform: translateY(-2px);
+            transform: scale(1.03);
         }
 
         .copy-message {
@@ -238,6 +211,153 @@
             color: #4ade80;
         }
 
+        /* =========================
+           TAGESBELOHNUNG
+        ========================= */
+
+        .reward-box {
+            background: linear-gradient(135deg, #1f2937, #273449);
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            text-align: center;
+            box-shadow: 0 6px 25px rgba(0,0,0,0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .reward-icon {
+            font-size: 55px;
+            animation: giftBounce 2s infinite;
+        }
+
+        @keyframes giftBounce {
+
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-8px) rotate(4deg);
+            }
+
+        }
+
+        .reward-box h1 {
+            margin: 10px 0;
+        }
+
+        .reward-box p {
+            color: #d1d5db;
+        }
+
+        .coin-display {
+            display: inline-block;
+            background: #111827;
+            padding: 12px 22px;
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            margin: 10px;
+            border: 1px solid #374151;
+        }
+
+        .reward-button {
+            display: inline-block;
+            padding: 14px 25px;
+            margin-top: 10px;
+            background: #f59e0b;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .reward-button:hover {
+            background: #d97706;
+            transform: scale(1.05);
+        }
+
+        .reward-button:disabled {
+            background: #4b5563;
+            color: #9ca3af;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .reward-message {
+            margin-top: 15px;
+            color: #4ade80;
+            font-weight: bold;
+            min-height: 24px;
+        }
+
+        /* =========================
+           GEWINN ANIMATION
+        ========================= */
+
+        .reward-animation {
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            background: #1f2937;
+            padding: 35px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 0 50px rgba(245,158,11,0.6);
+            z-index: 2000;
+            pointer-events: none;
+            opacity: 0;
+        }
+
+        .reward-animation.show {
+            animation: rewardPop 2.2s ease forwards;
+        }
+
+        .reward-animation-icon {
+            font-size: 65px;
+        }
+
+        .reward-animation h2 {
+            margin: 10px 0;
+            color: #fbbf24;
+        }
+
+        .reward-animation p {
+            font-size: 20px;
+            margin: 0;
+        }
+
+        @keyframes rewardPop {
+
+            0% {
+                opacity: 0;
+                transform: translate(-50%, -50%) scale(0.2);
+            }
+
+            20% {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(1.1);
+            }
+
+            35% {
+                transform: translate(-50%, -50%) scale(1);
+            }
+
+            80% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+                transform: translate(-50%, -60%) scale(0.9);
+            }
+
+        }
 
         /* =========================
            BUTTON BEREICH
@@ -250,22 +370,21 @@
             align-items: center;
         }
 
-
-        /* =========================
-           TEAMLER BUTTON
-        ========================= */
-
-        .teamler-button {
+        .teamler-button,
+        .minecraft-button {
             display: inline-block;
             margin-top: 30px;
             padding: 13px 22px;
-            background: #2563eb;
             color: white;
             border: none;
             border-radius: 9px;
             font-size: 16px;
             cursor: pointer;
             transition: 0.2s;
+        }
+
+        .teamler-button {
+            background: #2563eb;
         }
 
         .teamler-button:hover {
@@ -273,22 +392,8 @@
             transform: translateY(-2px);
         }
 
-
-        /* =========================
-           MINECRAFT BUTTON
-        ========================= */
-
         .minecraft-button {
-            display: inline-block;
-            margin-top: 30px;
-            padding: 13px 22px;
             background: #22c55e;
-            color: white;
-            border: none;
-            border-radius: 9px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: 0.2s;
         }
 
         .minecraft-button:hover {
@@ -296,50 +401,47 @@
             transform: translateY(-2px);
         }
 
-
         /* =========================
-           TEAMLER LOGIN FENSTER
+           LOGIN FENSTER
         ========================= */
 
-        .login-box {
+        .login-box,
+        .mc-login-box {
             display: none;
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.7);
+            background: rgba(0,0,0,0.7);
             justify-content: center;
             align-items: center;
             padding: 20px;
             z-index: 999;
         }
 
-        .login-content {
+        .mc-login-box {
+            z-index: 1000;
+        }
+
+        .login-content,
+        .mc-login-content {
             background: #1f2937;
             width: 100%;
             max-width: 420px;
             padding: 30px;
             border-radius: 15px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
             text-align: center;
-            transition: 0.3s;
         }
 
-        .login-content h2 {
-            margin-top: 0;
-        }
-
-        .login-content p {
+        .login-content p,
+        .mc-login-content p {
             color: #d1d5db;
         }
 
-
-        /* =========================
-           TEAMLER PASSWORT
-        ========================= */
-
-        #teamlerPassword {
+        #teamlerPassword,
+        #mcName {
             width: 100%;
             padding: 13px;
             margin-top: 10px;
@@ -356,15 +458,16 @@
             border-color: #2563eb;
         }
 
+        #mcName:focus {
+            border-color: #22c55e;
+        }
 
-        /* =========================
-           LOGIN BUTTON
-        ========================= */
-
-        .login-submit {
+        .login-submit,
+        .login-cancel,
+        .mc-login-submit,
+        .mc-login-cancel {
             width: 100%;
             padding: 13px;
-            background: #2563eb;
             color: white;
             border: none;
             border-radius: 8px;
@@ -373,34 +476,31 @@
             margin-bottom: 10px;
         }
 
+        .login-submit {
+            background: #2563eb;
+        }
+
         .login-submit:hover {
             background: #1d4ed8;
         }
 
-
-        /* =========================
-           ABBRECHEN
-        ========================= */
-
-        .login-cancel {
-            width: 100%;
-            padding: 13px;
+        .login-cancel,
+        .mc-login-cancel {
             background: #374151;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            font-size: 16px;
-            cursor: pointer;
         }
 
-        .login-cancel:hover {
+        .login-cancel:hover,
+        .mc-login-cancel:hover {
             background: #4b5563;
         }
 
+        .mc-login-submit {
+            background: #22c55e;
+        }
 
-        /* =========================
-           LOGIN FEHLER
-        ========================= */
+        .mc-login-submit:hover {
+            background: #16a34a;
+        }
 
         .login-error {
             display: none;
@@ -411,110 +511,8 @@
             color: white;
         }
 
-
         /* =========================
-           MINECRAFT LOGIN FENSTER
-        ========================= */
-
-        .mc-login-box {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-            z-index: 1000;
-        }
-
-        .mc-login-content {
-            background: #1f2937;
-            width: 100%;
-            max-width: 420px;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-            text-align: center;
-            transition: 0.3s;
-        }
-
-        .mc-login-content h2 {
-            margin-top: 0;
-        }
-
-        .mc-login-content p {
-            color: #d1d5db;
-        }
-
-
-        /* =========================
-           MINECRAFT NAME
-        ========================= */
-
-        #mcName {
-            width: 100%;
-            padding: 13px;
-            margin-top: 10px;
-            margin-bottom: 15px;
-            background: #374151;
-            border: 1px solid #4b5563;
-            border-radius: 8px;
-            color: white;
-            font-size: 16px;
-            outline: none;
-        }
-
-        #mcName:focus {
-            border-color: #22c55e;
-        }
-
-
-        /* =========================
-           MINECRAFT LOGIN
-        ========================= */
-
-        .mc-login-submit {
-            width: 100%;
-            padding: 13px;
-            background: #22c55e;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            font-size: 16px;
-            cursor: pointer;
-            margin-bottom: 10px;
-        }
-
-        .mc-login-submit:hover {
-            background: #16a34a;
-        }
-
-
-        /* =========================
-           MINECRAFT ABBRECHEN
-        ========================= */
-
-        .mc-login-cancel {
-            width: 100%;
-            padding: 13px;
-            background: #374151;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
-        .mc-login-cancel:hover {
-            background: #4b5563;
-        }
-
-
-        /* =========================
-           EINGELOGGT
+           MINECRAFT PROFIL
         ========================= */
 
         .mc-logged {
@@ -524,13 +522,7 @@
             background: #14532d;
             border-radius: 10px;
             text-align: center;
-            color: white;
         }
-
-
-        /* =========================
-           MINECRAFT PROFIL
-        ========================= */
 
         .mc-profile {
             display: none;
@@ -538,13 +530,8 @@
             background: #1f2937;
             padding: 25px;
             border-radius: 15px;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.25);
             text-align: center;
-            transition: 0.3s;
-        }
-
-        .mc-profile h2 {
-            margin-top: 0;
         }
 
         .mc-skin {
@@ -576,7 +563,6 @@
             background: #b91c1c;
         }
 
-
         /* =========================
            FOOTER
         ========================= */
@@ -587,88 +573,6 @@
             padding: 30px 20px;
             margin-top: 30px;
         }
-
-
-        /* =========================
-           HELLER MODUS
-        ========================= */
-
-        body.light-mode {
-            background: #f3f4f6;
-            color: #111827;
-        }
-
-        body.light-mode nav {
-            background: #ffffff;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-        }
-
-        body.light-mode nav a {
-            color: #111827;
-        }
-
-        body.light-mode nav a:hover,
-        body.light-mode nav a.active {
-            background: #e5e7eb;
-        }
-
-        body.light-mode .theme-button {
-            background: #e5e7eb;
-            color: #111827;
-        }
-
-        body.light-mode .theme-button:hover {
-            background: #d1d5db;
-        }
-
-        body.light-mode .info-box,
-        body.light-mode .server-status,
-        body.light-mode .gamemode,
-        body.light-mode .mc-profile,
-        body.light-mode .login-content,
-        body.light-mode .mc-login-content {
-            background: #ffffff;
-            color: #111827;
-        }
-
-        body.light-mode .info-box p,
-        body.light-mode .gamemode p,
-        body.light-mode .server-card p,
-        body.light-mode .login-content p,
-        body.light-mode .mc-login-content p {
-            color: #4b5563;
-        }
-
-        body.light-mode .gamemode:hover {
-            background: #f9fafb;
-        }
-
-        body.light-mode .server-card {
-            background: #f3f4f6;
-        }
-
-        body.light-mode #teamlerPassword,
-        body.light-mode #mcName {
-            background: #f3f4f6;
-            color: #111827;
-            border-color: #d1d5db;
-        }
-
-        body.light-mode .login-cancel,
-        body.light-mode .mc-login-cancel {
-            background: #e5e7eb;
-            color: #111827;
-        }
-
-        body.light-mode .login-cancel:hover,
-        body.light-mode .mc-login-cancel:hover {
-            background: #d1d5db;
-        }
-
-        body.light-mode footer {
-            color: #6b7280;
-        }
-
 
         /* =========================
            HANDY
@@ -708,21 +612,13 @@
                 margin-top: 10px;
             }
 
-            .theme-button {
-                width: 100%;
-                margin-left: 0;
-                margin-top: 5px;
-            }
-
         }
 
     </style>
 
 </head>
 
-
 <body>
-
 
 <!-- =========================
      NAVIGATION
@@ -730,40 +626,14 @@
 
 <nav>
 
-    <a href="index.html" class="active">
-        🏠 Startseite
-    </a>
-
-    <a href="wartung.html">
-        ⚠️ Wartungszeiten
-    </a>
-
-    <a href="regeln.html">
-        ❗ Regeln
-    </a>
-
-    <a href="status.html">
-        ℹ️ Server Status
-    </a>
-
-    <a href="bewertung.html">
-        ⭐ Bewertung
-    </a>
-
-    <a href="news.html">
-        📰 News
-    </a>
-
-    <button
-        class="theme-button"
-        onclick="toggleTheme()"
-        id="themeButton"
-    >
-        ☀️ Hell
-    </button>
+    <a href="index.html" class="active">🏠 Startseite</a>
+    <a href="wartung.html">⚠️ Wartungszeiten</a>
+    <a href="regeln.html">❗ Regeln</a>
+    <a href="status.html">ℹ️ Server Status</a>
+    <a href="bewertung.html">⭐ Bewertung</a>
+    <a href="news.html">📰 News</a>
 
 </nav>
-
 
 <!-- =========================
      LOGO
@@ -773,17 +643,11 @@
     🎮 GAMING.LUXUS 🎮
 </div>
 
-
 <!-- =========================
      HAUPTINHALT
 ========================= -->
 
 <main class="container">
-
-
-    <!-- =========================
-         WAS IST GAMING.LUXUS
-    ========================= -->
 
     <div class="info-box">
 
@@ -803,7 +667,6 @@
         </p>
 
     </div>
-
 
     <!-- =========================
          SERVER STATUS
@@ -832,7 +695,6 @@
                 </p>
 
             </div>
-
 
             <div class="server-card">
 
@@ -866,6 +728,44 @@
 
     </div>
 
+    <!-- =========================
+         TAGESBELOHNUNG
+    ========================= -->
+
+    <div class="reward-box">
+
+        <div class="reward-icon">
+            🎁
+        </div>
+
+        <h1>
+            🎁 Tagesbelohnung
+        </h1>
+
+        <p>
+            Hol dir jeden Tag deine kostenlose Belohnung!
+        </p>
+
+        <div class="coin-display">
+            🪙 <span id="coinAmount">0</span> Coins
+        </div>
+
+        <br>
+
+        <button
+            id="rewardButton"
+            class="reward-button"
+            onclick="claimDailyReward()"
+        >
+            🎁 Belohnung abholen
+        </button>
+
+        <div
+            id="rewardMessage"
+            class="reward-message"
+        ></div>
+
+    </div>
 
     <!-- =========================
          SPIELMODI
@@ -878,9 +778,6 @@
         </h1>
 
         <div class="gamemodes">
-
-
-            <!-- PVP -->
 
             <div class="gamemode">
 
@@ -899,9 +796,6 @@
 
             </div>
 
-
-            <!-- SMP -->
-
             <div class="gamemode">
 
                 <div class="gamemode-icon">
@@ -918,9 +812,6 @@
                 </p>
 
             </div>
-
-
-            <!-- CITYBUILD -->
 
             <div class="gamemode">
 
@@ -943,7 +834,6 @@
 
     </div>
 
-
     <!-- =========================
          LOGIN BUTTONS
     ========================= -->
@@ -957,7 +847,6 @@
             👥 Als Teamler einloggen
         </button>
 
-
         <button
             class="minecraft-button"
             onclick="openMinecraftLogin()"
@@ -966,7 +855,6 @@
         </button>
 
     </div>
-
 
     <!-- =========================
          MINECRAFT EINGELOGGT
@@ -982,7 +870,6 @@
         eingeloggt!
 
     </div>
-
 
     <!-- =========================
          MINECRAFT PROFIL
@@ -1020,9 +907,30 @@
 
     </div>
 
-
 </main>
 
+<!-- =========================
+     GEWINN ANIMATION
+========================= -->
+
+<div
+    id="rewardAnimation"
+    class="reward-animation"
+>
+
+    <div class="reward-animation-icon">
+        🎉
+    </div>
+
+    <h2>
+        +100 Coins!
+    </h2>
+
+    <p>
+        🎁 Tagesbelohnung erhalten!
+    </p>
+
+</div>
 
 <!-- =========================
      TEAMLER LOGIN
@@ -1075,7 +983,6 @@
 
 </div>
 
-
 <!-- =========================
      MINECRAFT LOGIN
 ========================= -->
@@ -1121,7 +1028,6 @@
 
 </div>
 
-
 <!-- =========================
      FOOTER
 ========================= -->
@@ -1132,13 +1038,11 @@
 
 </footer>
 
-
 <!-- =========================
      JAVASCRIPT
 ========================= -->
 
 <script>
-
 
     /* =========================
        TEAMLER-PASSWORT
@@ -1148,7 +1052,7 @@
 
 
     /* =========================
-       TEAMLER LOGIN ÖFFNEN
+       TEAMLER LOGIN
     ========================= */
 
     function openLogin() {
@@ -1159,7 +1063,7 @@
 
         document.getElementById("loginError").style.display = "none";
 
-        setTimeout(function () {
+        setTimeout(function() {
 
             document
                 .getElementById("teamlerPassword")
@@ -1169,10 +1073,6 @@
 
     }
 
-
-    /* =========================
-       TEAMLER LOGIN SCHLIESSEN
-    ========================= */
 
     function closeLogin() {
 
@@ -1185,15 +1085,10 @@
     }
 
 
-    /* =========================
-       TEAMLER EINLOGGEN
-    ========================= */
-
     function login() {
 
         const eingegebenesPasswort =
             document.getElementById("teamlerPassword").value;
-
 
         if (eingegebenesPasswort === TEAMLER_PASSWORT) {
 
@@ -1217,7 +1112,7 @@
 
 
     /* =========================
-       MINECRAFT LOGIN ÖFFNEN
+       MINECRAFT LOGIN
     ========================= */
 
     function openMinecraftLogin() {
@@ -1226,7 +1121,7 @@
 
         document.getElementById("mcName").value = "";
 
-        setTimeout(function () {
+        setTimeout(function() {
 
             document
                 .getElementById("mcName")
@@ -1237,10 +1132,6 @@
     }
 
 
-    /* =========================
-       MINECRAFT LOGIN SCHLIESSEN
-    ========================= */
-
     function closeMinecraftLogin() {
 
         document.getElementById("mcLoginBox").style.display = "none";
@@ -1248,15 +1139,10 @@
     }
 
 
-    /* =========================
-       MINECRAFT EINLOGGEN
-    ========================= */
-
     function minecraftLogin() {
 
         const name =
             document.getElementById("mcName").value.trim();
-
 
         if (name === "") {
 
@@ -1266,28 +1152,21 @@
 
         }
 
-
         document
             .getElementById("mcLoggedName")
             .textContent = name;
-
 
         document
             .getElementById("mcProfileName")
             .textContent = name;
 
-
         document
             .getElementById("mcLogged")
             .style.display = "block";
 
-
         document
             .getElementById("mcProfile")
             .style.display = "block";
-
-
-        /* Minecraft-Skin laden */
 
         document
             .getElementById("mcSkin")
@@ -1296,11 +1175,7 @@
             encodeURIComponent(name) +
             "/180";
 
-
         closeMinecraftLogin();
-
-
-        /* Name speichern */
 
         localStorage.setItem(
             "minecraftName",
@@ -1310,34 +1185,25 @@
     }
 
 
-    /* =========================
-       MINECRAFT AUSLOGGEN
-    ========================= */
-
     function minecraftLogout() {
 
         localStorage.removeItem("minecraftName");
-
 
         document
             .getElementById("mcLogged")
             .style.display = "none";
 
-
         document
             .getElementById("mcProfile")
             .style.display = "none";
-
 
         document
             .getElementById("mcLoggedName")
             .textContent = "";
 
-
         document
             .getElementById("mcProfileName")
             .textContent = "";
-
 
         document
             .getElementById("mcSkin")
@@ -1347,7 +1213,7 @@
 
 
     /* =========================
-       GESPEICHERTEN MINECRAFT-NAMEN LADEN
+       GESPEICHERTEN MC-NAMEN LADEN
     ========================= */
 
     window.addEventListener("load", function() {
@@ -1355,18 +1221,15 @@
         const gespeicherterName =
             localStorage.getItem("minecraftName");
 
-
         if (gespeicherterName) {
 
             document
                 .getElementById("mcLoggedName")
                 .textContent = gespeicherterName;
 
-
             document
                 .getElementById("mcProfileName")
                 .textContent = gespeicherterName;
-
 
             document
                 .getElementById("mcSkin")
@@ -1375,11 +1238,9 @@
                 encodeURIComponent(gespeicherterName) +
                 "/180";
 
-
             document
                 .getElementById("mcLogged")
                 .style.display = "block";
-
 
             document
                 .getElementById("mcProfile")
@@ -1387,11 +1248,206 @@
 
         }
 
+        loadCoins();
+
+        checkDailyReward();
+
     });
 
 
     /* =========================
-       SERVER-IP KOPIEREN
+       COINS LADEN
+    ========================= */
+
+    function loadCoins() {
+
+        let coins =
+            parseInt(localStorage.getItem("gamingLuxusCoins")) || 0;
+
+        document
+            .getElementById("coinAmount")
+            .textContent = coins;
+
+    }
+
+
+    /* =========================
+       TAGESBELOHNUNG PRÜFEN
+    ========================= */
+
+    function checkDailyReward() {
+
+        const letzteBelohnung =
+            localStorage.getItem("dailyRewardTime");
+
+        const button =
+            document.getElementById("rewardButton");
+
+        const message =
+            document.getElementById("rewardMessage");
+
+
+        if (!letzteBelohnung) {
+
+            button.disabled = false;
+
+            message.textContent =
+                "🎁 Deine heutige Belohnung wartet auf dich!";
+
+            return;
+
+        }
+
+
+        const jetzt = Date.now();
+
+        const vergangen =
+            jetzt - parseInt(letzteBelohnung);
+
+
+        const 24Stunden =
+            24 * 60 * 60 * 1000;
+
+
+        if (vergangen >= 24Stunden) {
+
+            button.disabled = false;
+
+            message.textContent =
+                "🎁 Deine neue Tagesbelohnung ist verfügbar!";
+
+        }
+
+        else {
+
+            button.disabled = true;
+
+            const verbleibend =
+                24Stunden - vergangen;
+
+            const stunden =
+                Math.floor(
+                    verbleibend / (1000 * 60 * 60)
+                );
+
+            const minuten =
+                Math.floor(
+                    (verbleibend % (1000 * 60 * 60))
+                    / (1000 * 60)
+                );
+
+            message.textContent =
+                "⏰ Nächste Belohnung in " +
+                stunden +
+                "h " +
+                minuten +
+                "min";
+
+        }
+
+    }
+
+
+    /* =========================
+       TAGESBELOHNUNG ABHOLEN
+    ========================= */
+
+    function claimDailyReward() {
+
+        const letzteBelohnung =
+            localStorage.getItem("dailyRewardTime");
+
+
+        if (letzteBelohnung) {
+
+            const vergangen =
+                Date.now() -
+                parseInt(letzteBelohnung);
+
+            const 24Stunden =
+                24 * 60 * 60 * 1000;
+
+            if (vergangen < 24Stunden) {
+
+                return;
+
+            }
+
+        }
+
+
+        /* 100 COINS GEBEN */
+
+        let coins =
+            parseInt(localStorage.getItem("gamingLuxusCoins")) || 0;
+
+        coins += 100;
+
+
+        localStorage.setItem(
+            "gamingLuxusCoins",
+            coins
+        );
+
+
+        /* ZEIT SPEICHERN */
+
+        localStorage.setItem(
+            "dailyRewardTime",
+            Date.now()
+        );
+
+
+        /* COINS ANZEIGEN */
+
+        document
+            .getElementById("coinAmount")
+            .textContent = coins;
+
+
+        /* BUTTON DEAKTIVIEREN */
+
+        document
+            .getElementById("rewardButton")
+            .disabled = true;
+
+
+        /* NACHRICHT */
+
+        document
+            .getElementById("rewardMessage")
+            .textContent =
+            "✅ Du hast heute 100 Coins bekommen!";
+
+
+        /* ANIMATION */
+
+        const animation =
+            document.getElementById("rewardAnimation");
+
+
+        animation.classList.remove("show");
+
+
+        void animation.offsetWidth;
+
+
+        animation.classList.add("show");
+
+
+        setTimeout(function() {
+
+            animation.classList.remove("show");
+
+            checkDailyReward();
+
+        }, 2300);
+
+    }
+
+
+    /* =========================
+       IP KOPIEREN
     ========================= */
 
     function copyServerIP() {
@@ -1410,9 +1466,7 @@
                 const message =
                     document.getElementById("copyMessage");
 
-
                 message.style.display = "block";
-
 
                 setTimeout(function() {
 
@@ -1434,75 +1488,7 @@
 
 
     /* =========================
-       DARK / HELL MODUS
-    ========================= */
-
-    function toggleTheme() {
-
-        document.body.classList.toggle("light-mode");
-
-        const button =
-            document.getElementById("themeButton");
-
-
-        if (document.body.classList.contains("light-mode")) {
-
-            button.textContent = "🌙 Dark";
-
-            localStorage.setItem(
-                "theme",
-                "light"
-            );
-
-        }
-
-        else {
-
-            button.textContent = "☀️ Hell";
-
-            localStorage.setItem(
-                "theme",
-                "dark"
-            );
-
-        }
-
-    }
-
-
-    /* =========================
-       GESPEICHERTES THEME LADEN
-    ========================= */
-
-    window.addEventListener("load", function() {
-
-        const gespeichertesTheme =
-            localStorage.getItem("theme");
-
-        const button =
-            document.getElementById("themeButton");
-
-
-        if (gespeichertesTheme === "light") {
-
-            document.body.classList.add("light-mode");
-
-            button.textContent = "🌙 Dark";
-
-        }
-
-        else {
-
-            button.textContent = "☀️ Hell";
-
-        }
-
-    });
-
-
-    /* =========================
-       TEAMLER LOGIN:
-       HINTERGRUND KLICK
+       LOGIN HINTERGRUND KLICK
     ========================= */
 
     document
@@ -1518,11 +1504,6 @@
         });
 
 
-    /* =========================
-       MINECRAFT LOGIN:
-       HINTERGRUND KLICK
-    ========================= */
-
     document
         .getElementById("mcLoginBox")
         .addEventListener("click", function(event) {
@@ -1535,9 +1516,7 @@
 
         });
 
-
 </script>
-
 
 </body>
 
