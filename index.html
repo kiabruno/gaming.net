@@ -21,56 +21,10 @@
     <p> </p>
     <p> </p>
     <p> </p>
-    <button onclick="openPasswordBox()" class="team-button">
+    
+<button onclick="window.location.href='team.html'">
     Team-Bereich
 </button>
-
-<div id="passwordBox" class="password-box" style="display: none;">
-    <div class="password-content">
-        <h2>🔒 Geschperter Bereich</h2>
-        <p>Bitte gebe das Passwort ein:</p>
-
-        <input
-            type="password"
-            id="passwordInput"
-            placeholder="Passwort"
-            onkeydown="if(event.key === 'Enter') checkPassword()"
-        >
-
-        <button onclick="checkPassword()">Anmelden</button>
-        <button onclick="closePasswordBox()">Abbrechen</button>
-
-        <p id="passwordError"></p>
-    </div>
-</div>
-<script>
-    // HIER dein Passwort eintragen
-    const correctPassword = "4155";
-
-    function openPasswordBox() {
-        document.getElementById("passwordBox").style.display = "flex";
-        document.getElementById("passwordInput").focus();
-    }
-
-    function closePasswordBox() {
-        document.getElementById("passwordBox").style.display = "none";
-        document.getElementById("passwordInput").value = "";
-        document.getElementById("passwordError").textContent = "";
-    }
-
-    function checkPassword() {
-        const enteredPassword =
-            document.getElementById("passwordInput").value;
-
-        if (enteredPassword === correctPassword) {
-            // Erfolgreich eingeloggt
-            window.location.href = "team.html";
-        } else {
-            document.getElementById("passwordError").textContent =
-                "❌ Dieses Passwort ist Falsch!";
-        }
-    }
-</script>
 </body>
 </html>
     <p>© GAMING.LUXUS</p>
