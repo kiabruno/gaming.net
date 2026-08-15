@@ -19,6 +19,7 @@
             font-family: Arial, sans-serif;
             background: #111827;
             color: white;
+            transition: background 0.3s ease, color 0.3s ease;
         }
 
 
@@ -34,6 +35,7 @@
             gap: 10px;
             flex-wrap: wrap;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            transition: 0.3s;
         }
 
         nav a {
@@ -51,6 +53,28 @@
 
         nav a.active {
             background: #374151;
+        }
+
+
+        /* =========================
+           THEME BUTTON
+        ========================= */
+
+        .theme-button {
+            margin-left: auto;
+            padding: 12px 18px;
+            border: none;
+            border-radius: 10px;
+            background: #374151;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .theme-button:hover {
+            background: #4b5563;
+            transform: translateY(-2px);
         }
 
 
@@ -82,6 +106,7 @@
             border-radius: 15px;
             margin-bottom: 25px;
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+            transition: 0.3s;
         }
 
         .info-box h1 {
@@ -115,7 +140,7 @@
         }
 
         .gamemode:hover {
-            transform: translateY(-3px);
+            transform: translateY(-5px);
             background: #273449;
         }
 
@@ -144,11 +169,13 @@
             margin-bottom: 25px;
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
             text-align: center;
+            transition: 0.3s;
         }
 
         .server-status h1 {
             margin-top: 0;
         }
+
 
         /* OFFLINE */
 
@@ -162,6 +189,7 @@
             margin: 10px 0 20px;
         }
 
+
         .server-info {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -172,6 +200,7 @@
             background: #111827;
             padding: 18px;
             border-radius: 10px;
+            transition: 0.3s;
         }
 
         .server-card h3 {
@@ -182,6 +211,11 @@
             color: #d1d5db;
         }
 
+
+        /* =========================
+           IP BUTTON
+        ========================= */
+
         .copy-button {
             padding: 10px 18px;
             background: #2563eb;
@@ -190,10 +224,12 @@
             border-radius: 8px;
             cursor: pointer;
             font-size: 15px;
+            transition: 0.2s;
         }
 
         .copy-button:hover {
             background: #1d4ed8;
+            transform: translateY(-2px);
         }
 
         .copy-message {
@@ -234,11 +270,12 @@
 
         .teamler-button:hover {
             background: #1d4ed8;
+            transform: translateY(-2px);
         }
 
 
         /* =========================
-           MINECRAFT LOGIN BUTTON
+           MINECRAFT BUTTON
         ========================= */
 
         .minecraft-button {
@@ -256,6 +293,7 @@
 
         .minecraft-button:hover {
             background: #16a34a;
+            transform: translateY(-2px);
         }
 
 
@@ -285,6 +323,7 @@
             border-radius: 15px;
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
             text-align: center;
+            transition: 0.3s;
         }
 
         .login-content h2 {
@@ -399,6 +438,7 @@
             border-radius: 15px;
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
             text-align: center;
+            transition: 0.3s;
         }
 
         .mc-login-content h2 {
@@ -500,6 +540,7 @@
             border-radius: 15px;
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
             text-align: center;
+            transition: 0.3s;
         }
 
         .mc-profile h2 {
@@ -549,6 +590,87 @@
 
 
         /* =========================
+           HELLER MODUS
+        ========================= */
+
+        body.light-mode {
+            background: #f3f4f6;
+            color: #111827;
+        }
+
+        body.light-mode nav {
+            background: #ffffff;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        body.light-mode nav a {
+            color: #111827;
+        }
+
+        body.light-mode nav a:hover,
+        body.light-mode nav a.active {
+            background: #e5e7eb;
+        }
+
+        body.light-mode .theme-button {
+            background: #e5e7eb;
+            color: #111827;
+        }
+
+        body.light-mode .theme-button:hover {
+            background: #d1d5db;
+        }
+
+        body.light-mode .info-box,
+        body.light-mode .server-status,
+        body.light-mode .gamemode,
+        body.light-mode .mc-profile,
+        body.light-mode .login-content,
+        body.light-mode .mc-login-content {
+            background: #ffffff;
+            color: #111827;
+        }
+
+        body.light-mode .info-box p,
+        body.light-mode .gamemode p,
+        body.light-mode .server-card p,
+        body.light-mode .login-content p,
+        body.light-mode .mc-login-content p {
+            color: #4b5563;
+        }
+
+        body.light-mode .gamemode:hover {
+            background: #f9fafb;
+        }
+
+        body.light-mode .server-card {
+            background: #f3f4f6;
+        }
+
+        body.light-mode #teamlerPassword,
+        body.light-mode #mcName {
+            background: #f3f4f6;
+            color: #111827;
+            border-color: #d1d5db;
+        }
+
+        body.light-mode .login-cancel,
+        body.light-mode .mc-login-cancel {
+            background: #e5e7eb;
+            color: #111827;
+        }
+
+        body.light-mode .login-cancel:hover,
+        body.light-mode .mc-login-cancel:hover {
+            background: #d1d5db;
+        }
+
+        body.light-mode footer {
+            color: #6b7280;
+        }
+
+
+        /* =========================
            HANDY
         ========================= */
 
@@ -584,6 +706,12 @@
             .minecraft-button {
                 width: 100%;
                 margin-top: 10px;
+            }
+
+            .theme-button {
+                width: 100%;
+                margin-left: 0;
+                margin-top: 5px;
             }
 
         }
@@ -625,6 +753,14 @@
     <a href="news.html">
         📰 News
     </a>
+
+    <button
+        class="theme-button"
+        onclick="toggleTheme()"
+        id="themeButton"
+    >
+        ☀️ Hell
+    </button>
 
 </nav>
 
@@ -692,7 +828,7 @@
                 </h3>
 
                 <p>
-                    <strong>0 / 0</strong>
+                    <strong>0 / 100</strong>
                 </p>
 
             </div>
@@ -706,7 +842,7 @@
 
                 <p>
                     <strong id="serverIP">
-                        157.90.205.61
+                        play.gaming.luxus
                     </strong>
                 </p>
 
@@ -1295,6 +1431,73 @@
             });
 
     }
+
+
+    /* =========================
+       DARK / HELL MODUS
+    ========================= */
+
+    function toggleTheme() {
+
+        document.body.classList.toggle("light-mode");
+
+        const button =
+            document.getElementById("themeButton");
+
+
+        if (document.body.classList.contains("light-mode")) {
+
+            button.textContent = "🌙 Dark";
+
+            localStorage.setItem(
+                "theme",
+                "light"
+            );
+
+        }
+
+        else {
+
+            button.textContent = "☀️ Hell";
+
+            localStorage.setItem(
+                "theme",
+                "dark"
+            );
+
+        }
+
+    }
+
+
+    /* =========================
+       GESPEICHERTES THEME LADEN
+    ========================= */
+
+    window.addEventListener("load", function() {
+
+        const gespeichertesTheme =
+            localStorage.getItem("theme");
+
+        const button =
+            document.getElementById("themeButton");
+
+
+        if (gespeichertesTheme === "light") {
+
+            document.body.classList.add("light-mode");
+
+            button.textContent = "🌙 Dark";
+
+        }
+
+        else {
+
+            button.textContent = "☀️ Hell";
+
+        }
+
+    });
 
 
     /* =========================
