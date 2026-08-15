@@ -21,6 +21,7 @@
             color: white;
         }
 
+
         /* =========================
            NAVIGATION
         ========================= */
@@ -32,15 +33,15 @@
             align-items: center;
             gap: 10px;
             flex-wrap: wrap;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            font-size: 18px;
-            padding: 12px 16px;
-            border-radius: 9px;
+            font-size: 20px;
+            padding: 14px 20px;
+            border-radius: 10px;
             transition: 0.2s;
         }
 
@@ -52,6 +53,7 @@
             background: #374151;
         }
 
+
         /* =========================
            HAUPTBEREICH
         ========================= */
@@ -61,6 +63,11 @@
             margin: auto;
             padding: 40px 20px;
         }
+
+
+        /* =========================
+           HEADER
+        ========================= */
 
         .header {
             text-align: center;
@@ -74,66 +81,94 @@
 
         .header p {
             color: #d1d5db;
+            font-size: 17px;
         }
 
+
         /* =========================
-           NEWS
+           NEWS BOX
         ========================= */
 
         .news-card {
             background: #1f2937;
             padding: 25px;
             border-radius: 15px;
-            margin-bottom: 20px;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+            margin-bottom: 25px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+            border-left: 5px solid #2563eb;
         }
 
         .news-card h2 {
             margin-top: 0;
             margin-bottom: 8px;
+            font-size: 25px;
         }
 
         .news-date {
             color: #9ca3af;
             font-size: 14px;
-            margin-bottom: 15px;
+            margin-bottom: 18px;
         }
 
-        .news-text {
+        .news-card p {
             color: #d1d5db;
-            line-height: 1.6;
-            white-space: pre-wrap;
+            line-height: 1.7;
         }
+
 
         /* =========================
-           KEINE NEWS
+           WARTUNGS-NEWS
         ========================= */
 
-        .no-news {
-            background: #1f2937;
-            padding: 30px;
-            border-radius: 15px;
-            text-align: center;
-            color: #d1d5db;
+        .maintenance-news {
+            border-left-color: #f59e0b;
         }
 
+        .maintenance-news h2 {
+            color: #fbbf24;
+        }
+
+
         /* =========================
-           BUTTON
+           INFO-NEWS
+        ========================= */
+
+        .info-news {
+            border-left-color: #22c55e;
+        }
+
+
+        /* =========================
+           ZURÜCK BUTTON
         ========================= */
 
         .back-button {
             display: inline-block;
-            margin-top: 20px;
+            margin-top: 10px;
             padding: 12px 20px;
             background: #374151;
             color: white;
             text-decoration: none;
             border-radius: 8px;
+            transition: 0.2s;
         }
 
         .back-button:hover {
             background: #4b5563;
         }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            text-align: center;
+            color: #9ca3af;
+            padding: 30px 20px;
+            margin-top: 20px;
+        }
+
 
         /* =========================
            HANDY
@@ -146,8 +181,8 @@
             }
 
             nav a {
-                font-size: 15px;
-                padding: 10px 12px;
+                font-size: 16px;
+                padding: 11px 13px;
             }
 
             .container {
@@ -156,6 +191,10 @@
 
             .header h1 {
                 font-size: 30px;
+            }
+
+            .news-card {
+                padding: 20px;
             }
 
         }
@@ -172,41 +211,41 @@
      NAVIGATION
 ========================= -->
 
-    <nav>
+<nav>
 
-        <a href="index.html">
-            🏠 Startseite
-        </a>
+    <a href="index.html">
+        🏠 Startseite
+    </a>
 
-        <a href="wartung.html">
-            ⚠️ Wartungszeiten
-        </a>
+    <a href="news.html" class="active">
+        📰 News
+    </a>
 
-        <a href="regeln.html">
-            ❗ Regeln
-        </a>
+    <a href="wartung.html">
+        ⚠️ Wartungszeiten
+    </a>
 
-        <a href="status.html">
-            ℹ️ Server Status
-        </a>
+    <a href="regeln.html">
+        ❗ Regeln
+    </a>
 
-        <a href="bewertung.html">
-            ⭐ Bewertung
-        </a>
-        
-        <a href="news.html" class="active">
-            📰 News
-        </a>
+    <a href="status.html">
+        ℹ️ Server Status
+    </a>
 
-    </nav>
+</nav>
 
 
 <!-- =========================
-     HAUPTBEREICH
+     HAUPTINHALT
 ========================= -->
 
 <main class="container">
 
+
+    <!-- =========================
+         HEADER
+    ========================= -->
 
     <div class="header">
 
@@ -215,7 +254,7 @@
         </h1>
 
         <p>
-            Hier findest du die neuesten Nachrichten
+            Hier findest du aktuelle Informationen
             rund um GAMING.LUXUS.
         </p>
 
@@ -223,11 +262,89 @@
 
 
     <!-- =========================
-         NEWS-BEREICH
+         NEWS 1
     ========================= -->
 
-    <div id="newsContainer"></div>
+    <div class="news-card maintenance-news">
 
+        <h2>
+            ⚠️ Server in Wartung
+        </h2>
+
+        <div class="news-date">
+            📅 15.08.2026
+        </div>
+
+        <p>
+            Der GAMING.LUXUS Server befindet sich momentan
+            in Wartung.
+        </p>
+
+        <p>
+            🗓️ <strong>Voraussichtlich bis zum 20.09.</strong>
+        </p>
+
+        <p>
+            Wir bitten um euer Verständnis und freuen uns,
+            euch bald wieder auf dem Server begrüßen zu dürfen! ❤️
+        </p>
+
+    </div>
+
+
+    <!-- =========================
+         NEWS 2
+    ========================= -->
+
+    <div class="news-card info-news">
+
+        <h2>
+            🎮 Unsere Spielmodi
+        </h2>
+
+        <div class="news-date">
+            📅 15.08.2026
+        </div>
+
+        <p>
+            Bei GAMING.LUXUS kannst du verschiedene
+            Spielmodi spielen.
+        </p>
+
+        <p>
+            ⚔️ <strong>PVP</strong><br>
+            🌳 <strong>SMP</strong><br>
+            🏙️ <strong>CityBuild</strong>
+        </p>
+
+    </div>
+
+
+    <!-- =========================
+         WEITERE NEWS
+    ========================= -->
+
+    <div class="news-card">
+
+        <h2>
+            📰 Weitere News folgen!
+        </h2>
+
+        <div class="news-date">
+            📅 15.08.2026
+        </div>
+
+        <p>
+            Hier werden in Zukunft weitere Neuigkeiten
+            über GAMING.LUXUS veröffentlicht.
+        </p>
+
+    </div>
+
+
+    <!-- =========================
+         ZURÜCK
+    ========================= -->
 
     <a
         href="index.html"
@@ -241,109 +358,14 @@
 
 
 <!-- =========================
-     JAVASCRIPT
+     FOOTER
 ========================= -->
 
-<script>
+<footer>
 
-    function loadNews() {
+    © GAMING.LUXUS
 
-        const newsContainer =
-            document.getElementById("newsContainer");
-
-
-        /*
-         * Gespeicherte News holen
-         */
-
-        const gespeicherteNews =
-            localStorage.getItem("gamingLuxusNews");
-
-
-        /*
-         * Keine News vorhanden
-         */
-
-        if (!gespeicherteNews) {
-
-            newsContainer.innerHTML = `
-            
-                <div class="no-news">
-
-                    📰 Noch keine News vorhanden.
-
-                    <br><br>
-
-                    Sobald eine News veröffentlicht
-                    wurde, wird sie hier angezeigt.
-
-                </div>
-
-            `;
-
-            return;
-
-        }
-
-
-        /*
-         * News umwandeln
-         */
-
-        const news =
-            JSON.parse(gespeicherteNews);
-
-
-        /*
-         * News anzeigen
-         */
-
-        newsContainer.innerHTML = `
-
-            <div class="news-card">
-
-                <h2>
-                    📰 ${escapeHTML(news.title)}
-                </h2>
-
-                <div class="news-date">
-                    📅 ${escapeHTML(news.date)}
-                </div>
-
-                <div class="news-text">
-                    ${escapeHTML(news.text)}
-                </div>
-
-            </div>
-
-        `;
-
-    }
-
-
-    /*
-     * Schutz vor HTML-Code
-     */
-
-    function escapeHTML(text) {
-
-        const div =
-            document.createElement("div");
-
-        div.textContent = text;
-
-        return div.innerHTML;
-
-    }
-
-
-    /*
-     * News laden
-     */
-
-    loadNews();
-
-</script>
+</footer>
 
 
 </body>
