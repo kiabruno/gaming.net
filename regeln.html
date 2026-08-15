@@ -2,101 +2,766 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>GAMING.LUXUS Regeln</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #111827;
+            color: white;
+        }
+
+        /* =========================
+           HAUPTBEREICH
+        ========================= */
+
+        #teamContent {
+            max-width: 1000px;
+            margin: auto;
+            padding: 35px 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .header h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: #d1d5db;
+        }
+
+        /* =========================
+           KATEGORIEN
+        ========================= */
+
+        .category {
+            background: #1f2937;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            padding: 25px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+        }
+
+        .category h2 {
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        /* =========================
+           EINZELNE REGELN
+        ========================= */
+
+        .rule {
+            background: #374151;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 10px;
+            line-height: 1.5;
+        }
+
+        .rule strong {
+            color: #60a5fa;
+        }
+
+        /* =========================
+           ZURÜCK BUTTON
+        ========================= */
+
+        .back-button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 12px 20px;
+            background: #374151;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
+        .back-button:hover {
+            background: #4b5563;
+        }
+
+        /* =========================
+           HANDY
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            #teamContent {
+                padding: 25px 15px;
+            }
+
+            .header h1 {
+                font-size: 28px;
+            }
+
+            .category {
+                padding: 18px;
+            }
+
+            .category h2 {
+                font-size: 21px;
+            }
+
+            .rule {
+                padding: 13px;
+            }
+        }
+    </style>
 </head>
-        <nav>
-        <a href="wartung.html">⚠️Wartungs Zeiten</a>
-        <a href="status.html">ℹ️Server Status</a>
-    </nav>
-<body style="background-color: yellow;">
-    <h1>GAMING.LUXUS Regeln</h1>
-    <p>Unsere Regeln:</p>
-    <p> </p>
-    <h1>Allgemeine Regeln</h1>
-    <p>1. Jeder Spieler muss die Serverregeln beachten.</p>
-    <p>2. Unwissenheit über die Regeln schützt nicht vor einer Strafe.</p>
-    <p>3. Respektvoller Umgang ist Pflicht.</p>
-    <p>4. as Ausnutzen von Regel-Lücken ist nicht erlaubt.</p>
-    <p>5. Anweisungen des Serverteams sind zu beachten.</p>
-    <p>6. Das absichtliche Provozieren anderer Spieler ist verboten.</p>
-    <p>7. Falsche Meldungen gegen andere Spieler sind nicht erwünschd.</p>
-    <p>8. Das Umgehen von Strafen ist verboten</p>
-    <p>9. Das Ausgeben als Teammitglied ist verboten.</p>
-    <p>10. Entscheidungen des Teams dürfen nicht absichtlich sabotiert werden.
-    <p> </p>
-    <h1>Chat & Kommunikation</h1>
-    <p>1. Kein Spam, und kein Kein Flooding.</p>
-    <p>2. Keine Chat-Nachrichten ausschließlich in Großbuchstaben, wenn sie andere stören.</p>
-    <p>3. Keine Beleidigungen.</p>
-    <p>4. Kein Mobbing, und keine Drohungen.</p>
-    <p>5. Keine diskriminierenden oder menschenverachtenden Äußerungen.</p>
-    <p>6. Keine unangemessenen sexuellen Inhalte.</p>
-    <p>7. Keine persönlichen Daten anderer veröffentlichen.</p>
-    <p>8. Keine unnötigen Streitigkeiten im öffentlichen Chat.</p>
-    <p>9. Keine absichtlichen Provokationen.</p>
-    <p>10. Keine irreführenden Nachrichten, die andere Spieler täuschen sollen.</p>
-    <p> </p>
-    <h1>PvP Server</h1>
-    <p>1. PvP darf nur dort stattfinden, wo es erlaubt ist.</p>
-    <p>2. Keine Spawn-Kills.</p>
-    <p>3. Keine Fallen, die gegen die jeweiligen PvP-Regeln verstoßen. (Gehe auf das Ausfühliche Regeln werk(Jeder PvP server hat seine eigende regeln!))<a href="regeln-alle.html">Ausfühliches Regel Werk</a></p>
-    <p>4. Kein Ausnutzen von Bugs im Kampf.</p>
-    <p>5. ine unerlaubten PvP-Clients oder Cheats.</p>
-    <p> </p>
-    <h1>Handel & Wirtschaft</h1>
-    <p>1. Betrug beim Handel ist verboten.</p>
-    <p>2. Absprachen beim Handel müssen eingehalten werden.</p>
-    <p>3. Keine Gegenstände duplizieren.</p>
-    <p>4. Keine illegal erworbenen Items verkaufen.</p>
-    <p>5. Keine absichtliche Manipulation der Serverwirtschaft.</p>
-    <p>6. Keine Fake-Shops oder irreführenden Angebote.</p>
-    <p>7. Echtgeld handel ist strengstens verboten.</p>
-    <p> </p>
-    <h1>Bugs & Exploits</h1>
-    <p>1. Bugs dürfen nicht absichtlich ausgenutzt werden.</p>
-    <p>2. Gefundene schwerwiegende Bugs sollten dem Team gemeldet werden.</p>
-    <p>3. Keine Item-Duplikations-Bugs.</p>
-    <p>4. Keine Exploits zur Umgehung von Schutzsystemen.</p>
-    <p>5. Keine Tricks, um Serverbeschränkungen zu umgehen.</p>
-    <p> </p>
-    <h1>Cheats & unerlaubte Mods</h1>
-    <p>1. Keine Cheats.</p>
-    <p>2.Keine X-Ray-Software.</p>
-    <p>3. Keine KillAura.</p>
-    <p>4. Keine Fly-Hacks.</p>
-    <p>5. Keine Speed-Hacks.</p>
-    <p>6. Keine unerlaubten Auto-Clicker, falls ihr diese verbieten wollt.</p>
-    <p>7. Keine Programme, die einen unfairen Vorteil verschaffen.</p>
-    <p>8. Erlaubte Mods können in einer separaten Liste aufgeführt werden.</p>
-    <p> </p>
-    <h1>Accounts</h1>
-    <p>1. Das Umgehen eines Banns mit einem Zweitaccount ist verboten.</p>
-    <p>2. Das Ausgeben als eine andere Person ist verboten.</p>
-    <p>3. Das Ausgeben als Teammitglied ist besonders streng verboten.</p>
-    <p>4. Das absichtliche Erstellen vieler Accounts zur Umgehung von Regeln ist verboten.</p>
-    <p>5. Das Benutzen eines zweiten Acchaunts muss beantragt werden! (Ansonsten ist es verboten.)</p>
-    <p> </p>
-    <h1>Werbung</h1>
-    <p>1. Keine Werbung für andere Minecraft-Server ohne Erlaubnis.</p>
-    <p>2. Keine Werbung für fremde Discord-Server ohne Erlaubnis.</p>
-    <p>3. Keine Spam-Werbung im Chat.</p>
-    <p>4. Keine unerlaubte Werbung über private Nachrichten.</p>
-    <p>5. Keine Links zu schädlichen oder betrügerischen Websites.</p>
-    <p> </p>
-    <h1>Team</h1>
-    <p>1. Teammitglieder dürfen ihre Rechte nicht missbrauchen.</p>
-    <p>2. Teammitglieder müssen Spieler fair behandeln.</p>
-    <p>3. Spieler dürfen Teammitglieder nicht absichtlich provozieren.</p>
-    <p>4. Entscheidungen des Teams dürfen nicht durch Spam beeinflusst werden.</p>
-    <p>5. Beschwerden über Teammitglieder sollten über den vorgesehenen Supportweg eingereicht werden.</p>
-    <p> </p>
-    <h1>Sicherheit</h1>
-    <p>1. Keine Veröffentlichung persönlicher Daten.</p>
-    <p>2. Keine Weitergabe von IP-Adressen anderer Spieler.</p>
-    <p>3. Keine Versuche, Accounts anderer Spieler zu übernehmen.</p>
-    <p>4. Keine schädlichen Links oder Dateien.</p>
-    <p>5. Keine Betrugsversuche.</p>
-    <p>6. Keine Aufforderungen an andere Spieler, Passwörter weiterzugeben.</p>
+
+<body>
+
+<main id="teamContent">
+
+    <div class="header">
+        <h1>🛡️ GAMING.LUXUS Regeln</h1>
+
+        <p>
+            GAMING.LUXUS Regeln:
+        </p>
+    </div>
+
+
+    <!-- ==============================
+         1. ALLGEMEINE REGELN
+    =============================== -->
+
+    <section class="category">
+
+        <h2>📜 Allgemeine Regeln</h2>
+
+        <div class="rule">
+            <strong>Regel 1:</strong>
+            Jedes Teammitglied muss die Serverregeln beachten.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 2:</strong>
+            Unwissenheit über Regeln schützt nicht vor einer Strafe.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 3:</strong>
+            Respektvoller Umgang ist Pflicht.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 4:</strong>
+            Das absichtliche Ausnutzen von Regel-Lücken ist nicht erlaubt.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 5:</strong>
+            Anweisungen von höherrangigen Teammitgliedern sind zu beachten.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 6:</strong>
+            Das absichtliche Provozieren von Spielern oder Teammitgliedern ist verboten.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 7:</strong>
+            Falsche Meldungen gegen andere Spieler dürfen nicht absichtlich erstellt werden.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 8:</strong>
+            Strafen dürfen nicht ohne Grund aufgehoben werden.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 9:</strong>
+            Das Ausgeben als ein anderes Teammitglied ist verboten.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 10:</strong>
+            Teammitglieder dürfen ihre Position nicht zum persönlichen Vorteil ausnutzen.
+        </div>
+
+    </section>
+
+
+    <!-- ==============================
+         2. CHAT & KOMMUNIKATION
+    =============================== -->
+
+    <section class="category">
+
+        <h2>💬 Chat & Kommunikation</h2>
+
+        <div class="rule">
+            <strong>Regel 11:</strong>
+            Kein Spam.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 12:</strong>
+            Kein Flooding.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 13:</strong>
+            Keine absichtlichen Provokationen im Chat.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 14:</strong>
+            Keine Beleidigungen.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 15:</strong>
+            Kein Mobbing.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 16:</strong>
+            Keine Drohungen.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 17:</strong>
+            Keine diskriminierenden Äußerungen.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 18:</strong>
+            Keine unangemessenen sexuellen Inhalte.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 19:</strong>
+            Keine persönlichen Daten anderer Spieler veröffentlichen.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 20:</strong>
+            Öffentliche Streitigkeiten sollen nicht unnötig im Chat ausgetragen werden.
+        </div>
+
+    </section>
+
+
+    <!-- ==============================
+         3. SPIELERVERHALTEN
+    =============================== -->
+
+    <section class="category">
+
+        <h2>🤝 Verhalten gegenüber Spielern</h2>
+
+        <div class="rule">
+            <strong>Regel 21:</strong>
+            Alle Spieler sind fair und respektvoll zu behandeln.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 22:</strong>
+            Persönliche Streitigkeiten dürfen keine Teamentscheidungen beeinflussen.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 23:</strong>
+            Spieler dürfen nicht absichtlich bevorzugt werden.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 24:</strong>
+            Spieler dürfen nicht absichtlich benachteiligt werden.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 25:</strong>
+            Teammitglieder dürfen keine Spieler provozieren.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 26:</strong>
+            Beschwerden von Spielern müssen ernst genommen werden.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 27:</strong>
+            Teammitglieder dürfen keine privaten Informationen von Spielern weitergeben.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 28:</strong>
+            Spieler dürfen nicht absichtlich zu Regelverstößen verleitet werden.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 29:</strong>
+            Teammitglieder müssen bei Konflikten möglichst neutral bleiben.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 30:</strong>
+            Das Team soll neuen Spielern bei Fragen helfen.
+        </div>
+
+    </section>
+
+
+    <!-- ==============================
+         4. BAUEN & GRIEFING
+    =============================== -->
+
+    <section class="category">
+
+        <h2>🏠 Bauen & Griefing</h2>
+
+        <div class="rule">
+            <strong>Regel 31:</strong>
+            Fremde Gebäude dürfen nicht absichtlich zerstört werden.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 32:</strong>
+            Fremde Kisten dürfen nicht ohne Erlaubnis geleert werden.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 33:</strong>
+            Fremde Grundstücke dürfen nicht absichtlich blockiert werden.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 34:</strong>
+            Keine absichtlichen Lava- oder Wasserfallen an fremden Grundstücken.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 35:</strong>
+            Keine unnötige Zerstörung der Landschaft.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 36:</strong>
+            Nicht direkt in fremde Gebäude bauen.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 37:</strong>
+            Die Bauwerke anderer Spieler sind zu respektieren.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 38:</strong>
+            Fremde Farmen dürfen nicht ohne Erlaubnis verändert werden.
+        </div>
+
+    </section>
+
+
+    <!-- ==============================
+         5. PVP
+    =============================== -->
+
+    <section class="category">
+
+        <h2>⚔️ PvP</h2>
+
+        <div class="rule">
+            <strong>Regel 39:</strong>
+            PvP darf nur dort stattfinden, wo es erlaubt ist.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 40:</strong>
+            Kein unerlaubtes Töten anderer Spieler.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 41:</strong>
+            Kein Spawn-Killing.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 42:</strong>
+            Keine unerlaubten PvP-Fallen.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 43:</strong>
+            Kein Ausnutzen von Bugs im Kampf.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 44:</strong>
+            Keine unerlaubten Vorteile durch Mods oder Clients.
+        </div>
+
+    </section>
+
+
+    <!-- ==============================
+         6. SMP
+    =============================== -->
+
+    <section class="category">
+
+        <h2>🌳 SMP</h2>
+
+        <div class="rule">
+            <strong>Regel 45:</strong>
+            Ressourcen dürfen normal gesammelt werden.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 46:</strong>
+            Keine absichtliche Zerstörung der Landschaft anderer Spieler.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 47:</strong>
+            Bäume sollten vollständig gefällt werden.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 48:</strong>
+            Keine riesigen sinnlosen Löcher nahe fremder Basen.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 49:</strong>
+            Fremde Farmen dürfen nicht ohne Erlaubnis benutzt werden.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 50:</strong>
+            Gemeinschaftsbereiche dürfen nicht absichtlich beschädigt werden.
+        </div>
+
+    </section>
+
+
+    <!-- ==============================
+         7. HANDEL & WIRTSCHAFT
+    =============================== -->
+
+    <section class="category">
+
+        <h2>💰 Handel & Wirtschaft</h2>
+
+        <div class="rule">
+            <strong>Regel 51:</strong>
+            Betrug beim Handel ist verboten.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 52:</strong>
+            Absprachen beim Handel müssen eingehalten werden.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 53:</strong>
+            Keine duplizierten Gegenstände verwenden.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 54:</strong>
+            Keine illegal erworbenen Items verkaufen.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 55:</strong>
+            Keine absichtliche Manipulation der Serverwirtschaft.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 56:</strong>
+            Keine Fake-Shops oder irreführenden Angebote.
+        </div>
+
+    </section>
+
+
+    <!-- ==============================
+         8. BUGS & EXPLOITS
+    =============================== -->
+
+    <section class="category">
+
+        <h2>🐛 Bugs & Exploits</h2>
+
+        <div class="rule">
+            <strong>Regel 57:</strong>
+            Bugs dürfen nicht absichtlich ausgenutzt werden.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 58:</strong>
+            Schwere Bugs sollen dem Team gemeldet werden.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 59:</strong>
+            Keine Item-Duplikations-Bugs ausnutzen.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 60:</strong>
+            Keine Exploits zur Umgehung von Schutzsystemen.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 61:</strong>
+            Keine Tricks zum Umgehen von Serverbeschränkungen.
+        </div>
+
+    </section>
+
+
+    <!-- ==============================
+         9. MODS & CHEATS
+    =============================== -->
+
+    <section class="category">
+
+        <h2>🖥️ Mods & Cheats</h2>
+
+        <div class="rule">
+            <strong>Regel 62:</strong>
+            Cheats sind verboten.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 63:</strong>
+            X-Ray ist verboten.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 64:</strong>
+            KillAura und vergleichbare Cheats sind verboten.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 65:</strong>
+            Fly-Hacks sind verboten.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 66:</strong>
+            Speed-Hacks sind verboten.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 67:</strong>
+            Keine Programme verwenden, die einen unfairen Vorteil verschaffen.
+        </div>
+
+    </section>
+
+
+    <!-- ==============================
+         10. ACCOUNTS
+    =============================== -->
+
+    <section class="category">
+
+        <h2>👤 Accounts</h2>
+
+        <div class="rule">
+            <strong>Regel 68:</strong>
+            Das Ausgeben als eine andere Person ist verboten.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 69:</strong>
+            Das Ausgeben als Teammitglied ist verboten.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 70:</strong>
+            Das Umgehen eines Banns mit einem Zweitaccount ist verboten.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 71:</strong>
+            Keine Accounts erstellen, um Strafen zu umgehen.
+        </div>
+
+    </section>
+
+
+    <!-- ==============================
+         11. WERBUNG
+    =============================== -->
+
+    <section class="category">
+
+        <h2>📢 Werbung</h2>
+
+        <div class="rule">
+            <strong>Regel 72:</strong>
+            Keine Werbung für andere Minecraft-Server ohne Erlaubnis.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 73:</strong>
+            Keine Werbung für fremde Discord-Server ohne Erlaubnis.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 74:</strong>
+            Keine Spam-Werbung.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 75:</strong>
+            Keine Werbung über private Nachrichten ohne Erlaubnis.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 76:</strong>
+            Keine schädlichen oder betrügerischen Links verbreiten.
+        </div>
+
+    </section>
+
+
+    <!-- ==============================
+         12. TEAM-REGELN
+    =============================== -->
+
+    <section class="category">
+
+        <h2>👮 Team-Regeln</h2>
+
+        <div class="rule">
+            <strong>Regel 77:</strong>
+            Teammitglieder dürfen ihre Rechte nicht missbrauchen.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 78:</strong>
+            Teammitglieder müssen Spieler fair behandeln.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 79:</strong>
+            Teammitglieder dürfen ihre Rechte nicht für persönliche Vorteile verwenden.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 80:</strong>
+            Beschwerden über Teammitglieder sollen über den vorgesehenen Supportweg eingereicht werden.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 81:</strong>
+            Interne Teaminformationen dürfen nicht ohne Erlaubnis weitergegeben werden.
+        </div>
+
+    </section>
+
+
+    <!-- ==============================
+         13. SICHERHEIT
+    =============================== -->
+
+    <section class="category">
+
+        <h2>🔒 Sicherheit</h2>
+
+        <div class="rule">
+            <strong>Regel 82:</strong>
+            Keine persönlichen Daten anderer Spieler veröffentlichen.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 83:</strong>
+            Keine IP-Adressen anderer Spieler veröffentlichen.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 84:</strong>
+            Keine Versuche, Accounts anderer Spieler zu übernehmen.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 85:</strong>
+            Keine schädlichen Dateien oder Links verbreiten.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 86:</strong>
+            Keine Spieler nach Passwörtern fragen.
+        </div>
+
+    </section>
+
+
+    <!-- ==============================
+         14. STRAFEN & SANKTIONEN
+    =============================== -->
+
+    <section class="category">
+
+        <h2>⚖️ Strafen & Sanktionen</h2>
+
+        <div class="rule">
+            <strong>Regel 87:</strong>
+            Je nach Verstoß können Verwarnungen ausgesprochen werden.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 88:</strong>
+            Wiederholte Regelverstöße können härter bestraft werden.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 89:</strong>
+            Mutes, Kicks und Banns können je nach Situation eingesetzt werden.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 90:</strong>
+            Schwere Verstöße können direkt zu einem längeren oder permanenten Bann führen.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 91:</strong>
+            Das Team darf bei besonderen Situationen individuell entscheiden.
+        </div>
+
+        <div class="rule">
+            <strong>Regel 92:</strong>
+            Strafen dürfen nicht absichtlich umgangen werden.
+        </div>
+
+    </section>
+
+
+    <!-- ==============================
+         ZURÜCK
+    =============================== -->
+
+    <a href="index.html" class="back-button">
+        ⬅️ Zurück
+    </a>
+
+</main>
+
+</body>
+</html>
 
     <button onclick="openPasswordBox()" class="team-button">
     Team-Regeln
