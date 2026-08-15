@@ -2,16 +2,132 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <title>Team</title>
+<meta charset="UTF-8">
+<title>GAMING.LUXUS Team</title>
 
-    <script>
-        const passwort = prompt("🔒 Passwort eingeben:");
+<style>
+    body {
+        margin: 0;
+        background: #101827;
+        color: white;
+        font-family: Arial, sans-serif;
+    }
 
-        if (passwort !== "MeinPasswort123") {
-            alert("❌ Falsches Passwort!");
-            window.location.href = "index.html";
+    /* Passwort-Sperre */
+    #loginScreen {
+        position: fixed;
+        inset: 0;
+        background: #101827;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+    }
+
+    .login-box {
+        width: 360px;
+        padding: 35px;
+        background: #202c3d;
+        border-radius: 18px;
+        text-align: center;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    }
+
+    .login-box h1 {
+        margin-top: 0;
+        font-size: 28px;
+    }
+
+    .login-box p {
+        color: #b9c2d0;
+    }
+
+    .login-box input {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 14px;
+        margin-top: 15px;
+        border: none;
+        border-radius: 10px;
+        background: #364256;
+        color: white;
+        font-size: 16px;
+        outline: none;
+    }
+
+    .login-box button {
+        width: 100%;
+        padding: 14px;
+        margin-top: 15px;
+        border: none;
+        border-radius: 10px;
+        background: #20c76b;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .login-box button:hover {
+        background: #18aa59;
+    }
+
+    #error {
+        color: #ff6b6b;
+        margin-top: 12px;
+        display: none;
+    }
+</style>
+</head>
+
+<body>
+
+<!-- Passwort-Fenster -->
+<div id="loginScreen">
+    <div class="login-box">
+        <h1>🔒 Gesperrte Seite</h1>
+        <p>Bitte geben sie das Passwort ein!</p>
+
+        <input 
+            type="password" 
+            id="password"
+            placeholder="Passwort eingeben"
+        >
+
+        <button onclick="checkPassword()">Einloggen</button>
+
+        <div id="error">❌ Dieses Passwort ist Falsch</div>
+    </div>
+</div>
+
+<script>
+    const richtigesPasswort = "4155";
+
+    function checkPassword() {
+        const eingabe = document.getElementById("password").value;
+        const error = document.getElementById("error");
+
+        if (eingabe === richtigesPasswort) {
+            document.getElementById("loginScreen").style.display = "none";
+        } else {
+            error.style.display = "block";
         }
-    </script>
+    }
 
-    <!-- Ab hier dein bisheriger Code -->
+    document.getElementById("password").addEventListener("keydown", function(event) {
+        if (event.key === "Enter") {
+            checkPassword();
+        }
+    });
+</script>
+
+<!-- AB HIER DEIN BISHERIGER TEAM-CODE -->
+
+<h1>Team-Hilfe Seite</h1>
+<p> </p>
+<p>Hier findest du hilfe zu deinen aufgaben :)</p>
+<p> </p>
+<h1>Was machen wen ein user nicht geband werden kan?</h1>
+
+</body>
+</html>
