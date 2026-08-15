@@ -21,6 +21,7 @@
             color: white;
         }
 
+
         /* =========================
            NAVIGATION
         ========================= */
@@ -44,10 +45,14 @@
             transition: 0.2s;
         }
 
-        nav a:hover,
+        nav a:hover {
+            background: #374151;
+        }
+
         nav a.active {
             background: #374151;
         }
+
 
         /* =========================
            LOGO
@@ -59,6 +64,7 @@
             text-align: center;
             padding: 35px 20px 20px;
         }
+
 
         /* =========================
            HAUPTBEREICH
@@ -86,6 +92,7 @@
             color: #d1d5db;
             line-height: 1.6;
         }
+
 
         /* =========================
            SPIELMODI
@@ -125,6 +132,77 @@
             color: #9ca3af;
         }
 
+
+        /* =========================
+           SERVER STATUS
+        ========================= */
+
+        .server-status {
+            background: #1f2937;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+            text-align: center;
+        }
+
+        .server-status h1 {
+            margin-top: 0;
+        }
+
+        /* OFFLINE */
+
+        .status-offline {
+            display: inline-block;
+            padding: 10px 18px;
+            background: #7f1d1d;
+            color: #f87171;
+            border-radius: 10px;
+            font-weight: bold;
+            margin: 10px 0 20px;
+        }
+
+        .server-info {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .server-card {
+            background: #111827;
+            padding: 18px;
+            border-radius: 10px;
+        }
+
+        .server-card h3 {
+            margin-top: 0;
+        }
+
+        .server-card p {
+            color: #d1d5db;
+        }
+
+        .copy-button {
+            padding: 10px 18px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        .copy-button:hover {
+            background: #1d4ed8;
+        }
+
+        .copy-message {
+            display: none;
+            margin-top: 10px;
+            color: #4ade80;
+        }
+
+
         /* =========================
            BUTTON BEREICH
         ========================= */
@@ -135,6 +213,7 @@
             gap: 12px;
             align-items: center;
         }
+
 
         /* =========================
            TEAMLER BUTTON
@@ -157,6 +236,7 @@
             background: #1d4ed8;
         }
 
+
         /* =========================
            MINECRAFT LOGIN BUTTON
         ========================= */
@@ -178,26 +258,6 @@
             background: #16a34a;
         }
 
-        /* =========================
-           AUSLOGGEN BUTTON
-        ========================= */
-
-        .logout-button {
-            display: inline-block;
-            margin-top: 30px;
-            padding: 13px 22px;
-            background: #374151;
-            color: white;
-            border: none;
-            border-radius: 9px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: 0.2s;
-        }
-
-        .logout-button:hover {
-            background: #4b5563;
-        }
 
         /* =========================
            TEAMLER LOGIN FENSTER
@@ -235,8 +295,9 @@
             color: #d1d5db;
         }
 
+
         /* =========================
-           TEAMLER PASSWORT FELD
+           TEAMLER PASSWORT
         ========================= */
 
         #teamlerPassword {
@@ -255,6 +316,7 @@
         #teamlerPassword:focus {
             border-color: #2563eb;
         }
+
 
         /* =========================
            LOGIN BUTTON
@@ -276,8 +338,9 @@
             background: #1d4ed8;
         }
 
+
         /* =========================
-           ABBRECHEN BUTTON
+           ABBRECHEN
         ========================= */
 
         .login-cancel {
@@ -295,6 +358,7 @@
             background: #4b5563;
         }
 
+
         /* =========================
            LOGIN FEHLER
         ========================= */
@@ -307,6 +371,7 @@
             border-radius: 8px;
             color: white;
         }
+
 
         /* =========================
            MINECRAFT LOGIN FENSTER
@@ -344,6 +409,7 @@
             color: #d1d5db;
         }
 
+
         /* =========================
            MINECRAFT NAME
         ========================= */
@@ -365,8 +431,9 @@
             border-color: #22c55e;
         }
 
+
         /* =========================
-           MINECRAFT LOGIN BUTTON
+           MINECRAFT LOGIN
         ========================= */
 
         .mc-login-submit {
@@ -384,6 +451,7 @@
         .mc-login-submit:hover {
             background: #16a34a;
         }
+
 
         /* =========================
            MINECRAFT ABBRECHEN
@@ -404,6 +472,7 @@
             background: #4b5563;
         }
 
+
         /* =========================
            EINGELOGGT
         ========================= */
@@ -418,6 +487,55 @@
             color: white;
         }
 
+
+        /* =========================
+           MINECRAFT PROFIL
+        ========================= */
+
+        .mc-profile {
+            display: none;
+            margin-top: 25px;
+            background: #1f2937;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+            text-align: center;
+        }
+
+        .mc-profile h2 {
+            margin-top: 0;
+        }
+
+        .mc-skin {
+            width: 120px;
+            height: 180px;
+            object-fit: cover;
+            image-rendering: pixelated;
+            border-radius: 12px;
+            margin: 15px auto;
+            background: #374151;
+        }
+
+        .mc-profile-name {
+            font-size: 20px;
+            margin: 10px 0 20px;
+        }
+
+        .logout-button {
+            padding: 12px 22px;
+            background: #dc2626;
+            color: white;
+            border: none;
+            border-radius: 9px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .logout-button:hover {
+            background: #b91c1c;
+        }
+
+
         /* =========================
            FOOTER
         ========================= */
@@ -428,6 +546,7 @@
             padding: 30px 20px;
             margin-top: 30px;
         }
+
 
         /* =========================
            HANDY
@@ -452,14 +571,17 @@
                 grid-template-columns: 1fr;
             }
 
+            .server-info {
+                grid-template-columns: 1fr;
+            }
+
             .button-area {
                 flex-direction: column;
                 align-items: stretch;
             }
 
             .teamler-button,
-            .minecraft-button,
-            .logout-button {
+            .minecraft-button {
                 width: 100%;
                 margin-top: 10px;
             }
@@ -523,6 +645,10 @@
 <main class="container">
 
 
+    <!-- =========================
+         WAS IST GAMING.LUXUS
+    ========================= -->
+
     <div class="info-box">
 
         <h1>
@@ -544,6 +670,68 @@
 
 
     <!-- =========================
+         SERVER STATUS
+    ========================= -->
+
+    <div class="server-status">
+
+        <h1>
+            🖥️ Server Status
+        </h1>
+
+        <div class="status-offline">
+            🔴 SERVER OFFLINE
+        </div>
+
+        <div class="server-info">
+
+            <div class="server-card">
+
+                <h3>
+                    👥 Spieler
+                </h3>
+
+                <p>
+                    <strong>0 / 0</strong>
+                </p>
+
+            </div>
+
+
+            <div class="server-card">
+
+                <h3>
+                    🌐 Server-IP
+                </h3>
+
+                <p>
+                    <strong id="serverIP">
+                        157.90.205.61
+                    </strong>
+                </p>
+
+                <button
+                    class="copy-button"
+                    onclick="copyServerIP()"
+                >
+                    📋 IP kopieren
+                </button>
+
+                <div
+                    id="copyMessage"
+                    class="copy-message"
+                >
+                    ✅ IP wurde kopiert!
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
          SPIELMODI
     ========================= -->
 
@@ -554,6 +742,7 @@
         </h1>
 
         <div class="gamemodes">
+
 
             <!-- PVP -->
 
@@ -640,18 +829,6 @@
             ⛏️ Minecraft Login
         </button>
 
-
-        <!-- AUSLOGGEN -->
-
-        <button
-            id="logoutButton"
-            class="logout-button"
-            onclick="minecraftLogout()"
-            style="display: none;"
-        >
-            🚪 Ausloggen
-        </button>
-
     </div>
 
 
@@ -664,9 +841,46 @@
         class="mc-logged"
     >
 
-        ✅ Du bist mit
+        ✅ Du bist nun mit
         <strong id="mcLoggedName"></strong>
         eingeloggt!
+
+    </div>
+
+
+    <!-- =========================
+         MINECRAFT PROFIL
+    ========================= -->
+
+    <div
+        id="mcProfile"
+        class="mc-profile"
+    >
+
+        <h2>
+            👤 Minecraft-Profil
+        </h2>
+
+        <img
+            id="mcSkin"
+            class="mc-skin"
+            src=""
+            alt="Minecraft Skin"
+        >
+
+        <div class="mc-profile-name">
+
+            Eingeloggt als:
+            <strong id="mcProfileName"></strong>
+
+        </div>
+
+        <button
+            class="logout-button"
+            onclick="minecraftLogout()"
+        >
+            🚪 Ausloggen
+        </button>
 
     </div>
 
@@ -693,14 +907,12 @@
             Bitte geben Sie das Teamler-Passwort ein.
         </p>
 
-
         <input
             type="password"
             id="teamlerPassword"
             placeholder="Passwort eingeben"
             onkeydown="if(event.key === 'Enter') login()"
         >
-
 
         <button
             class="login-submit"
@@ -709,14 +921,12 @@
             🔓 Einloggen
         </button>
 
-
         <button
             class="login-cancel"
             onclick="closeLogin()"
         >
             ❌ Abbrechen
         </button>
-
 
         <div
             id="loginError"
@@ -749,15 +959,13 @@
             Gib deinen Minecraft-Namen ein.
         </p>
 
-
         <input
             type="text"
             id="mcName"
-            placeholder="Gebe hier dein Minecraft-Namen ein:"
+            placeholder="Minecraft-Name"
             maxlength="16"
             onkeydown="if(event.key === 'Enter') minecraftLogin()"
         >
-
 
         <button
             class="mc-login-submit"
@@ -766,12 +974,11 @@
             ✅ Einloggen
         </button>
 
-
         <button
             class="mc-login-cancel"
             onclick="closeMinecraftLogin()"
         >
-            ❌ Abbrechen
+            Abbrechen
         </button>
 
     </div>
@@ -795,6 +1002,7 @@
 ========================= -->
 
 <script>
+
 
     /* =========================
        TEAMLER-PASSWORT
@@ -923,16 +1131,40 @@
         }
 
 
-        document.getElementById("mcLoggedName").textContent = name;
+        document
+            .getElementById("mcLoggedName")
+            .textContent = name;
 
-        document.getElementById("mcLogged").style.display = "block";
 
-        document.getElementById("logoutButton").style.display = "inline-block";
+        document
+            .getElementById("mcProfileName")
+            .textContent = name;
+
+
+        document
+            .getElementById("mcLogged")
+            .style.display = "block";
+
+
+        document
+            .getElementById("mcProfile")
+            .style.display = "block";
+
+
+        /* Minecraft-Skin laden */
+
+        document
+            .getElementById("mcSkin")
+            .src =
+            "https://mc-heads.net/body/" +
+            encodeURIComponent(name) +
+            "/180";
+
 
         closeMinecraftLogin();
 
 
-        /* Name im Browser speichern */
+        /* Name speichern */
 
         localStorage.setItem(
             "minecraftName",
@@ -950,11 +1182,30 @@
 
         localStorage.removeItem("minecraftName");
 
-        document.getElementById("mcLogged").style.display = "none";
 
-        document.getElementById("mcLoggedName").textContent = "";
+        document
+            .getElementById("mcLogged")
+            .style.display = "none";
 
-        document.getElementById("logoutButton").style.display = "none";
+
+        document
+            .getElementById("mcProfile")
+            .style.display = "none";
+
+
+        document
+            .getElementById("mcLoggedName")
+            .textContent = "";
+
+
+        document
+            .getElementById("mcProfileName")
+            .textContent = "";
+
+
+        document
+            .getElementById("mcSkin")
+            .src = "";
 
     }
 
@@ -977,17 +1228,73 @@
 
 
             document
+                .getElementById("mcProfileName")
+                .textContent = gespeicherterName;
+
+
+            document
+                .getElementById("mcSkin")
+                .src =
+                "https://mc-heads.net/body/" +
+                encodeURIComponent(gespeicherterName) +
+                "/180";
+
+
+            document
                 .getElementById("mcLogged")
                 .style.display = "block";
 
 
             document
-                .getElementById("logoutButton")
-                .style.display = "inline-block";
+                .getElementById("mcProfile")
+                .style.display = "block";
 
         }
 
     });
+
+
+    /* =========================
+       SERVER-IP KOPIEREN
+    ========================= */
+
+    function copyServerIP() {
+
+        const ip =
+            document
+                .getElementById("serverIP")
+                .textContent
+                .trim();
+
+
+        navigator.clipboard.writeText(ip)
+
+            .then(function() {
+
+                const message =
+                    document.getElementById("copyMessage");
+
+
+                message.style.display = "block";
+
+
+                setTimeout(function() {
+
+                    message.style.display = "none";
+
+                }, 2000);
+
+            })
+
+            .catch(function() {
+
+                alert(
+                    "Die IP konnte nicht kopiert werden: " + ip
+                );
+
+            });
+
+    }
 
 
     /* =========================
@@ -1025,12 +1332,9 @@
 
         });
 
+
 </script>
 
-
-</body>
-
-</html>
 
 </body>
 
