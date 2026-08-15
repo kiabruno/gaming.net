@@ -2,6 +2,7 @@
 <html lang="de">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -20,24 +21,68 @@
             color: white;
         }
 
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        nav {
+            background: #1f2937;
+            padding: 14px 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            padding: 14px 20px;
+            border-radius: 10px;
+            transition: 0.2s;
+        }
+
+        nav a:hover {
+            background: #374151;
+        }
+
+
+        /* =========================
+           LOGIN
+        ========================= */
+
         .login-box {
             position: fixed;
             inset: 0;
-            background: #111827;
+
             display: flex;
             justify-content: center;
             align-items: center;
+
             padding: 20px;
+
+            background: #111827;
+
+            z-index: 999;
         }
 
         .login-content {
             width: 100%;
             max-width: 420px;
+
             background: #1f2937;
+
             padding: 30px;
+
             border-radius: 15px;
+
             text-align: center;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+
+            box-shadow:
+                0 10px 40px rgba(0, 0, 0, 0.5);
         }
 
         .login-content h1 {
@@ -48,101 +93,206 @@
             color: #d1d5db;
         }
 
-        input {
+
+        /* =========================
+           PASSWORT
+        ========================= */
+
+        #password {
             width: 100%;
+
             padding: 13px;
+
             margin-top: 15px;
+
             background: #374151;
+
             border: 1px solid #4b5563;
+
             border-radius: 8px;
+
             color: white;
+
             font-size: 16px;
+
             outline: none;
         }
 
-        input:focus {
+        #password:focus {
             border-color: #2563eb;
         }
 
-        button {
+
+        /* =========================
+           LOGIN BUTTON
+        ========================= */
+
+        .login-button {
             width: 100%;
+
             padding: 13px;
+
             margin-top: 15px;
+
             background: #2563eb;
+
             color: white;
+
             border: none;
+
             border-radius: 8px;
+
             font-size: 16px;
+
             cursor: pointer;
+
+            transition: 0.2s;
         }
 
-        button:hover {
+        .login-button:hover {
             background: #1d4ed8;
         }
 
+
+        /* =========================
+           FEHLER
+        ========================= */
+
         .error {
             display: none;
+
             margin-top: 15px;
+
             padding: 10px;
+
             background: #7f1d1d;
+
             border-radius: 8px;
+
+            color: white;
         }
+
+
+        /* =========================
+           HAUPTINHALT
+        ========================= */
 
         #bewertungen {
             display: none;
         }
 
-        nav {
-            background: #1f2937;
-            padding: 14px 18px;
-            display: flex;
-            gap: 10px;
-        }
+        .logo {
+            font-size: 35px;
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 12px 18px;
-            border-radius: 8px;
-        }
+            font-weight: bold;
 
-        nav a:hover {
-            background: #374151;
+            text-align: center;
+
+            padding: 35px 20px 20px;
         }
 
         .container {
             max-width: 1000px;
+
             margin: auto;
-            padding: 30px 20px;
+
+            padding: 20px;
         }
 
-        .box {
+
+        /* =========================
+           INFO BOX
+        ========================= */
+
+        .info-box {
             background: #1f2937;
+
             padding: 25px;
+
             border-radius: 15px;
-            margin-bottom: 20px;
+
+            box-shadow:
+                0 6px 20px rgba(0, 0, 0, 0.25);
+
+            text-align: center;
+        }
+
+        .info-box h1 {
+            margin-top: 0;
+        }
+
+        .info-box p {
+            color: #d1d5db;
+
+            line-height: 1.6;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            text-align: center;
+
+            color: #9ca3af;
+
+            padding: 30px 20px;
+
+            margin-top: 30px;
+        }
+
+
+        /* =========================
+           HANDY
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            nav {
+                padding: 10px;
+            }
+
+            nav a {
+                font-size: 16px;
+
+                padding: 11px 13px;
+            }
+
+            .logo {
+                font-size: 28px;
+            }
+
         }
 
     </style>
 
 </head>
 
+
 <body>
 
 
 <!-- =========================
-     PASSWORT
+     PASSWORT-BEREICH
 ========================= -->
 
-<div id="loginBox" class="login-box">
+<div
+    id="loginBox"
+    class="login-box"
+>
 
     <div class="login-content">
 
-        <h1>🔒 Geschützter Bereich</h1>
+        <h1>
+            🔒 Geschützter Bereich
+        </h1>
 
         <p>
-            Bitte Passwort eingeben, um die Bewertungen zu sehen.
+            Bitte Passwort eingeben,
+            um die Bewertungen zu sehen.
         </p>
+
 
         <input
             type="password"
@@ -151,11 +301,19 @@
             onkeydown="if(event.key === 'Enter') pruefen()"
         >
 
-        <button onclick="pruefen()">
+
+        <button
+            class="login-button"
+            onclick="pruefen()"
+        >
             🔓 Öffnen
         </button>
 
-        <div id="error" class="error">
+
+        <div
+            id="error"
+            class="error"
+        >
             ❌ Falsches Passwort!
         </div>
 
@@ -170,39 +328,91 @@
 
 <div id="bewertungen">
 
+
+    <!-- =========================
+         NAVIGATION
+    ========================= -->
+
     <nav>
 
         <a href="index.html">
             🏠 Startseite
         </a>
 
+        <a href="wartung.html">
+            ⚠️ Wartungszeiten
+        </a>
+
+        <a href="regeln.html">
+            ❗ Regeln
+        </a>
+
+        <a href="status.html">
+            ℹ️ Server Status
+        </a>
+
         <a href="bewertung.html">
-            ⭐ Bewertung abgeben
+            ⭐ Bewertung
         </a>
 
     </nav>
 
 
+    <!-- =========================
+         LOGO
+    ========================= -->
+
+    <div class="logo">
+
+        🎮 GAMING.LUXUS 🎮
+
+    </div>
+
+
+    <!-- =========================
+         HAUPTINHALT
+    ========================= -->
+
     <main class="container">
 
-        <div class="box">
+
+        <div class="info-box">
 
             <h1>
-                ⭐ GAMING.LUXUS Bewertungen
+                ⭐ Bewertungen
             </h1>
 
             <p>
-                Hier werden später die eingegangenen Bewertungen angezeigt.
+                Hier werden später die eingegangenen
+                Bewertungen angezeigt.
             </p>
 
         </div>
 
+
     </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        © GAMING.LUXUS
+
+    </footer>
+
 
 </div>
 
 
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
 <script>
+
 
     /* =========================
        PASSWORT
@@ -220,19 +430,34 @@
         const eingegeben =
             document.getElementById("password").value;
 
+
         if (eingegeben === PASSWORT) {
 
-            document.getElementById("loginBox").style.display = "none";
+            document
+                .getElementById("loginBox")
+                .style.display = "none";
 
-            document.getElementById("bewertungen").style.display = "block";
+
+            document
+                .getElementById("bewertungen")
+                .style.display = "block";
+
 
         } else {
 
-            document.getElementById("error").style.display = "block";
+            document
+                .getElementById("error")
+                .style.display = "block";
 
-            document.getElementById("password").value = "";
 
-            document.getElementById("password").focus();
+            document
+                .getElementById("password")
+                .value = "";
+
+
+            document
+                .getElementById("password")
+                .focus();
 
         }
 
