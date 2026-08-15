@@ -1,0 +1,950 @@
+```html
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GAMING.LUXUS – Wiki</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #111827;
+            color: white;
+        }
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        nav {
+            background: #1f2937;
+            padding: 14px 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            padding: 14px 20px;
+            border-radius: 10px;
+            transition: 0.2s;
+        }
+
+        nav a:hover {
+            background: #374151;
+        }
+
+        nav a.active {
+            background: #374151;
+        }
+
+        /* =========================
+           LOGO
+        ========================= */
+
+        .logo {
+            font-size: 35px;
+            font-weight: bold;
+            text-align: center;
+            padding: 35px 20px 20px;
+        }
+
+        /* =========================
+           HAUPTBEREICH
+        ========================= */
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .hero {
+            background: #1f2937;
+            padding: 35px 25px;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 25px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+        }
+
+        .hero h1 {
+            margin-top: 0;
+            font-size: 34px;
+        }
+
+        .hero p {
+            color: #d1d5db;
+            line-height: 1.6;
+        }
+
+        /* =========================
+           SUCHE
+        ========================= */
+
+        .search-box {
+            margin-top: 25px;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 15px 18px;
+            background: #111827;
+            border: 1px solid #4b5563;
+            border-radius: 10px;
+            color: white;
+            font-size: 17px;
+            outline: none;
+        }
+
+        .search-box input:focus {
+            border-color: #2563eb;
+        }
+
+        /* =========================
+           WIKI KARTEN
+        ========================= */
+
+        .wiki-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .wiki-card {
+            background: #1f2937;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+        }
+
+        .wiki-card h2 {
+            margin-top: 0;
+        }
+
+        .wiki-card p {
+            color: #d1d5db;
+            line-height: 1.6;
+        }
+
+        .wiki-button {
+            width: 100%;
+            padding: 13px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 9px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .wiki-button:hover {
+            background: #1d4ed8;
+        }
+
+        /* =========================
+           DETAILS
+        ========================= */
+
+        .wiki-details {
+            display: none;
+            margin-top: 15px;
+            padding: 15px;
+            background: #111827;
+            border-radius: 10px;
+        }
+
+        .wiki-details p {
+            margin: 8px 0;
+        }
+
+        .wiki-details code {
+            background: #374151;
+            padding: 3px 7px;
+            border-radius: 5px;
+            color: #93c5fd;
+        }
+
+        /* =========================
+           FAQ
+        ========================= */
+
+        .faq {
+            margin-top: 25px;
+            background: #1f2937;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+        }
+
+        .faq h2 {
+            margin-top: 0;
+        }
+
+        .faq-item {
+            margin-bottom: 10px;
+        }
+
+        .faq-question {
+            width: 100%;
+            text-align: left;
+            padding: 15px;
+            background: #374151;
+            color: white;
+            border: none;
+            border-radius: 9px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .faq-question:hover {
+            background: #4b5563;
+        }
+
+        .faq-answer {
+            display: none;
+            padding: 15px;
+            background: #111827;
+            border-radius: 0 0 9px 9px;
+            color: #d1d5db;
+            line-height: 1.6;
+        }
+
+        /* =========================
+           KEINE ERGEBNISSE
+        ========================= */
+
+        #noResults {
+            display: none;
+            background: #7f1d1d;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            text-align: center;
+            color: #9ca3af;
+            padding: 30px 20px;
+            margin-top: 30px;
+        }
+
+        /* =========================
+           HANDY
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            nav {
+                padding: 10px;
+            }
+
+            nav a {
+                font-size: 16px;
+                padding: 11px 13px;
+            }
+
+            .logo {
+                font-size: 28px;
+            }
+
+            .wiki-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 27px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav>
+
+    <a href="index.html">
+        🏠 Startseite
+    </a>
+
+    <a href="wartung.html">
+        ⚠️ Wartungszeiten
+    </a>
+
+    <a href="regeln.html">
+        ❗ Regeln
+    </a>
+
+    <a href="status.html">
+        ℹ️ Server Status
+    </a>
+
+    <a href="bewertung.html">
+        ⭐ Bewertung
+    </a>
+
+    <a href="news.html">
+        📰 News
+    </a>
+
+    <a href="wiki.html" class="active">
+        📚 Wiki
+    </a>
+
+</nav>
+
+
+<!-- =========================
+     LOGO
+========================= -->
+
+<div class="logo">
+    🎮 GAMING.LUXUS 🎮
+</div>
+
+
+<main class="container">
+
+
+<!-- =========================
+     WIKI START
+========================= -->
+
+<section class="hero">
+
+    <h1>
+        📚 GAMING.LUXUS Wiki
+    </h1>
+
+    <p>
+        Willkommen im offiziellen Wiki von GAMING.LUXUS!
+        Hier findest du wichtige Informationen über unseren Server.
+    </p>
+
+    <div class="search-box">
+
+        <input
+            type="text"
+            id="wikiSearch"
+            placeholder="🔎 Wiki durchsuchen..."
+            oninput="searchWiki()"
+        >
+
+    </div>
+
+</section>
+
+
+<div id="noResults">
+    ❌ Keine passenden Wiki-Einträge gefunden.
+</div>
+
+
+<!-- =========================
+     WIKI BEREICHE
+========================= -->
+
+<div class="wiki-grid" id="wikiGrid">
+
+
+    <!-- SPIELMODI -->
+
+    <div class="wiki-card">
+
+        <h2>🎮 Spielmodi</h2>
+
+        <p>
+            Erfahre mehr über die verschiedenen Spielmodi
+            von GAMING.LUXUS.
+        </p>
+
+        <button
+            class="wiki-button"
+            onclick="toggleDetails('gamemodes')"
+        >
+            📖 Mehr erfahren
+        </button>
+
+        <div
+            id="gamemodes"
+            class="wiki-details"
+        >
+
+            <p>
+                ⚔️ <strong>PVP:</strong>
+                Kämpfe gegen andere Spieler.
+            </p>
+
+            <p>
+                🌳 <strong>SMP:</strong>
+                Spiele gemeinsam mit anderen Spielern.
+            </p>
+
+            <p>
+                🏙️ <strong>CityBuild:</strong>
+                Baue deine eigene Stadt und gestalte dein Grundstück.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- BEFEHLE -->
+
+    <div class="wiki-card">
+
+        <h2>🛠️ Befehle</h2>
+
+        <p>
+            Einige nützliche Befehle für den Server.
+        </p>
+
+        <button
+            class="wiki-button"
+            onclick="toggleDetails('commands')"
+        >
+            📖 Befehle anzeigen
+        </button>
+
+        <div
+            id="commands"
+            class="wiki-details"
+        >
+
+            <p>
+                <code>/spawn</code>
+                → Zum Spawn teleportieren
+            </p>
+
+            <p>
+                <code>/help</code>
+                → Hilfe anzeigen
+            </p>
+
+            <p>
+                <code>/rules</code>
+                → Serverregeln anzeigen
+            </p>
+
+            <p>
+                <code>/msg</code>
+                → Spieler privat anschreiben
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- RÄNGE -->
+
+    <div class="wiki-card">
+
+        <h2>🏆 Ränge</h2>
+
+        <p>
+            Entdecke die verschiedenen Ränge von GAMING.LUXUS.
+        </p>
+
+        <button
+            class="wiki-button"
+            onclick="toggleDetails('ranks')"
+        >
+            🏅 Ränge anzeigen
+        </button>
+
+        <div
+            id="ranks"
+            class="wiki-details"
+        >
+
+            <p>
+                🪵 <strong>Anfänger</strong>
+            </p>
+
+            <p>
+                🪨 <strong>Spieler</strong>
+            </p>
+
+            <p>
+                ⚔️ <strong>Kämpfer</strong>
+            </p>
+
+            <p>
+                💎 <strong>Elite</strong>
+            </p>
+
+            <p>
+                👑 <strong>Legende</strong>
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- WIRTSCHAFT -->
+
+    <div class="wiki-card">
+
+        <h2>💰 Wirtschaft</h2>
+
+        <p>
+            Informationen über Coins, Handel und die Serverwirtschaft.
+        </p>
+
+        <button
+            class="wiki-button"
+            onclick="toggleDetails('economy')"
+        >
+            💰 Wirtschaft anzeigen
+        </button>
+
+        <div
+            id="economy"
+            class="wiki-details"
+        >
+
+            <p>
+                🪙 Coins können zum Beispiel durch Aufgaben
+                und Events verdient werden.
+            </p>
+
+            <p>
+                🛒 Coins können später im Server-Shop
+                für Belohnungen eingesetzt werden.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- REGELN -->
+
+    <div class="wiki-card">
+
+        <h2>📜 Regeln</h2>
+
+        <p>
+            Ein kurzer Überblick über das faire Verhalten
+            auf unserem Server.
+        </p>
+
+        <button
+            class="wiki-button"
+            onclick="toggleDetails('rules')"
+        >
+            📜 Regeln anzeigen
+        </button>
+
+        <div
+            id="rules"
+            class="wiki-details"
+        >
+
+            <p>
+                🤝 Respektiere andere Spieler.
+            </p>
+
+            <p>
+                🚫 Kein Cheaten oder Hacken.
+            </p>
+
+            <p>
+                🚫 Kein Spam oder absichtliches Stören.
+            </p>
+
+            <p>
+                🛡️ Befolge die Anweisungen des Teams.
+            </p>
+
+            <p>
+                📖 Die vollständigen Regeln findest du
+                auf der <a href="regeln.html" style="color:#60a5fa;">
+                Regelseite</a>.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- TUTORIALS -->
+
+    <div class="wiki-card">
+
+        <h2>📖 Tutorials</h2>
+
+        <p>
+            Hilfreiche Anleitungen für neue und erfahrene Spieler.
+        </p>
+
+        <button
+            class="wiki-button"
+            onclick="toggleDetails('tutorials')"
+        >
+            🛠️ Tutorials anzeigen
+        </button>
+
+        <div
+            id="tutorials"
+            class="wiki-details"
+        >
+
+            <p>
+                🆕 <strong>Neu auf dem Server?</strong>
+                Starte zuerst am Spawn.
+            </p>
+
+            <p>
+                🏠 <strong>Grundstück bauen:</strong>
+                Wähle einen geeigneten Platz und beginne dein Projekt.
+            </p>
+
+            <p>
+                👥 <strong>Mit Freunden spielen:</strong>
+                Nutze den Chat oder private Nachrichten.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ACHIEVEMENTS -->
+
+    <div class="wiki-card">
+
+        <h2>🏅 Achievements</h2>
+
+        <p>
+            Sammle besondere Erfolge auf GAMING.LUXUS.
+        </p>
+
+        <button
+            class="wiki-button"
+            onclick="toggleDetails('achievements')"
+        >
+            🏆 Erfolge anzeigen
+        </button>
+
+        <div
+            id="achievements"
+            class="wiki-details"
+        >
+
+            <p>
+                🥚 <strong>Erster Login</strong>
+                – Zum ersten Mal anmelden.
+            </p>
+
+            <p>
+                ⚔️ <strong>Krieger</strong>
+                – Deine ersten Kämpfe gewinnen.
+            </p>
+
+            <p>
+                💎 <strong>Reich</strong>
+                – Eine große Menge Coins sammeln.
+            </p>
+
+            <p>
+                🔥 <strong>Treuer Spieler</strong>
+                – Mehrere Tage hintereinander spielen.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- FAQ -->
+
+    <div class="wiki-card">
+
+        <h2>❓ FAQ</h2>
+
+        <p>
+            Häufig gestellte Fragen rund um den Server.
+        </p>
+
+        <button
+            class="wiki-button"
+            onclick="scrollToFAQ()"
+        >
+            ❓ FAQ öffnen
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     FAQ
+========================= -->
+
+<section class="faq" id="faq">
+
+    <h2>
+        ❓ Häufig gestellte Fragen
+    </h2>
+
+
+    <div class="faq-item">
+
+        <button
+            class="faq-question"
+            onclick="toggleFAQ(1)"
+        >
+            ❓ Wie komme ich auf den Server?
+        </button>
+
+        <div
+            id="faq1"
+            class="faq-answer"
+        >
+            Öffne Minecraft, gehe zum Mehrspieler-Menü und
+            füge die Server-IP <strong>play.gaming.luxus</strong> hinzu.
+        </div>
+
+    </div>
+
+
+    <div class="faq-item">
+
+        <button
+            class="faq-question"
+            onclick="toggleFAQ(2)"
+        >
+            ❓ Welche Spielmodi gibt es?
+        </button>
+
+        <div
+            id="faq2"
+            class="faq-answer"
+        >
+            Aktuell findest du auf GAMING.LUXUS unter anderem
+            PVP, SMP und CityBuild.
+        </div>
+
+    </div>
+
+
+    <div class="faq-item">
+
+        <button
+            class="faq-question"
+            onclick="toggleFAQ(3)"
+        >
+            ❓ Wo finde ich die Serverregeln?
+        </button>
+
+        <div
+            id="faq3"
+            class="faq-answer"
+        >
+            Die Regeln findest du direkt auf unserer
+            <a href="regeln.html" style="color:#60a5fa;">
+                Regelseite
+            </a>.
+        </div>
+
+    </div>
+
+
+    <div class="faq-item">
+
+        <button
+            class="faq-question"
+            onclick="toggleFAQ(4)"
+        >
+            ❓ Wie kann ich das Team erreichen?
+        </button>
+
+        <div
+            id="faq4"
+            class="faq-answer"
+        >
+            Bei Problemen oder Fragen kannst du dich an
+            das GAMING.LUXUS-Team wenden.
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    © GAMING.LUXUS
+
+</footer>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+    /* =========================
+       WIKI BEREICH ÖFFNEN
+    ========================= */
+
+    function toggleDetails(id) {
+
+        const element = document.getElementById(id);
+
+        if (element.style.display === "block") {
+
+            element.style.display = "none";
+
+        } else {
+
+            element.style.display = "block";
+
+        }
+
+    }
+
+
+    /* =========================
+       FAQ ÖFFNEN
+    ========================= */
+
+    function toggleFAQ(number) {
+
+        const answer =
+            document.getElementById("faq" + number);
+
+        if (answer.style.display === "block") {
+
+            answer.style.display = "none";
+
+        } else {
+
+            answer.style.display = "block";
+
+        }
+
+    }
+
+
+    /* =========================
+       ZU FAQ SCROLLEN
+    ========================= */
+
+    function scrollToFAQ() {
+
+        document
+            .getElementById("faq")
+            .scrollIntoView({
+                behavior: "smooth"
+            });
+
+    }
+
+
+    /* =========================
+       WIKI SUCHE
+    ========================= */
+
+    function searchWiki() {
+
+        const search =
+            document
+                .getElementById("wikiSearch")
+                .value
+                .toLowerCase()
+                .trim();
+
+        const cards =
+            document.querySelectorAll(".wiki-card");
+
+        let found = 0;
+
+
+        cards.forEach(function(card) {
+
+            const text =
+                card.textContent.toLowerCase();
+
+
+            if (text.includes(search)) {
+
+                card.style.display = "";
+
+                found++;
+
+            } else {
+
+                card.style.display = "none";
+
+            }
+
+        });
+
+
+        const noResults =
+            document.getElementById("noResults");
+
+
+        if (found === 0) {
+
+            noResults.style.display = "block";
+
+        } else {
+
+            noResults.style.display = "none";
+
+        }
+
+    }
+
+</script>
+
+
+</body>
+
+</html>
+```
