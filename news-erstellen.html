@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GAMING.LUXUS - News erstellen</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #111827;
+            color: white;
+        }
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        nav {
+            background: #1f2937;
+            padding: 14px 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 12px 16px;
+            border-radius: 9px;
+            transition: 0.2s;
+        }
+
+        nav a:hover {
+            background: #374151;
+        }
+
+        /* =========================
+           HAUPTBEREICH
+        ========================= */
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: #d1d5db;
+        }
+
+        /* =========================
+           NEWS BOX
+        ========================= */
+
+        .news-box {
+            background: #1f2937;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .news-box label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        /* =========================
+           EINGABEFELDER
+        ========================= */
+
+        .news-input,
+        .news-textarea {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 20px;
+            background: #374151;
+            border: 1px solid #4b5563;
+            border-radius: 9px;
+            color: white;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .news-input:focus,
+        .news-textarea:focus {
+            border-color: #2563eb;
+        }
+
+        .news-textarea {
+            min-height: 200px;
+            resize: vertical;
+        }
+
+        /* =========================
+           BUTTONS
+        ========================= */
+
+        .publish-button {
+            width: 100%;
+            padding: 14px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 9px;
+            font-size: 17px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .publish-button:hover {
+            background: #1d4ed8;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 20px;
+            background: #374151;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
+        .back-button:hover {
+            background: #4b5563;
+        }
+
+        /* =========================
+           ERFOLGSMELDUNG
+        ========================= */
+
+        .success {
+            display: none;
+            margin-top: 20px;
+            padding: 13px;
+            background: #166534;
+            border-radius: 9px;
+            text-align: center;
+        }
+
+        /* =========================
+           HANDY
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            nav {
+                padding: 10px;
+            }
+
+            nav a {
+                font-size: 15px;
+                padding: 10px 12px;
+            }
+
+            .container {
+                padding: 25px 15px;
+            }
+
+            .header h1 {
+                font-size: 30px;
+            }
+
+            .news-box {
+                padding: 20px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav>
+
+    <a href="index.html">
+        🏠 Startseite
+    </a>
+
+    <a href="news.html">
+        📰 News
+    </a>
+
+    <a href="team.html">
+        👥 Team
+    </a>
+
+    <a href="status.html">
+        ℹ️ Server Status
+    </a>
+
+</nav>
+
+
+<!-- =========================
+     HAUPTBEREICH
+========================= -->
+
+<main class="container">
+
+
+    <div class="header">
+
+        <h1>
+            📰 News erstellen
+        </h1>
+
+        <p>
+            Erstelle eine neue Nachricht für GAMING.LUXUS.
+        </p>
+
+    </div>
+
+
+    <!-- =========================
+         NEWS FORMULAR
+    ========================= -->
+
+    <div class="news-box">
+
+        <label for="newsTitle">
+            📝 Titel der News
+        </label>
+
+        <input
+            type="text"
+            id="newsTitle"
+            class="news-input"
+            placeholder="z.B. Neues Server Update!"
+        >
+
+
+        <label for="newsText">
+            📄 Nachricht
+        </label>
+
+        <textarea
+            id="newsText"
+            class="news-textarea"
+            placeholder="Schreibe hier deine News..."
+        ></textarea>
+
+
+        <button
+            class="publish-button"
+            onclick="createNews()"
+        >
+            📰 News veröffentlichen
+        </button>
+
+
+        <div
+            id="successMessage"
+            class="success"
+        >
+            ✅ News wurde erstellt!
+
+        </div>
+
+
+        <a
+            href="team.html"
+            class="back-button"
+        >
+            ⬅️ Zurück zum Team-Bereich
+        </a>
+
+    </div>
+
+
+</main>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+    function createNews() {
+
+        const title =
+            document.getElementById("newsTitle").value.trim();
+
+        const text =
+            document.getElementById("newsText").value.trim();
+
+
+        if (title === "" || text === "") {
+
+            alert("Bitte Titel und Nachricht eingeben!");
+
+            return;
+
+        }
+
+
+        /*
+         * Aktuelles Datum
+         */
+
+        const datum =
+            new Date().toLocaleDateString("de-DE");
+
+
+        /*
+         * News speichern
+         *
+         * ACHTUNG:
+         * Das ist zunächst nur eine lokale Speicherung
+         * im Browser.
+         */
+
+        const news = {
+
+            title: title,
+
+            text: text,
+
+            date: datum
+
+        };
+
+
+        localStorage.setItem(
+            "gamingLuxusNews",
+            JSON.stringify(news)
+        );
+
+
+        /*
+         * Erfolg anzeigen
+         */
+
+        document.getElementById(
+            "successMessage"
+        ).style.display = "block";
+
+
+        /*
+         * Eingabefelder leeren
+         */
+
+        document.getElementById(
+            "newsTitle"
+        ).value = "";
+
+        document.getElementById(
+            "newsText"
+        ).value = "";
+
+    }
+
+</script>
+
+
+</body>
+
+</html>
