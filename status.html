@@ -1,30 +1,509 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <nav>
-        <a href="wartung.html">⚠️Wartungs Zeiten</a>
-        <a href="regeln.html">❗Regeln</a>
-        <a href="kontakt.html"></a>
-    </nav>
     <meta charset="UTF-8">
-    <title>GAMING.LUXUS Status</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GAMING.LUXUS Server Status</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #111827;
+            color: white;
+        }
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        nav {
+            background: #1f2937;
+            padding: 18px 25px;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            flex-wrap: wrap;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 17px;
+            padding: 9px 14px;
+            border-radius: 8px;
+            transition: 0.2s;
+        }
+
+        nav a:hover {
+            background: #374151;
+        }
+
+        /* =========================
+           HAUPTBEREICH
+        ========================= */
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 35px 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .header h1 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: #d1d5db;
+            font-size: 16px;
+        }
+
+        /* =========================
+           ERKLÄRUNG
+        ========================= */
+
+        .info-box {
+            background: #1f2937;
+            padding: 22px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+        }
+
+        .info-box h2 {
+            margin-top: 0;
+        }
+
+        .info-box p {
+            color: #d1d5db;
+            line-height: 1.6;
+        }
+
+        /* =========================
+           SERVER-BOXEN
+        ========================= */
+
+        .server-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .server-card {
+            background: #1f2937;
+            padding: 22px;
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+            border-left: 5px solid #22c55e;
+        }
+
+        .server-card.offline {
+            border-left-color: #ef4444;
+        }
+
+        .server-name {
+            font-size: 23px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        /* =========================
+           ONLINE / OFFLINE
+        ========================= */
+
+        .status {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            margin-bottom: 18px;
+            background: #166534;
+        }
+
+        .offline .status {
+            background: #991b1b;
+        }
+
+        /* =========================
+           TPS / MSPT
+        ========================= */
+
+        .stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .stat {
+            background: #374151;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .stat-title {
+            display: block;
+            color: #9ca3af;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .stat-value {
+            font-size: 21px;
+            font-weight: bold;
+        }
+
+        /* =========================
+           GESAMT STATUS
+        ========================= */
+
+        .total-box {
+            margin-top: 30px;
+            background: #1f2937;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+        }
+
+        .total-box h2 {
+            margin-top: 0;
+        }
+
+        .total-number {
+            font-size: 38px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        /* =========================
+           ZURÜCK BUTTON
+        ========================= */
+
+        .back-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 20px;
+            background: #374151;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: 0.2s;
+        }
+
+        .back-button:hover {
+            background: #4b5563;
+        }
+
+        /* =========================
+           HANDY
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            .server-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .header h1 {
+                font-size: 30px;
+            }
+
+            nav {
+                padding: 15px;
+                gap: 8px;
+            }
+
+            nav a {
+                font-size: 15px;
+            }
+
+            .container {
+                padding: 25px 15px;
+            }
+        }
+    </style>
 </head>
-<body style="background-color: lightgreen;">
-    <h1>Server Status</h1>
-    <p> </p>
-    <p>Erklärung:</p>
-    <p>Es steht immer vor den doppel punkten der server wie z.B der erste server, dort steht Content: dan steht dahinter die TPS und hinter der TPS steht die MSPT. Alle Datei wie die TPS, MSPT und der Status werden jede Stunde Neu geladen. Da du dafür die webseite neu laden must und sie nicht alleine neu geladen wird, empfelen wir dir die webseite immer neu zu laden befor du dir die daten anschaust! 
-    <p></p>
-    <p>Server: <br>Content: Online TPS: 22.17 MSPT: 1.77</p>
-    <p>CBDev: Offline TPS: 0.00 MSPT: 0.00</p>
-    <p>Event: Offline TPS: 0.00 MSPT: 0.00 </p>
-    <p>Vorbau: Online TPS: 17.28 MSPT: 2.21</p>
-    <p>Lobby-1: Online TPS: 27.04 MSPT: 0.92</p>
-    <p>Lobby-2: Offline TPS: 0.00 MSPT: 0.00</p>
-    <p>
-    <p>Gesamt Online: 3/6</p>
-    <p> </p>
-    <p> </p>
-    <a href="index.html">⬅️ Zurück zur Startseite</a>
+
+<body>
+
+    <!-- =========================
+         NAVIGATION
+    ========================= -->
+
+    <nav>
+        <a href="index.html">🏠 Startseite</a>
+        <a href="wartung.html">⚠️ Wartungszeiten</a>
+        <a href="regeln.html">❗ Regeln</a>
+        <a href="kontakt.html">📩 Kontakt</a>
+    </nav>
+
+
+    <!-- =========================
+         HAUPTINHALT
+    ========================= -->
+
+    <main class="container">
+
+        <div class="header">
+            <h1>🖥️ Server Status</h1>
+
+            <p>
+                Aktueller Status der GAMING.LUXUS Server
+            </p>
+        </div>
+
+
+        <!-- =========================
+             ERKLÄRUNG
+        ========================= -->
+
+        <div class="info-box">
+
+            <h2>ℹ️ Erklärung</h2>
+
+            <p>
+                Vor dem Doppelpunkt steht jeweils der Name des Servers.
+                Dahinter werden der aktuelle Status, die TPS und die MSPT angezeigt.
+            </p>
+
+            <p>
+                Die Statusdaten, TPS und MSPT werden regelmäßig aktualisiert.
+                Da die Webseite nicht automatisch neu geladen wird,
+                empfehlen wir, die Seite vor dem Anschauen der Daten neu zu laden.
+            </p>
+
+            <p>
+                <strong>TPS</strong> steht für Ticks per Second.
+                <strong>MSPT</strong> steht für Milliseconds per Tick.
+            </p>
+
+        </div>
+
+
+        <!-- =========================
+             SERVER
+        ========================= -->
+
+        <div class="server-grid">
+
+
+            <!-- CONTENT -->
+
+            <div class="server-card">
+
+                <div class="server-name">
+                    Content
+                </div>
+
+                <div class="status">
+                    🟢 Online
+                </div>
+
+                <div class="stats">
+
+                    <div class="stat">
+                        <span class="stat-title">TPS</span>
+                        <span class="stat-value">22.17</span>
+                    </div>
+
+                    <div class="stat">
+                        <span class="stat-title">MSPT</span>
+                        <span class="stat-value">1.77</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CBDEV -->
+
+            <div class="server-card offline">
+
+                <div class="server-name">
+                    CBDev
+                </div>
+
+                <div class="status">
+                    🔴 Offline
+                </div>
+
+                <div class="stats">
+
+                    <div class="stat">
+                        <span class="stat-title">TPS</span>
+                        <span class="stat-value">0.00</span>
+                    </div>
+
+                    <div class="stat">
+                        <span class="stat-title">MSPT</span>
+                        <span class="stat-value">0.00</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- EVENT -->
+
+            <div class="server-card offline">
+
+                <div class="server-name">
+                    Event
+                </div>
+
+                <div class="status">
+                    🔴 Offline
+                </div>
+
+                <div class="stats">
+
+                    <div class="stat">
+                        <span class="stat-title">TPS</span>
+                        <span class="stat-value">0.00</span>
+                    </div>
+
+                    <div class="stat">
+                        <span class="stat-title">MSPT</span>
+                        <span class="stat-value">0.00</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- VORBAU -->
+
+            <div class="server-card">
+
+                <div class="server-name">
+                    Vorbau
+                </div>
+
+                <div class="status">
+                    🟢 Online
+                </div>
+
+                <div class="stats">
+
+                    <div class="stat">
+                        <span class="stat-title">TPS</span>
+                        <span class="stat-value">17.28</span>
+                    </div>
+
+                    <div class="stat">
+                        <span class="stat-title">MSPT</span>
+                        <span class="stat-value">2.21</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- LOBBY 1 -->
+
+            <div class="server-card">
+
+                <div class="server-name">
+                    Lobby-1
+                </div>
+
+                <div class="status">
+                    🟢 Online
+                </div>
+
+                <div class="stats">
+
+                    <div class="stat">
+                        <span class="stat-title">TPS</span>
+                        <span class="stat-value">27.04</span>
+                    </div>
+
+                    <div class="stat">
+                        <span class="stat-title">MSPT</span>
+                        <span class="stat-value">0.92</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- LOBBY 2 -->
+
+            <div class="server-card offline">
+
+                <div class="server-name">
+                    Lobby-2
+                </div>
+
+                <div class="status">
+                    🔴 Offline
+                </div>
+
+                <div class="stats">
+
+                    <div class="stat">
+                        <span class="stat-title">TPS</span>
+                        <span class="stat-value">0.00</span>
+                    </div>
+
+                    <div class="stat">
+                        <span class="stat-title">MSPT</span>
+                        <span class="stat-value">0.00</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             GESAMT ONLINE
+        ========================= -->
+
+        <div class="total-box">
+
+            <h2>👥 Gesamt Online</h2>
+
+            <div class="total-number">
+                3 / 6
+            </div>
+
+            <p>
+                Server online
+            </p>
+
+        </div>
+
+
+        <!-- =========================
+             ZURÜCK
+        ========================= -->
+
+        <a href="index.html" class="back-button">
+            ⬅️ Zurück zur Startseite
+        </a>
+
+    </main>
+
 </body>
 </html>
