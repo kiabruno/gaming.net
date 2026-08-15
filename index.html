@@ -1,33 +1,552 @@
-<body style="background-color: lightgreen;">
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GAMING.LUXUS</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #111827;
+            color: white;
+        }
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        nav {
+            background: #1f2937;
+            padding: 18px 25px;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            flex-wrap: wrap;
+
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 17px;
+
+            padding: 9px 14px;
+
+            border-radius: 8px;
+
+            transition: 0.2s;
+        }
+
+        nav a:hover {
+            background: #374151;
+        }
+
+        /* =========================
+           HAUPTBEREICH
+        ========================= */
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 35px 20px;
+        }
+
+        /* =========================
+           LOGO
+        ========================= */
+
+        .logo {
+            text-align: center;
+            font-size: 42px;
+            font-weight: bold;
+
+            margin-bottom: 15px;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        .header {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .header h1 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: #d1d5db;
+            font-size: 17px;
+        }
+
+        /* =========================
+           INFO BOX
+        ========================= */
+
+        .info-box {
+            background: #1f2937;
+
+            padding: 25px;
+
+            border-radius: 15px;
+
+            margin-bottom: 25px;
+
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+        }
+
+        .info-box h2 {
+            margin-top: 0;
+        }
+
+        .info-box p {
+            color: #d1d5db;
+            line-height: 1.6;
+        }
+
+        /* =========================
+           SPIELMODI
+        ========================= */
+
+        .server-grid {
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 20px;
+
+            margin-top: 25px;
+        }
+
+        .server-card {
+            background: #1f2937;
+
+            padding: 22px;
+
+            border-radius: 15px;
+
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+
+            border-left: 5px solid #22c55e;
+        }
+
+        .server-name {
+            font-size: 23px;
+            font-weight: bold;
+
+            margin-bottom: 10px;
+        }
+
+        .server-description {
+            color: #d1d5db;
+
+            line-height: 1.5;
+        }
+
+        /* =========================
+           TEAMLER BUTTON
+        ========================= */
+
+        .button-area {
+            text-align: center;
+
+            margin-top: 30px;
+        }
+
+        .back-button {
+            display: inline-block;
+
+            padding: 12px 20px;
+
+            background: #374151;
+
+            color: white;
+
+            text-decoration: none;
+
+            border: none;
+
+            border-radius: 8px;
+
+            cursor: pointer;
+
+            font-size: 16px;
+
+            transition: 0.2s;
+        }
+
+        .back-button:hover {
+            background: #4b5563;
+        }
+
+        .teamler-button {
+            margin-left: 10px;
+        }
+
+        /* =========================
+           LOGIN FENSTER
+        ========================= */
+
+        .login-box {
+            display: none;
+
+            position: fixed;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            background: rgba(0, 0, 0, 0.75);
+
+            justify-content: center;
+            align-items: center;
+
+            padding: 20px;
+
+            z-index: 9999;
+        }
+
+        .login-content {
+            background: #1f2937;
+
+            width: 100%;
+            max-width: 420px;
+
+            padding: 30px;
+
+            border-radius: 15px;
+
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+
+            text-align: center;
+        }
+
+        .login-content h2 {
+            margin-top: 0;
+
+            font-size: 27px;
+        }
+
+        .login-content p {
+            color: #d1d5db;
+
+            margin-bottom: 20px;
+        }
+
+        /* =========================
+           PASSWORT INPUT
+        ========================= */
+
+        #teamlerPassword {
+            width: 100%;
+
+            padding: 13px;
+
+            background: #374151;
+
+            border: 1px solid #4b5563;
+
+            border-radius: 8px;
+
+            color: white;
+
+            font-size: 16px;
+
+            outline: none;
+
+            margin-bottom: 15px;
+        }
+
+        #teamlerPassword:focus {
+            border-color: #60a5fa;
+        }
+
+        #teamlerPassword::placeholder {
+            color: #9ca3af;
+        }
+
+        /* =========================
+           LOGIN BUTTON
+        ========================= */
+
+        .login-submit,
+        .login-cancel {
+            width: 100%;
+
+            padding: 12px;
+
+            border: none;
+
+            border-radius: 8px;
+
+            color: white;
+
+            font-size: 16px;
+
+            cursor: pointer;
+
+            margin-top: 8px;
+
+            transition: 0.2s;
+        }
+
+        .login-submit {
+            background: #166534;
+        }
+
+        .login-submit:hover {
+            background: #15803d;
+        }
+
+        .login-cancel {
+            background: #991b1b;
+        }
+
+        .login-cancel:hover {
+            background: #b91c1c;
+        }
+
+        /* =========================
+           LOGIN FEHLER
+        ========================= */
+
+        .login-error {
+            display: none;
+
+            margin-top: 15px;
+
+            padding: 10px;
+
+            background: #991b1b;
+
+            border-radius: 8px;
+
+            color: white;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            text-align: center;
+
+            margin-top: 40px;
+
+            padding: 20px;
+
+            color: #9ca3af;
+        }
+
+        /* =========================
+           HANDY
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            nav {
+                padding: 15px;
+
+                gap: 8px;
+            }
+
+            nav a {
+                font-size: 15px;
+            }
+
+            .container {
+                padding: 25px 15px;
+            }
+
+            .logo {
+                font-size: 32px;
+            }
+
+            .header h1 {
+                font-size: 30px;
+            }
+
+            .server-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .teamler-button {
+                margin-left: 0;
+
+                margin-top: 10px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================= -->
 
     <nav>
-        <a href="wartung.html">⚠️Wartungs Zeiten</a>
-        <a href="status.html">ℹ️Server Status</a>
-        <a href="regeln.html">❗Regeln</a>
-        <a href="kontakt.html"></a>
-    </nav>
-    <div class="logo">🎮GAMING.LUXUS🎮</div>
-    <style>
-    .logo {
-        font-size: 35px;
-        font-weight: bold;
-        text-align: center;
-        padding: 20px;
-    }
-</style>
 
-    <h1>Was ist GAMING.LUXUS?</h1>
-    <p>GAMING.LUXUS ist ein Minecraft server mit vielen verschidenden spiel modies wie zum beispiel SMP oder PVP <br> <br>Alle Spielmodies:<br>SMP<br>PVP</p>
-    <p> </p>
-    <p> </p>
-    <p> </p>
-    
-<button onclick="window.location.href='team.html'">
-    Team-Bereich
-</button>
-</body>
-</html>
-    <p>© GAMING.LUXUS</p>
+        <a href="index.html">
+            🏠 Startseite
+        </a>
+
+        <a href="wartung.html">
+            ⚠️ Wartungszeiten
+        </a>
+
+        <a href="regeln.html">
+            ❗ Regeln
+        </a>
+
+        <a href="status.html">
+            ℹ️ Server Status
+        </a>
+
+    </nav>
+
+
+    <!-- =========================
+         HAUPTBEREICH
+    ========================= -->
+
+    <main class="container">
+
+
+        <!-- LOGO -->
+
+        <div class="logo">
+            🎮 GAMING.LUXUS 🎮
+        </div>
+
+
+        <!-- HEADER -->
+
+        <div class="header">
+
+            <h1>
+                Willkommen bei GAMING.LUXUS
+            </h1>
+
+            <p>
+                Dein Minecraft-Server mit verschiedenen Spielmodi.
+            </p>
+
+        </div>
+
+
+        <!-- =========================
+             INFO
+        ========================= -->
+
+        <div class="info-box">
+
+            <h2>
+                🎮 Was ist GAMING.LUXUS?
+            </h2>
+
+            <p>
+                GAMING.LUXUS ist ein Minecraft-Server
+                mit verschiedenen Spielmodi.
+            </p>
+
+            <p>
+                Bei uns kannst du gemeinsam mit anderen
+                Spielern spielen, bauen und Abenteuer erleben.
+            </p>
+
+        </div>
+
+
+        <!-- =========================
+             SPIELMODI
+        ========================= -->
+
+        <div class="header">
+
+            <h1>
+                🕹️ Unsere Spielmodi
+            </h1>
+
+        </div>
+
+
+        <div class="server-grid">
+
+
+            <!-- SMP -->
+
+            <div class="server-card">
+
+                <div class="server-name">
+                    🌳 SMP
+                </div>
+
+                <div class="server-description">
+
+                    Spiele gemeinsam mit anderen Spielern
+                    auf unserer Survival-Welt.
+
+                </div>
+
+            </div>
+
+
+            <!-- PVP -->
+
+            <div class="server-card">
+
+                <div class="server-name">
+                    ⚔️ PvP
+                </div>
+
+                <div class="server-description">
+
+                    Kämpfe gegen andere Spieler
+                    und beweise dein Können.
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- =========================
+             BUTTONS
+        ========================= -->
+
+        <div class="button-area">
+
+
+            <a
+                href="status.html"
+                class="back-button"
+            >
+                ℹ️ Server Status
+            </a>
+
 
             <button
                 class="back-button teamler-button"
@@ -36,10 +555,23 @@
                 👥 Als Teamler Einloggen
             </button>
 
+
         </div>
 
 
     </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        © GAMING.LUXUS
+
+    </footer>
+
 
 
     <!-- =========================
@@ -57,15 +589,16 @@
                 👥 Teamler Login
             </h2>
 
+
             <p>
-                Bitte geben sie das Passwort ein!
+                Bitte geben Sie das Teamler-Passwort ein.
             </p>
 
 
             <input
                 type="password"
                 id="teamlerPassword"
-                placeholder="Hier Passwort eingeben!"
+                placeholder="Hier Passwort eingeben"
                 onkeydown="if(event.key === 'Enter') login()"
             >
 
@@ -90,12 +623,13 @@
                 id="loginError"
                 class="login-error"
             >
-                ❌ Dieses Passwort ist Falsch!
+                ❌ Dieses Passwort ist falsch!
             </div>
 
         </div>
 
     </div>
+
 
 
     <!-- =========================
@@ -108,29 +642,33 @@
          * ==========================================
          * TEAMLER-PASSWORT
          * ==========================================
-         *
-         * HIER DEIN PASSWORT EINTRAGEN.
-         *
-         * Beispiel:
-         *
-         * const TEAMLER_PASSWORT = "MeinPasswort123";
-         *
          */
 
         const TEAMLER_PASSWORT = "4155";
 
 
         /*
-         * LOGIN-FENSTER ÖFFNEN
+         * ==========================================
+         * LOGIN ÖFFNEN
+         * ==========================================
          */
 
         function openLogin() {
 
-            document.getElementById("loginBox").style.display = "flex";
+            document
+                .getElementById("loginBox")
+                .style.display = "flex";
 
-            document.getElementById("teamlerPassword").value = "";
 
-            document.getElementById("loginError").style.display = "none";
+            document
+                .getElementById("teamlerPassword")
+                .value = "";
+
+
+            document
+                .getElementById("loginError")
+                .style.display = "none";
+
 
             setTimeout(function () {
 
@@ -144,38 +682,49 @@
 
 
         /*
-         * LOGIN-FENSTER SCHLIESSEN
+         * ==========================================
+         * LOGIN SCHLIESSEN
+         * ==========================================
          */
 
         function closeLogin() {
 
-            document.getElementById("loginBox").style.display = "none";
+            document
+                .getElementById("loginBox")
+                .style.display = "none";
 
-            document.getElementById("teamlerPassword").value = "";
 
-            document.getElementById("loginError").style.display = "none";
+            document
+                .getElementById("teamlerPassword")
+                .value = "";
+
+
+            document
+                .getElementById("loginError")
+                .style.display = "none";
 
         }
 
 
         /*
+         * ==========================================
          * EINLOGGEN
+         * ==========================================
          */
 
         function login() {
 
             const eingegebenesPasswort =
-                document.getElementById("teamlerPassword").value;
+                document
+                    .getElementById("teamlerPassword")
+                    .value;
 
 
             if (eingegebenesPasswort === TEAMLER_PASSWORT) {
 
                 /*
-                 * HIER WIRD FESTGELEGT,
-                 * WO ES NACH DEM LOGIN HINGEHT.
-                 *
-                 * Später können wir hier z.B.
-                 * teamler.html verwenden.
+                 * Nach erfolgreichem Login
+                 * wird team.html geöffnet.
                  */
 
                 window.location.href = "team.html";
@@ -184,9 +733,15 @@
 
             else {
 
-                document.getElementById("loginError").style.display = "block";
+                document
+                    .getElementById("loginError")
+                    .style.display = "block";
 
-                document.getElementById("teamlerPassword").value = "";
+
+                document
+                    .getElementById("teamlerPassword")
+                    .value = "";
+
 
                 document
                     .getElementById("teamlerPassword")
@@ -198,8 +753,9 @@
 
 
         /*
-         * KLICK AUF DEN HINTERGRUND
-         * SCHLIESST DAS LOGIN-FENSTER
+         * ==========================================
+         * KLICK AUF HINTERGRUND
+         * ==========================================
          */
 
         document
@@ -213,6 +769,23 @@
                 }
 
             });
+
+
+        /*
+         * ==========================================
+         * ESC-TASTE SCHLIESST LOGIN
+         * ==========================================
+         */
+
+        document.addEventListener("keydown", function(event) {
+
+            if (event.key === "Escape") {
+
+                closeLogin();
+
+            }
+
+        });
 
     </script>
 
