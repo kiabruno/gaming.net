@@ -29,4 +29,194 @@
 </html>
     <p>© GAMING.LUXUS</p>
 
+            <button
+                class="back-button teamler-button"
+                onclick="openLogin()"
+            >
+                👥 Als Teamler Einloggen
+            </button>
+
+        </div>
+
+
+    </main>
+
+
+    <!-- =========================
+         TEAMLER LOGIN
+    ========================= -->
+
+    <div
+        id="loginBox"
+        class="login-box"
+    >
+
+        <div class="login-content">
+
+            <h2>
+                👥 Teamler Login
+            </h2>
+
+            <p>
+                Bitte geben sie das Passwort ein!
+            </p>
+
+
+            <input
+                type="password"
+                id="teamlerPassword"
+                placeholder="Hier Passwort eingeben!"
+                onkeydown="if(event.key === 'Enter') login()"
+            >
+
+
+            <button
+                class="login-submit"
+                onclick="login()"
+            >
+                🔓 Einloggen
+            </button>
+
+
+            <button
+                class="login-cancel"
+                onclick="closeLogin()"
+            >
+                ❌ Abbrechen
+            </button>
+
+
+            <div
+                id="loginError"
+                class="login-error"
+            >
+                ❌ Dieses Passwort ist Falsch!
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================= -->
+
+    <script>
+
+        /*
+         * ==========================================
+         * TEAMLER-PASSWORT
+         * ==========================================
+         *
+         * HIER DEIN PASSWORT EINTRAGEN.
+         *
+         * Beispiel:
+         *
+         * const TEAMLER_PASSWORT = "MeinPasswort123";
+         *
+         */
+
+        const TEAMLER_PASSWORT = "4155";
+
+
+        /*
+         * LOGIN-FENSTER ÖFFNEN
+         */
+
+        function openLogin() {
+
+            document.getElementById("loginBox").style.display = "flex";
+
+            document.getElementById("teamlerPassword").value = "";
+
+            document.getElementById("loginError").style.display = "none";
+
+            setTimeout(function () {
+
+                document
+                    .getElementById("teamlerPassword")
+                    .focus();
+
+            }, 100);
+
+        }
+
+
+        /*
+         * LOGIN-FENSTER SCHLIESSEN
+         */
+
+        function closeLogin() {
+
+            document.getElementById("loginBox").style.display = "none";
+
+            document.getElementById("teamlerPassword").value = "";
+
+            document.getElementById("loginError").style.display = "none";
+
+        }
+
+
+        /*
+         * EINLOGGEN
+         */
+
+        function login() {
+
+            const eingegebenesPasswort =
+                document.getElementById("teamlerPassword").value;
+
+
+            if (eingegebenesPasswort === TEAMLER_PASSWORT) {
+
+                /*
+                 * HIER WIRD FESTGELEGT,
+                 * WO ES NACH DEM LOGIN HINGEHT.
+                 *
+                 * Später können wir hier z.B.
+                 * teamler.html verwenden.
+                 */
+
+                window.location.href = "team.html";
+
+            }
+
+            else {
+
+                document.getElementById("loginError").style.display = "block";
+
+                document.getElementById("teamlerPassword").value = "";
+
+                document
+                    .getElementById("teamlerPassword")
+                    .focus();
+
+            }
+
+        }
+
+
+        /*
+         * KLICK AUF DEN HINTERGRUND
+         * SCHLIESST DAS LOGIN-FENSTER
+         */
+
+        document
+            .getElementById("loginBox")
+            .addEventListener("click", function(event) {
+
+                if (event.target === this) {
+
+                    closeLogin();
+
+                }
+
+            });
+
+    </script>
+
+
 </body>
+
+</html>
