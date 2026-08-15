@@ -45,6 +45,11 @@
             background: #374151;
         }
 
+        nav a.active {
+            background: #374151;
+        }
+
+
         /* =========================
            HAUPTBEREICH
         ========================= */
@@ -70,6 +75,7 @@
             font-size: 16px;
         }
 
+
         /* =========================
            ERKLÄRUNG
         ========================= */
@@ -90,6 +96,7 @@
             color: #d1d5db;
             line-height: 1.6;
         }
+
 
         /* =========================
            SERVER-BOXEN
@@ -113,14 +120,24 @@
             border-left-color: #ef4444;
         }
 
+        .server-card.maintenance {
+            border-left-color: #f59e0b;
+        }
+
+
+        /* =========================
+           SERVER NAME
+        ========================= */
+
         .server-name {
             font-size: 23px;
             font-weight: bold;
             margin-bottom: 15px;
         }
 
+
         /* =========================
-           ONLINE / OFFLINE
+           STATUS
         ========================= */
 
         .status {
@@ -135,12 +152,11 @@
         .offline .status {
             background: #991b1b;
         }
-        
+
+        .maintenance .status {
+            background: #92400e;
         }
 
-        .wartung .status {
-            background: #FFA500;
-        }
 
         /* =========================
            TPS / MSPT
@@ -171,6 +187,7 @@
             font-weight: bold;
         }
 
+
         /* =========================
            GESAMT STATUS
         ========================= */
@@ -194,6 +211,18 @@
             margin-top: 10px;
         }
 
+
+        /* =========================
+           STATUS ÜBERSICHT
+        ========================= */
+
+        .status-info {
+            margin-top: 20px;
+            color: #d1d5db;
+            line-height: 1.6;
+        }
+
+
         /* =========================
            ZURÜCK BUTTON
         ========================= */
@@ -212,6 +241,7 @@
         .back-button:hover {
             background: #4b5563;
         }
+
 
         /* =========================
            HANDY
@@ -243,7 +273,9 @@
     </style>
 </head>
 
+
 <body>
+
 
     <!-- =========================
          NAVIGATION
@@ -251,23 +283,23 @@
 
     <nav>
 
-    <a href="index.html">
-        🏠 Startseite
-    </a>
+        <a href="index.html">
+            🏠 Startseite
+        </a>
 
-    <a href="wartung.html">
-        ⚠️ Wartungszeiten
-    </a>
+        <a href="wartung.html">
+            ⚠️ Wartungszeiten
+        </a>
 
-    <a href="regeln.html">
-        ❗ Regeln
-    </a>
+        <a href="regeln.html">
+            ❗ Regeln
+        </a>
 
-    <a href="status.html" class="active">
-        ℹ️ Server Status
-    </a>
+        <a href="status.html" class="active">
+            ℹ️ Server Status
+        </a>
 
-</nav>
+    </nav>
 
 
     <!-- =========================
@@ -276,12 +308,15 @@
 
     <main class="container">
 
+
         <div class="header">
+
             <h1>🖥️ Server Status</h1>
 
             <p>
                 Aktueller Status der GAMING.LUXUS Server
             </p>
+
         </div>
 
 
@@ -307,6 +342,14 @@
             <p>
                 <strong>TPS</strong> steht für Ticks per Second.
                 <strong>MSPT</strong> steht für Milliseconds per Tick.
+            </p>
+
+            <p>
+                🟢 <strong>Online</strong> = Server ist online
+                <br>
+                🔴 <strong>Offline</strong> = Server ist offline
+                <br>
+                🟠 <strong>Wartung</strong> = Server befindet sich momentan in Wartung
             </p>
 
         </div>
@@ -406,78 +449,336 @@
             </div>
 
 
-            <!-- VORBAU --><!-- JUMP AND RUN -->
-<div class="server-card">
-    <div class="server-name">Jump and Run</div>
-    <div class="status">🟢 Online</div>
-    <div class="stats">
-        <div class="stat">
-            <span class="stat-title">TPS</span>
-            <span class="stat-value">28.00</span>
+            <!-- VORBAU -->
+
+            <div class="server-card">
+
+                <div class="server-name">
+                    Vorbau
+                </div>
+
+                <div class="status">
+                    🟢 Online
+                </div>
+
+                <div class="stats">
+
+                    <div class="stat">
+                        <span class="stat-title">TPS</span>
+                        <span class="stat-value">17.28</span>
+                    </div>
+
+                    <div class="stat">
+                        <span class="stat-title">MSPT</span>
+                        <span class="stat-value">2.21</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- LOBBY 1 -->
+
+            <div class="server-card">
+
+                <div class="server-name">
+                    Lobby-1
+                </div>
+
+                <div class="status">
+                    🟢 Online
+                </div>
+
+                <div class="stats">
+
+                    <div class="stat">
+                        <span class="stat-title">TPS</span>
+                        <span class="stat-value">27.04</span>
+                    </div>
+
+                    <div class="stat">
+                        <span class="stat-title">MSPT</span>
+                        <span class="stat-value">0.92</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- LOBBY 2 -->
+
+            <div class="server-card offline">
+
+                <div class="server-name">
+                    Lobby-2
+                </div>
+
+                <div class="status">
+                    🔴 Offline
+                </div>
+
+                <div class="stats">
+
+                    <div class="stat">
+                        <span class="stat-title">TPS</span>
+                        <span class="stat-value">0.00</span>
+                    </div>
+
+                    <div class="stat">
+                        <span class="stat-title">MSPT</span>
+                        <span class="stat-value">0.00</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- JUMP AND RUN -->
+
+            <div class="server-card">
+
+                <div class="server-name">
+                    Jump and Run
+                </div>
+
+                <div class="status">
+                    🟢 Online
+                </div>
+
+                <div class="stats">
+
+                    <div class="stat">
+                        <span class="stat-title">TPS</span>
+                        <span class="stat-value">—</span>
+                    </div>
+
+                    <div class="stat">
+                        <span class="stat-title">MSPT</span>
+                        <span class="stat-value">—</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- SMP-1 -->
+
+            <div class="server-card">
+
+                <div class="server-name">
+                    SMP-1
+                </div>
+
+                <div class="status">
+                    🟢 Online
+                </div>
+
+                <div class="stats">
+
+                    <div class="stat">
+                        <span class="stat-title">TPS</span>
+                        <span class="stat-value">—</span>
+                    </div>
+
+                    <div class="stat">
+                        <span class="stat-title">MSPT</span>
+                        <span class="stat-value">—</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- SMP-2 -->
+
+            <div class="server-card">
+
+                <div class="server-name">
+                    SMP-2
+                </div>
+
+                <div class="status">
+                    🟢 Online
+                </div>
+
+                <div class="stats">
+
+                    <div class="stat">
+                        <span class="stat-title">TPS</span>
+                        <span class="stat-value">—</span>
+                    </div>
+
+                    <div class="stat">
+                        <span class="stat-title">MSPT</span>
+                        <span class="stat-value">—</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- WELT-1 -->
+
+            <div class="server-card">
+
+                <div class="server-name">
+                    Welt-1
+                </div>
+
+                <div class="status">
+                    🟢 Online
+                </div>
+
+                <div class="stats">
+
+                    <div class="stat">
+                        <span class="stat-title">TPS</span>
+                        <span class="stat-value">—</span>
+                    </div>
+
+                    <div class="stat">
+                        <span class="stat-title">MSPT</span>
+                        <span class="stat-value">—</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- WELT-2 -->
+
+            <div class="server-card">
+
+                <div class="server-name">
+                    Welt-2
+                </div>
+
+                <div class="status">
+                    🟢 Online
+                </div>
+
+                <div class="stats">
+
+                    <div class="stat">
+                        <span class="stat-title">TPS</span>
+                        <span class="stat-value">—</span>
+                    </div>
+
+                    <div class="stat">
+                        <span class="stat-title">MSPT</span>
+                        <span class="stat-value">—</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CB-1 -->
+
+            <div class="server-card">
+
+                <div class="server-name">
+                    CB-1
+                </div>
+
+                <div class="status">
+                    🟢 Online
+                </div>
+
+                <div class="stats">
+
+                    <div class="stat">
+                        <span class="stat-title">TPS</span>
+                        <span class="stat-value">—</span>
+                    </div>
+
+                    <div class="stat">
+                        <span class="stat-title">MSPT</span>
+                        <span class="stat-value">—</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CB-2 -->
+
+            <div class="server-card maintenance">
+
+                <div class="server-name">
+                    CB-2
+                </div>
+
+                <div class="status">
+                    🟠 Wartung
+                </div>
+
+                <div class="stats">
+
+                    <div class="stat">
+                        <span class="stat-title">TPS</span>
+                        <span class="stat-value">—</span>
+                    </div>
+
+                    <div class="stat">
+                        <span class="stat-title">MSPT</span>
+                        <span class="stat-value">—</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
         </div>
-        <div class="stat">
-            <span class="stat-title">MSPT</span>
-            <span class="stat-value">1.22</span>
+
+
+        <!-- =========================
+             GESAMT ONLINE
+        ========================= -->
+
+        <div class="total-box">
+
+            <h2>👥 Gesamt Online</h2>
+
+            <div class="total-number">
+                9 / 13
+            </div>
+
+            <p>
+                Server online
+            </p>
+
+            <div class="status-info">
+                🟢 9 Online
+                &nbsp;&nbsp;|&nbsp;&nbsp;
+                🔴 3 Offline
+                &nbsp;&nbsp;|&nbsp;&nbsp;
+                🟠 1 Wartung
+            </div>
+
         </div>
-    </div>
-</div>
 
-<!-- SMP-1 -->
-<div class="server-card">
-    <div class="server-name">SMP-1</div>
-    <div class="status">🟢 Online</div>
-    <div class="stats">
-        <div class="stat"><span class="stat-title">TPS</span><span class="stat-value">24.55</span></div>
-        <div class="stat"><span class="stat-title">MSPT</span><span class="stat-value">1.15</span></div>
-    </div>
-</div>
 
-<!-- SMP-2 -->
-<div class="server-card">
-    <div class="server-name">SMP-2</div>
-    <div class="status">🟢 Online</div>
-    <div class="stats">
-        <div class="stat"><span class="stat-title">TPS</span><span class="stat-value">28.75</span></div>
-        <div class="stat"><span class="stat-title">MSPT</span><span class="stat-value">1.30</span></div>
-    </div>
-</div>
+        <!-- =========================
+             ZURÜCK
+        ========================= -->
 
-<!-- WELT-1 -->
-<div class="server-card">
-    <div class="server-name">Welt-1</div>
-    <div class="status">🟢 Online</div>
-    <div class="stats">
-        <div class="stat"><span class="stat-title">TPS</span><span class="stat-value">28.80</span></div>
-        <div class="stat"><span class="stat-title">MSPT</span><span class="stat-value">1.10</span></div>
-    </div>
-</div>
+        <a href="index.html" class="back-button">
+            ⬅️ Zurück zur Startseite
+        </a>
 
-<!-- WELT-2 -->
-<div class="server-card">
-    <div class="server-name">Welt-2</div>
-    <div class="status">🟢 Online</div>
-    <div class="stats">
-        <div class="stat"><span class="stat-title">TPS</span><span class="stat-value">54.09</span></div>
-        <div class="stat"><span class="stat-title">MSPT</span><span class="stat-value">1.18</span></div>
-    </div>
-</div>
 
-<!-- CB-1 -->
-<div class="server-card">
-    <div class="server-name">CB-1</div>
-    <div class="status">🟢 Online</div>
-    <div class="stats">
-        <div class="stat"><span class="stat-title">TPS</span><span class="stat-value">14.40</span></div>
-        <div class="stat"><span class="stat-title">MSPT</span><span class="stat-value">1.22</span></div>
-    </div>
-</div>
+    </main>
 
-<!-- CB-2 -->
-<div class="server-card wartung">
-    <div class="server-name">CB-2</div>
-    <div class="status">🟠 Wartung</div>
-    <div class="stats">
-        <div class="stat"><span class="stat-title">TPS</span><span class="stat-value">14.57</span></div>
-        <div class="stat"><span class="stat-title">MSPT</span><span class="stat-value">1.25</span></div>
-    </div>
-</div>
+</body>
+</html>
