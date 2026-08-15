@@ -1,11 +1,11 @@
 <button onclick="openPasswordBox()" class="team-button">
-    🔒 Team-Bereich
+    Team-Regeln
 </button>
 
 <div id="passwordBox" class="password-box" style="display: none;">
     <div class="password-content">
-        <h2>🔒 Geschützter Bereich</h2>
-        <p>Bitte gib das Passwort ein:</p>
+        <h2>Team Reglen</h2>
+        <p>Bitte gebe das Passwort ein:</p>
 
         <input
             type="password"
@@ -41,7 +41,7 @@
 
         if (enteredPassword === correctPassword) {
             // Erfolgreich eingeloggt
-            window.location.href = "team.html";
+            window.location.href = "team-regeln.html";
         } else {
             document.getElementById("passwordError").textContent =
                 "❌ Falsches Passwort!";
