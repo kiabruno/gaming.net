@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="de">
 
-
 <head>
 
     <meta charset="UTF-8">
@@ -47,6 +46,10 @@
         }
 
         nav a:hover {
+            background: #374151;
+        }
+
+        nav a.active {
             background: #374151;
         }
 
@@ -131,6 +134,18 @@
 
 
         /* =========================
+           BUTTON BEREICH
+        ========================= */
+
+        .button-area {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            align-items: center;
+        }
+
+
+        /* =========================
            TEAMLER BUTTON
         ========================= */
 
@@ -153,7 +168,29 @@
 
 
         /* =========================
-           LOGIN FENSTER
+           MINECRAFT LOGIN BUTTON
+        ========================= */
+
+        .minecraft-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 13px 22px;
+            background: #22c55e;
+            color: white;
+            border: none;
+            border-radius: 9px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .minecraft-button:hover {
+            background: #16a34a;
+        }
+
+
+        /* =========================
+           TEAMLER LOGIN FENSTER
         ========================= */
 
         .login-box {
@@ -190,7 +227,7 @@
 
 
         /* =========================
-           PASSWORT FELD
+           TEAMLER PASSWORT FELD
         ========================= */
 
         #teamlerPassword {
@@ -267,6 +304,121 @@
 
 
         /* =========================
+           MINECRAFT LOGIN FENSTER
+        ========================= */
+
+        .mc-login-box {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            z-index: 1000;
+        }
+
+        .mc-login-content {
+            background: #1f2937;
+            width: 100%;
+            max-width: 420px;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        .mc-login-content h2 {
+            margin-top: 0;
+        }
+
+        .mc-login-content p {
+            color: #d1d5db;
+        }
+
+
+        /* =========================
+           MINECRAFT NAME
+        ========================= */
+
+        #mcName {
+            width: 100%;
+            padding: 13px;
+            margin-top: 10px;
+            margin-bottom: 15px;
+            background: #374151;
+            border: 1px solid #4b5563;
+            border-radius: 8px;
+            color: white;
+            font-size: 16px;
+            outline: none;
+        }
+
+        #mcName:focus {
+            border-color: #22c55e;
+        }
+
+
+        /* =========================
+           MINECRAFT LOGIN BUTTON
+        ========================= */
+
+        .mc-login-submit {
+            width: 100%;
+            padding: 13px;
+            background: #22c55e;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        .mc-login-submit:hover {
+            background: #16a34a;
+        }
+
+
+        /* =========================
+           MINECRAFT ABBRECHEN
+        ========================= */
+
+        .mc-login-cancel {
+            width: 100%;
+            padding: 13px;
+            background: #374151;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .mc-login-cancel:hover {
+            background: #4b5563;
+        }
+
+
+        /* =========================
+           EINGELOGGT
+        ========================= */
+
+        .mc-logged {
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            background: #14532d;
+            border-radius: 10px;
+            text-align: center;
+            color: white;
+        }
+
+
+        /* =========================
            FOOTER
         ========================= */
 
@@ -301,6 +453,17 @@
                 grid-template-columns: 1fr;
             }
 
+            .button-area {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .teamler-button,
+            .minecraft-button {
+                width: 100%;
+                margin-top: 10px;
+            }
+
         }
 
     </style>
@@ -315,33 +478,33 @@
      NAVIGATION
 ========================= -->
 
-        <nav>
+<nav>
 
-        <a href="index.html" class="active">
-            🏠 Startseite
-        </a>
+    <a href="index.html" class="active">
+        🏠 Startseite
+    </a>
 
-        <a href="wartung.html">
-            ⚠️ Wartungszeiten
-        </a>
+    <a href="wartung.html">
+        ⚠️ Wartungszeiten
+    </a>
 
-        <a href="regeln.html">
-            ❗ Regeln
-        </a>
+    <a href="regeln.html">
+        ❗ Regeln
+    </a>
 
-        <a href="status.html">
-            ℹ️ Server Status
-        </a>
+    <a href="status.html">
+        ℹ️ Server Status
+    </a>
 
-        <a href="bewertung.html">
-            ⭐ Bewertung
-        </a>
-        
-        <a href="news.html">
-            📰 News
-        </a>
+    <a href="bewertung.html">
+        ⭐ Bewertung
+    </a>
 
-    </nav>
+    <a href="news.html">
+        📰 News
+    </a>
+
+</nav>
 
 
 <!-- =========================
@@ -459,15 +622,45 @@
 
 
     <!-- =========================
-         TEAMLER LOGIN BUTTON
+         LOGIN BUTTONS
     ========================= -->
 
-    <button
-        class="teamler-button"
-        onclick="openLogin()"
+    <div class="button-area">
+
+        <!-- TEAMLER LOGIN -->
+
+        <button
+            class="teamler-button"
+            onclick="openLogin()"
+        >
+            👥 Als Teamler einloggen
+        </button>
+
+
+        <!-- MINECRAFT LOGIN -->
+
+        <button
+            class="minecraft-button"
+            onclick="openMinecraftLogin()"
+        >
+            ⛏️ Minecraft Login
+        </button>
+
+    </div>
+
+
+    <!-- =========================
+         MINECRAFT EINGELOGGT
+    ========================= -->
+
+    <div
+        id="mcLogged"
+        class="mc-logged"
     >
-        👥 Als Teamler einloggen
-    </button>
+        ✅ Du bist nun mit
+        <strong id="mcLoggedName"></strong>
+        eingeloggt!
+    </div>
 
 
 </main>
@@ -530,6 +723,55 @@
 
 
 <!-- =========================
+     MINECRAFT LOGIN
+========================= -->
+
+<div
+    id="mcLoginBox"
+    class="mc-login-box"
+>
+
+    <div class="mc-login-content">
+
+        <h2>
+            ⛏️ Minecraft Login
+        </h2>
+
+        <p>
+            Gib deinen Minecraft-Namen ein.
+        </p>
+
+
+        <input
+            type="text"
+            id="mcName"
+            placeholder="Minecraft-Name"
+            maxlength="16"
+            onkeydown="if(event.key === 'Enter') minecraftLogin()"
+        >
+
+
+        <button
+            class="mc-login-submit"
+            onclick="minecraftLogin()"
+        >
+            ✅ Einloggen
+        </button>
+
+
+        <button
+            class="mc-login-cancel"
+            onclick="closeMinecraftLogin()"
+        >
+            Abbrechen
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
      FOOTER
 ========================= -->
 
@@ -555,7 +797,7 @@
 
 
     /* =========================
-       LOGIN ÖFFNEN
+       TEAMLER LOGIN ÖFFNEN
     ========================= */
 
     function openLogin() {
@@ -578,7 +820,7 @@
 
 
     /* =========================
-       LOGIN SCHLIESSEN
+       TEAMLER LOGIN SCHLIESSEN
     ========================= */
 
     function closeLogin() {
@@ -593,7 +835,7 @@
 
 
     /* =========================
-       EINLOGGEN
+       TEAMLER EINLOGGEN
     ========================= */
 
     function login() {
@@ -624,7 +866,102 @@
 
 
     /* =========================
-       KLICK AUF HINTERGRUND
+       MINECRAFT LOGIN ÖFFNEN
+    ========================= */
+
+    function openMinecraftLogin() {
+
+        document.getElementById("mcLoginBox").style.display = "flex";
+
+        document.getElementById("mcName").value = "";
+
+        setTimeout(function () {
+
+            document
+                .getElementById("mcName")
+                .focus();
+
+        }, 100);
+
+    }
+
+
+    /* =========================
+       MINECRAFT LOGIN SCHLIESSEN
+    ========================= */
+
+    function closeMinecraftLogin() {
+
+        document.getElementById("mcLoginBox").style.display = "none";
+
+    }
+
+
+    /* =========================
+       MINECRAFT EINLOGGEN
+    ========================= */
+
+    function minecraftLogin() {
+
+        const name =
+            document.getElementById("mcName").value.trim();
+
+
+        if (name === "") {
+
+            alert("Bitte gib deinen Minecraft-Namen ein!");
+
+            return;
+
+        }
+
+
+        document.getElementById("mcLoggedName").textContent = name;
+
+        document.getElementById("mcLogged").style.display = "block";
+
+        closeMinecraftLogin();
+
+
+        /* Name im Browser speichern */
+
+        localStorage.setItem(
+            "minecraftName",
+            name
+        );
+
+    }
+
+
+    /* =========================
+       GESPEICHERTEN MINECRAFT-NAMEN LADEN
+    ========================= */
+
+    window.addEventListener("load", function() {
+
+        const gespeicherterName =
+            localStorage.getItem("minecraftName");
+
+
+        if (gespeicherterName) {
+
+            document
+                .getElementById("mcLoggedName")
+                .textContent = gespeicherterName;
+
+
+            document
+                .getElementById("mcLogged")
+                .style.display = "block";
+
+        }
+
+    });
+
+
+    /* =========================
+       TEAMLER LOGIN:
+       HINTERGRUND KLICK
     ========================= */
 
     document
@@ -640,8 +977,30 @@
         });
 
 
+    /* =========================
+       MINECRAFT LOGIN:
+       HINTERGRUND KLICK
+    ========================= */
+
+    document
+        .getElementById("mcLoginBox")
+        .addEventListener("click", function(event) {
+
+            if (event.target === this) {
+
+                closeMinecraftLogin();
+
+            }
+
+        });
+
+
 </script>
 
+
+</body>
+
+</html>
 
 </body>
 
