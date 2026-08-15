@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>GAMING.LUXUS Server Status</title>
 
     <style>
+
         * {
             box-sizing: border-box;
         }
@@ -25,19 +28,24 @@
         nav {
             background: #1f2937;
             padding: 18px 25px;
+
             display: flex;
             gap: 20px;
             align-items: center;
             flex-wrap: wrap;
+
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
         }
 
         nav a {
             color: white;
             text-decoration: none;
+
             font-size: 17px;
+
             padding: 9px 14px;
             border-radius: 8px;
+
             transition: 0.2s;
         }
 
@@ -48,7 +56,6 @@
         nav a.active {
             background: #374151;
         }
-
 
         /* =========================
            HAUPTBEREICH
@@ -75,17 +82,21 @@
             font-size: 16px;
         }
 
-
         /* =========================
            ERKLÄRUNG
         ========================= */
 
         .info-box {
             background: #1f2937;
+
             padding: 22px;
+
             border-radius: 15px;
+
             margin-bottom: 30px;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+
+            box-shadow:
+                0 6px 20px rgba(0, 0, 0, 0.25);
         }
 
         .info-box h2 {
@@ -97,23 +108,31 @@
             line-height: 1.6;
         }
 
-
         /* =========================
            SERVER-BOXEN
         ========================= */
 
         .server-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
             gap: 20px;
         }
 
         .server-card {
             background: #1f2937;
+
             padding: 22px;
+
             border-radius: 15px;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
-            border-left: 5px solid #22c55e;
+
+            box-shadow:
+                0 6px 20px rgba(0, 0, 0, 0.25);
+
+            border-left:
+                5px solid #22c55e;
         }
 
         .server-card.offline {
@@ -124,7 +143,6 @@
             border-left-color: #f59e0b;
         }
 
-
         /* =========================
            SERVER NAME
         ========================= */
@@ -132,9 +150,9 @@
         .server-name {
             font-size: 23px;
             font-weight: bold;
+
             margin-bottom: 15px;
         }
-
 
         /* =========================
            STATUS
@@ -142,10 +160,15 @@
 
         .status {
             display: inline-block;
+
             padding: 6px 12px;
+
             border-radius: 20px;
+
             font-size: 14px;
+
             margin-bottom: 18px;
+
             background: #166534;
         }
 
@@ -157,28 +180,36 @@
             background: #92400e;
         }
 
-
         /* =========================
            TPS / MSPT
         ========================= */
 
         .stats {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+
+            grid-template-columns:
+                1fr 1fr;
+
             gap: 12px;
         }
 
         .stat {
             background: #374151;
+
             padding: 15px;
+
             border-radius: 10px;
+
             text-align: center;
         }
 
         .stat-title {
             display: block;
+
             color: #9ca3af;
+
             font-size: 14px;
+
             margin-bottom: 5px;
         }
 
@@ -187,18 +218,23 @@
             font-weight: bold;
         }
 
-
         /* =========================
            GESAMT STATUS
         ========================= */
 
         .total-box {
             margin-top: 30px;
+
             background: #1f2937;
+
             padding: 25px;
+
             border-radius: 15px;
+
             text-align: center;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+
+            box-shadow:
+                0 6px 20px rgba(0, 0, 0, 0.25);
         }
 
         .total-box h2 {
@@ -208,9 +244,9 @@
         .total-number {
             font-size: 38px;
             font-weight: bold;
+
             margin-top: 10px;
         }
-
 
         /* =========================
            STATUS ÜBERSICHT
@@ -218,10 +254,29 @@
 
         .status-info {
             margin-top: 20px;
+
             color: #d1d5db;
+
             line-height: 1.6;
         }
 
+        /* =========================
+           BUTTON-BEREICH
+        ========================= */
+
+        .button-container {
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            gap: 15px;
+
+            flex-wrap: wrap;
+
+            margin-top: 30px;
+        }
 
         /* =========================
            ZURÜCK BUTTON
@@ -229,19 +284,186 @@
 
         .back-button {
             display: inline-block;
-            margin-top: 30px;
+
             padding: 12px 20px;
+
             background: #374151;
+
             color: white;
+
             text-decoration: none;
+
             border-radius: 8px;
+
             transition: 0.2s;
+
+            border: none;
+
+            cursor: pointer;
+
+            font-size: 16px;
         }
 
         .back-button:hover {
             background: #4b5563;
         }
 
+        /* =========================
+           TEAMLER BUTTON
+        ========================= */
+
+        .teamler-button {
+            background: #2563eb;
+        }
+
+        .teamler-button:hover {
+            background: #1d4ed8;
+        }
+
+        /* =========================
+           LOGIN-BEREICH
+        ========================= */
+
+        .login-box {
+            display: none;
+
+            position: fixed;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            background: rgba(0, 0, 0, 0.75);
+
+            justify-content: center;
+
+            align-items: center;
+
+            padding: 20px;
+
+            z-index: 9999;
+        }
+
+        .login-content {
+            width: 100%;
+            max-width: 420px;
+
+            background: #1f2937;
+
+            padding: 30px;
+
+            border-radius: 15px;
+
+            box-shadow:
+                0 10px 40px rgba(0, 0, 0, 0.5);
+
+            text-align: center;
+        }
+
+        .login-content h2 {
+            margin-top: 0;
+
+            font-size: 28px;
+        }
+
+        .login-content p {
+            color: #9ca3af;
+
+            margin-bottom: 25px;
+        }
+
+        .login-content input {
+            width: 100%;
+
+            padding: 13px;
+
+            border: none;
+
+            border-radius: 8px;
+
+            background: #374151;
+
+            color: white;
+
+            font-size: 16px;
+
+            outline: none;
+
+            margin-bottom: 15px;
+        }
+
+        .login-content input:focus {
+            box-shadow:
+                0 0 0 2px #2563eb;
+        }
+
+        .login-submit {
+            width: 100%;
+
+            padding: 13px;
+
+            background: #2563eb;
+
+            color: white;
+
+            border: none;
+
+            border-radius: 8px;
+
+            font-size: 16px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: 0.2s;
+        }
+
+        .login-submit:hover {
+            background: #1d4ed8;
+        }
+
+        .login-cancel {
+            width: 100%;
+
+            padding: 13px;
+
+            margin-top: 10px;
+
+            background: #374151;
+
+            color: white;
+
+            border: none;
+
+            border-radius: 8px;
+
+            font-size: 16px;
+
+            cursor: pointer;
+
+            transition: 0.2s;
+        }
+
+        .login-cancel:hover {
+            background: #4b5563;
+        }
+
+        .login-error {
+            display: none;
+
+            margin-top: 15px;
+
+            padding: 10px;
+
+            background: #991b1b;
+
+            color: white;
+
+            border-radius: 8px;
+        }
 
         /* =========================
            HANDY
@@ -259,6 +481,7 @@
 
             nav {
                 padding: 15px;
+
                 gap: 8px;
             }
 
@@ -269,8 +492,11 @@
             .container {
                 padding: 25px 15px;
             }
+
         }
+
     </style>
+
 </head>
 
 
@@ -311,7 +537,9 @@
 
         <div class="header">
 
-            <h1>🖥️ Server Status</h1>
+            <h1>
+                🖥️ Server Status
+            </h1>
 
             <p>
                 Aktueller Status der GAMING.LUXUS Server
@@ -326,7 +554,9 @@
 
         <div class="info-box">
 
-            <h2>ℹ️ Erklärung</h2>
+            <h2>
+                ℹ️ Erklärung
+            </h2>
 
             <p>
                 Vor dem Doppelpunkt steht jeweils der Name des Servers.
@@ -340,16 +570,28 @@
             </p>
 
             <p>
-                <strong>TPS</strong> steht für Ticks per Second.
-                <strong>MSPT</strong> steht für Milliseconds per Tick.
+                <strong>TPS</strong>
+                steht für Ticks per Second.
+
+                <strong>MSPT</strong>
+                steht für Milliseconds per Tick.
             </p>
 
             <p>
-                🟢 <strong>Online</strong> = Server ist online
+
+                🟢 <strong>Online</strong>
+                = Server ist online
+
                 <br>
-                🔴 <strong>Offline</strong> = Server ist offline
+
+                🔴 <strong>Offline</strong>
+                = Server ist offline
+
                 <br>
-                🟠 <strong>Wartung</strong> = Server befindet sich momentan in Wartung
+
+                🟠 <strong>Wartung</strong>
+                = Server befindet sich momentan in Wartung
+
             </p>
 
         </div>
@@ -377,13 +619,27 @@
                 <div class="stats">
 
                     <div class="stat">
-                        <span class="stat-title">TPS</span>
-                        <span class="stat-value">22.17</span>
+
+                        <span class="stat-title">
+                            TPS
+                        </span>
+
+                        <span class="stat-value">
+                            22.17
+                        </span>
+
                     </div>
 
                     <div class="stat">
-                        <span class="stat-title">MSPT</span>
-                        <span class="stat-value">1.77</span>
+
+                        <span class="stat-title">
+                            MSPT
+                        </span>
+
+                        <span class="stat-value">
+                            1.77
+                        </span>
+
                     </div>
 
                 </div>
@@ -406,13 +662,27 @@
                 <div class="stats">
 
                     <div class="stat">
-                        <span class="stat-title">TPS</span>
-                        <span class="stat-value">0.00</span>
+
+                        <span class="stat-title">
+                            TPS
+                        </span>
+
+                        <span class="stat-value">
+                            0.00
+                        </span>
+
                     </div>
 
                     <div class="stat">
-                        <span class="stat-title">MSPT</span>
-                        <span class="stat-value">0.00</span>
+
+                        <span class="stat-title">
+                            MSPT
+                        </span>
+
+                        <span class="stat-value">
+                            0.00
+                        </span>
+
                     </div>
 
                 </div>
@@ -435,13 +705,27 @@
                 <div class="stats">
 
                     <div class="stat">
-                        <span class="stat-title">TPS</span>
-                        <span class="stat-value">0.00</span>
+
+                        <span class="stat-title">
+                            TPS
+                        </span>
+
+                        <span class="stat-value">
+                            0.00
+                        </span>
+
                     </div>
 
                     <div class="stat">
-                        <span class="stat-title">MSPT</span>
-                        <span class="stat-value">0.00</span>
+
+                        <span class="stat-title">
+                            MSPT
+                        </span>
+
+                        <span class="stat-value">
+                            0.00
+                        </span>
+
                     </div>
 
                 </div>
@@ -464,13 +748,27 @@
                 <div class="stats">
 
                     <div class="stat">
-                        <span class="stat-title">TPS</span>
-                        <span class="stat-value">17.28</span>
+
+                        <span class="stat-title">
+                            TPS
+                        </span>
+
+                        <span class="stat-value">
+                            17.28
+                        </span>
+
                     </div>
 
                     <div class="stat">
-                        <span class="stat-title">MSPT</span>
-                        <span class="stat-value">2.21</span>
+
+                        <span class="stat-title">
+                            MSPT
+                        </span>
+
+                        <span class="stat-value">
+                            2.21
+                        </span>
+
                     </div>
 
                 </div>
@@ -493,13 +791,27 @@
                 <div class="stats">
 
                     <div class="stat">
-                        <span class="stat-title">TPS</span>
-                        <span class="stat-value">27.04</span>
+
+                        <span class="stat-title">
+                            TPS
+                        </span>
+
+                        <span class="stat-value">
+                            27.04
+                        </span>
+
                     </div>
 
                     <div class="stat">
-                        <span class="stat-title">MSPT</span>
-                        <span class="stat-value">0.92</span>
+
+                        <span class="stat-title">
+                            MSPT
+                        </span>
+
+                        <span class="stat-value">
+                            0.92
+                        </span>
+
                     </div>
 
                 </div>
@@ -522,13 +834,27 @@
                 <div class="stats">
 
                     <div class="stat">
-                        <span class="stat-title">TPS</span>
-                        <span class="stat-value">0.00</span>
+
+                        <span class="stat-title">
+                            TPS
+                        </span>
+
+                        <span class="stat-value">
+                            0.00
+                        </span>
+
                     </div>
 
                     <div class="stat">
-                        <span class="stat-title">MSPT</span>
-                        <span class="stat-value">0.00</span>
+
+                        <span class="stat-title">
+                            MSPT
+                        </span>
+
+                        <span class="stat-value">
+                            0.00
+                        </span>
+
                     </div>
 
                 </div>
@@ -551,13 +877,27 @@
                 <div class="stats">
 
                     <div class="stat">
-                        <span class="stat-title">TPS</span>
-                        <span class="stat-value">14.15</span>
+
+                        <span class="stat-title">
+                            TPS
+                        </span>
+
+                        <span class="stat-value">
+                            14.15
+                        </span>
+
                     </div>
 
                     <div class="stat">
-                        <span class="stat-title">MSPT</span>
-                        <span class="stat-value">0.45</span>
+
+                        <span class="stat-title">
+                            MSPT
+                        </span>
+
+                        <span class="stat-value">
+                            0.45
+                        </span>
+
                     </div>
 
                 </div>
@@ -580,13 +920,27 @@
                 <div class="stats">
 
                     <div class="stat">
-                        <span class="stat-title">TPS</span>
-                        <span class="stat-value">0.14</span>
+
+                        <span class="stat-title">
+                            TPS
+                        </span>
+
+                        <span class="stat-value">
+                            0.14
+                        </span>
+
                     </div>
 
                     <div class="stat">
-                        <span class="stat-title">MSPT</span>
-                        <span class="stat-value">21.25</span>
+
+                        <span class="stat-title">
+                            MSPT
+                        </span>
+
+                        <span class="stat-value">
+                            21.25
+                        </span>
+
                     </div>
 
                 </div>
@@ -609,13 +963,27 @@
                 <div class="stats">
 
                     <div class="stat">
-                        <span class="stat-title">TPS</span>
-                        <span class="stat-value">17.87</span>
+
+                        <span class="stat-title">
+                            TPS
+                        </span>
+
+                        <span class="stat-value">
+                            17.87
+                        </span>
+
                     </div>
 
                     <div class="stat">
-                        <span class="stat-title">MSPT</span>
-                        <span class="stat-value">14.80</span>
+
+                        <span class="stat-title">
+                            MSPT
+                        </span>
+
+                        <span class="stat-value">
+                            14.80
+                        </span>
+
                     </div>
 
                 </div>
@@ -638,13 +1006,27 @@
                 <div class="stats">
 
                     <div class="stat">
-                        <span class="stat-title">TPS</span>
-                        <span class="stat-value">74.41</span>
+
+                        <span class="stat-title">
+                            TPS
+                        </span>
+
+                        <span class="stat-value">
+                            74.41
+                        </span>
+
                     </div>
 
                     <div class="stat">
-                        <span class="stat-title">MSPT</span>
-                        <span class="stat-value">87.47</span>
+
+                        <span class="stat-title">
+                            MSPT
+                        </span>
+
+                        <span class="stat-value">
+                            87.47
+                        </span>
+
                     </div>
 
                 </div>
@@ -667,13 +1049,27 @@
                 <div class="stats">
 
                     <div class="stat">
-                        <span class="stat-title">TPS</span>
-                        <span class="stat-value">4.14</span>
+
+                        <span class="stat-title">
+                            TPS
+                        </span>
+
+                        <span class="stat-value">
+                            4.14
+                        </span>
+
                     </div>
 
                     <div class="stat">
-                        <span class="stat-title">MSPT</span>
-                        <span class="stat-value">7.14</span>
+
+                        <span class="stat-title">
+                            MSPT
+                        </span>
+
+                        <span class="stat-value">
+                            7.14
+                        </span>
+
                     </div>
 
                 </div>
@@ -696,13 +1092,27 @@
                 <div class="stats">
 
                     <div class="stat">
-                        <span class="stat-title">TPS</span>
-                        <span class="stat-value">4.84</span>
+
+                        <span class="stat-title">
+                            TPS
+                        </span>
+
+                        <span class="stat-value">
+                            4.84
+                        </span>
+
                     </div>
 
                     <div class="stat">
-                        <span class="stat-title">MSPT</span>
-                        <span class="stat-value">2.54</span>
+
+                        <span class="stat-title">
+                            MSPT
+                        </span>
+
+                        <span class="stat-value">
+                            2.54
+                        </span>
+
                     </div>
 
                 </div>
@@ -725,13 +1135,27 @@
                 <div class="stats">
 
                     <div class="stat">
-                        <span class="stat-title">TPS</span>
-                        <span class="stat-value">—</span>
+
+                        <span class="stat-title">
+                            TPS
+                        </span>
+
+                        <span class="stat-value">
+                            —
+                        </span>
+
                     </div>
 
                     <div class="stat">
-                        <span class="stat-title">MSPT</span>
-                        <span class="stat-value">—</span>
+
+                        <span class="stat-title">
+                            MSPT
+                        </span>
+
+                        <span class="stat-value">
+                            —
+                        </span>
+
                     </div>
 
                 </div>
@@ -739,9 +1163,7 @@
             </div>
 
 
-        </div>
-        
- <!-- PVP-1  --->
+            <!-- PVP-1 -->
 
             <div class="server-card offline">
 
@@ -756,18 +1178,35 @@
                 <div class="stats">
 
                     <div class="stat">
-                        <span class="stat-title">TPS</span>
-                        <span class="stat-value">0.00</span>
+
+                        <span class="stat-title">
+                            TPS
+                        </span>
+
+                        <span class="stat-value">
+                            0.00
+                        </span>
+
                     </div>
 
                     <div class="stat">
-                        <span class="stat-title">MSPT</span>
-                        <span class="stat-value">0.00</span>
+
+                        <span class="stat-title">
+                            MSPT
+                        </span>
+
+                        <span class="stat-value">
+                            0.00
+                        </span>
+
                     </div>
 
                 </div>
 
             </div>
+
+
+        </div>
 
 
         <!-- =========================
@@ -776,7 +1215,9 @@
 
         <div class="total-box">
 
-            <h2>Verfügbare Server</h2>
+            <h2>
+                Verfügbare Server
+            </h2>
 
             <div class="total-number">
                 9 / 13
@@ -787,27 +1228,222 @@
             </p>
 
             <div class="status-info">
+
                 🟢 9 Online
                 &nbsp;&nbsp;|&nbsp;&nbsp;
+
                 🔴 4 Offline
                 &nbsp;&nbsp;|&nbsp;&nbsp;
+
                 🟠 1 Wartung
+
             </div>
 
         </div>
 
 
-
         <!-- =========================
-             ZURÜCK
+             BUTTONS
         ========================= -->
 
-        <a href="index.html" class="back-button">
-            ⬅️ Zurück zur Startseite
-        </a>
+        <div class="button-container">
+
+            <a
+                href="index.html"
+                class="back-button"
+            >
+                ⬅️ Zurück zur Startseite
+            </a>
+
+
+            <button
+                class="back-button teamler-button"
+                onclick="openLogin()"
+            >
+                🔐 Teamler Login
+            </button>
+
+        </div>
 
 
     </main>
 
+
+    <!-- =========================
+         TEAMLER LOGIN
+    ========================= -->
+
+    <div
+        id="loginBox"
+        class="login-box"
+    >
+
+        <div class="login-content">
+
+            <h2>
+                🔐 Teamler Login
+            </h2>
+
+            <p>
+                Bitte gib das Teamler-Passwort ein.
+            </p>
+
+
+            <input
+                type="password"
+                id="teamlerPassword"
+                placeholder="Passwort"
+                onkeydown="if(event.key === 'Enter') login()"
+            >
+
+
+            <button
+                class="login-submit"
+                onclick="login()"
+            >
+                🔓 Einloggen
+            </button>
+
+
+            <button
+                class="login-cancel"
+                onclick="closeLogin()"
+            >
+                Abbrechen
+            </button>
+
+
+            <div
+                id="loginError"
+                class="login-error"
+            >
+                ❌ Falsches Passwort!
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================= -->
+
+    <script>
+
+        /*
+         * ==========================================
+         * TEAMLER-PASSWORT
+         * ==========================================
+         *
+         * HIER DEIN PASSWORT EINTRAGEN.
+         *
+         * Beispiel:
+         *
+         * const TEAMLER_PASSWORT = "MeinPasswort123";
+         *
+         */
+
+        const TEAMLER_PASSWORT = "DEIN_PASSWORT";
+
+
+        /*
+         * LOGIN-FENSTER ÖFFNEN
+         */
+
+        function openLogin() {
+
+            document.getElementById("loginBox").style.display = "flex";
+
+            document.getElementById("teamlerPassword").value = "";
+
+            document.getElementById("loginError").style.display = "none";
+
+            setTimeout(function () {
+
+                document
+                    .getElementById("teamlerPassword")
+                    .focus();
+
+            }, 100);
+
+        }
+
+
+        /*
+         * LOGIN-FENSTER SCHLIESSEN
+         */
+
+        function closeLogin() {
+
+            document.getElementById("loginBox").style.display = "none";
+
+            document.getElementById("teamlerPassword").value = "";
+
+            document.getElementById("loginError").style.display = "none";
+
+        }
+
+
+        /*
+         * EINLOGGEN
+         */
+
+        function login() {
+
+            const eingegebenesPasswort =
+                document.getElementById("teamlerPassword").value;
+
+
+            if (eingegebenesPasswort === TEAMLER_PASSWORT) {
+
+                /*
+                 * HIER WIRD FESTGELEGT,
+                 * WO ES NACH DEM LOGIN HINGEHT.
+                 *
+                 * Später können wir hier z.B.
+                 * teamler.html verwenden.
+                 */
+
+                window.location.href = "teamler.html";
+
+            }
+
+            else {
+
+                document.getElementById("loginError").style.display = "block";
+
+                document.getElementById("teamlerPassword").value = "";
+
+                document
+                    .getElementById("teamlerPassword")
+                    .focus();
+
+            }
+
+        }
+
+
+        /*
+         * KLICK AUF DEN HINTERGRUND
+         * SCHLIESST DAS LOGIN-FENSTER
+         */
+
+        document
+            .getElementById("loginBox")
+            .addEventListener("click", function(event) {
+
+                if (event.target === this) {
+
+                    closeLogin();
+
+                }
+
+            });
+
+    </script>
+
+
 </body>
+
 </html>
