@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="de">
 
@@ -21,44 +22,25 @@
             color: white;
         }
 
-
-        /* =========================
-           NAVIGATION
-        ========================= */
-
         nav {
             background: #1f2937;
-
             padding: 14px 18px;
-
             display: flex;
             align-items: center;
-
             gap: 10px;
-
             flex-wrap: wrap;
-
-            box-shadow:
-                0 4px 15px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
         }
 
         nav a {
             color: white;
-
             text-decoration: none;
-
             font-size: 20px;
-
             padding: 14px 20px;
-
             border-radius: 10px;
-
             transition: 0.2s;
-
             display: inline-flex;
-
             align-items: center;
-
             gap: 8px;
         }
 
@@ -70,77 +52,46 @@
             background: #374151;
         }
 
-
-        /* =========================
-           HAUPTBEREICH
-        ========================= */
-
         .container {
             max-width: 1000px;
-
             margin: auto;
-
             padding: 35px 20px;
         }
 
         .header {
             text-align: center;
-
             margin-bottom: 35px;
         }
 
         .header h1 {
             font-size: 40px;
-
             margin-bottom: 10px;
         }
 
         .header p {
             color: #d1d5db;
-
             font-size: 16px;
         }
 
-
-        /* =========================
-           KATEGORIEN
-        ========================= */
-
         .category {
             background: #1f2937;
-
             border-radius: 15px;
-
             margin-bottom: 25px;
-
             padding: 25px;
-
-            box-shadow:
-                0 6px 20px rgba(0, 0, 0, 0.25);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
         }
 
         .category h2 {
             margin-top: 0;
-
             margin-bottom: 20px;
-
             font-size: 25px;
         }
 
-
-        /* =========================
-           EINZELNE REGEL
-        ========================= */
-
         .rule {
             background: #374151;
-
             padding: 15px;
-
             margin: 10px 0;
-
             border-radius: 10px;
-
             line-height: 1.5;
         }
 
@@ -148,58 +99,30 @@
             color: #60a5fa;
         }
 
-
-        /* =========================
-           BUTTON-BEREICH
-        ========================= */
-
         .button-container {
             display: flex;
-
             align-items: center;
-
             gap: 15px;
-
             flex-wrap: wrap;
-
             margin-top: 10px;
         }
 
-
-        /* =========================
-           BUTTONS
-        ========================= */
-
         .back-button {
             display: inline-block;
-
             padding: 12px 20px;
-
             background: #374151;
-
             color: white;
-
             text-decoration: none;
-
             border-radius: 8px;
-
             border: none;
-
             font-size: 16px;
-
             cursor: pointer;
-
             transition: 0.2s;
         }
 
         .back-button:hover {
             background: #4b5563;
         }
-
-
-        /* =========================
-           TEAMLER BUTTON
-        ========================= */
 
         .teamler-button {
             background: #2563eb;
@@ -209,193 +132,157 @@
             background: #1d4ed8;
         }
 
+        /* =========================
+           REGELN AKZEPTIEREN BUTTON
+        ========================= */
+
+        .rules-accept-button {
+            background: #16a34a;
+        }
+
+        .rules-accept-button:hover {
+            background: #15803d;
+        }
 
         /* =========================
            LOGIN FENSTER
         ========================= */
 
         .login-box {
-
             display: none;
-
             position: fixed;
-
             top: 0;
             left: 0;
-
             width: 100%;
             height: 100%;
-
             background: rgba(0, 0, 0, 0.75);
-
             justify-content: center;
-
             align-items: center;
-
             padding: 20px;
-
             z-index: 9999;
         }
 
-
-        /* =========================
-           LOGIN INHALT
-        ========================= */
-
         .login-content {
-
             width: 100%;
-
             max-width: 420px;
-
             background: #1f2937;
-
             padding: 30px;
-
             border-radius: 15px;
-
-            box-shadow:
-                0 10px 40px rgba(0, 0, 0, 0.5);
-
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
             text-align: center;
         }
 
         .login-content h2 {
-
             margin-top: 0;
-
             font-size: 28px;
         }
 
         .login-content p {
-
             color: #d1d5db;
-
             margin-bottom: 25px;
         }
 
-
-        /* =========================
-           PASSWORT FELD
-        ========================= */
-
         .login-content input {
-
             width: 100%;
-
             padding: 13px;
-
             border: none;
-
             border-radius: 8px;
-
             background: #374151;
-
             color: white;
-
             font-size: 16px;
-
             outline: none;
-
             margin-bottom: 15px;
         }
 
         .login-content input:focus {
-
-            box-shadow:
-                0 0 0 2px #2563eb;
+            box-shadow: 0 0 0 2px #2563eb;
         }
 
-
-        /* =========================
-           LOGIN BUTTON
-        ========================= */
-
         .login-submit {
-
             width: 100%;
-
             padding: 13px;
-
             background: #2563eb;
-
             color: white;
-
             border: none;
-
             border-radius: 8px;
-
             font-size: 16px;
-
             font-weight: bold;
-
             cursor: pointer;
-
             transition: 0.2s;
         }
 
         .login-submit:hover {
-
             background: #1d4ed8;
         }
 
-
-        /* =========================
-           ABBRECHEN BUTTON
-        ========================= */
-
         .login-cancel {
-
             width: 100%;
-
             padding: 13px;
-
             margin-top: 10px;
-
             background: #374151;
-
             color: white;
-
             border: none;
-
             border-radius: 8px;
-
             font-size: 16px;
-
             cursor: pointer;
-
             transition: 0.2s;
         }
 
         .login-cancel:hover {
-
             background: #4b5563;
         }
 
-
-        /* =========================
-           FEHLERMELDUNG
-        ========================= */
-
         .login-error {
-
             display: none;
-
             margin-top: 15px;
-
             padding: 10px;
-
             background: #991b1b;
-
             color: white;
-
             border-radius: 8px;
         }
 
-
         /* =========================
-           HANDY
+           REGELN AKZEPTIEREN FENSTER
         ========================= */
+
+        .rules-checkbox {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-align: left;
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        .rules-checkbox input {
+            width: 20px;
+            height: 20px;
+            margin: 0;
+            cursor: pointer;
+            box-shadow: none;
+        }
+
+        .rules-checkbox input:focus {
+            box-shadow: none;
+        }
+
+        .rules-error {
+            display: none;
+            margin-top: 15px;
+            padding: 10px;
+            background: #991b1b;
+            color: white;
+            border-radius: 8px;
+        }
+
+        .rules-success {
+            display: none;
+            margin-top: 15px;
+            padding: 10px;
+            background: #166534;
+            color: white;
+            border-radius: 8px;
+        }
 
         @media (max-width: 700px) {
 
@@ -405,7 +292,6 @@
 
             nav a {
                 font-size: 16px;
-
                 padding: 11px 13px;
             }
 
@@ -431,13 +317,11 @@
 
             .button-container {
                 flex-direction: column;
-
                 align-items: stretch;
             }
 
             .back-button {
                 text-align: center;
-
                 width: 100%;
             }
 
@@ -447,13 +331,7 @@
 
 </head>
 
-
 <body>
-
-
-<!-- =========================
-     NAVIGATION
-========================= -->
 
     <nav>
 
@@ -465,7 +343,7 @@
             ⚠️ Wartungszeiten
         </a>
 
-        <a href="regeln.html"  class="active">
+        <a href="regeln.html" class="active">
             ❗ Regeln
         </a>
 
@@ -476,7 +354,7 @@
         <a href="bewertung.html">
             ⭐ Bewertung
         </a>
-        
+
         <a href="news.html">
             📰 News
         </a>
@@ -484,759 +362,671 @@
     </nav>
 
 
-<!-- =========================
-     HAUPTINHALT
-========================= -->
+    <main class="container">
 
-<main class="container">
+        <div class="header">
+
+            <h1>
+                📜 GAMING.LUXUS Regeln
+            </h1>
+
+            <p>
+                Regeln für ein faires und angenehmes Spielerlebnis
+            </p>
+
+        </div>
 
 
-    <div class="header">
+        <!-- DEINE REGELN BLEIBEN HIER UNVERÄNDERT -->
 
-        <h1>
-            📜 GAMING.LUXUS Regeln
-        </h1>
+        <!-- =========================
+             ALLGEMEINE REGELN
+        ========================= -->
 
-        <p>
-            Regeln für ein faires und angenehmes Spielerlebnis
-        </p>
+        <section class="category">
+
+            <h2>
+                📜 Allgemeine Regeln
+            </h2>
+
+            <div class="rule">
+                <strong>Regel 1:</strong>
+                Jeder Spieler muss die Serverregeln beachten.
+            </div>
+
+            <div class="rule">
+                <strong>Regel 2:</strong>
+                Unwissenheit über die Regeln schützt nicht vor einer Strafe.
+            </div>
+
+            <div class="rule">
+                <strong>Regel 3:</strong>
+                Ein respektvoller Umgang miteinander ist Pflicht.
+            </div>
+
+            <div class="rule">
+                <strong>Regel 4:</strong>
+                Das absichtliche Ausnutzen von Regel-Lücken ist nicht erlaubt.
+            </div>
+
+            <div class="rule">
+                <strong>Regel 5:</strong>
+                Anweisungen des Serverteams sind zu beachten.
+            </div>
+
+            <div class="rule">
+                <strong>Regel 6:</strong>
+                Absichtliches Provozieren anderer Spieler ist verboten.
+            </div>
+
+            <div class="rule">
+                <strong>Regel 7:</strong>
+                Falsche Meldungen gegen andere Spieler dürfen nicht absichtlich erstellt werden.
+            </div>
+
+            <div class="rule">
+                <strong>Regel 8:</strong>
+                Das Ausgeben als Teammitglied ist verboten.
+            </div>
+
+            <div class="rule">
+                <strong>Regel 9:</strong>
+                Das absichtliche Umgehen von Serverregeln ist verboten.
+            </div>
+
+            <div class="rule">
+                <strong>Regel 10:</strong>
+                Habt Spaß und behandelt andere so, wie ihr selbst behandelt werden möchtet.
+            </div>
+
+        </section>
+
+
+        <section class="category">
+
+            <h2>💬 Chat & Kommunikation</h2>
+
+            <div class="rule"><strong>Regel 11:</strong> Kein Spam.</div>
+            <div class="rule"><strong>Regel 12:</strong> Kein Flooding.</div>
+            <div class="rule"><strong>Regel 13:</strong> Keine Beleidigungen.</div>
+            <div class="rule"><strong>Regel 14:</strong> Kein Mobbing.</div>
+            <div class="rule"><strong>Regel 15:</strong> Keine Drohungen.</div>
+            <div class="rule"><strong>Regel 16:</strong> Keine diskriminierenden Äußerungen.</div>
+            <div class="rule"><strong>Regel 17:</strong> Keine unangemessenen sexuellen Inhalte.</div>
+            <div class="rule"><strong>Regel 18:</strong> Keine persönlichen Daten anderer Spieler veröffentlichen.</div>
+            <div class="rule"><strong>Regel 19:</strong> Keine absichtlichen Provokationen im Chat.</div>
+            <div class="rule"><strong>Regel 20:</strong> Öffentliche Streitigkeiten sollen nicht unnötig im Chat ausgetragen werden.</div>
+
+        </section>
+
+
+        <section class="category">
+
+            <h2>🤝 Verhalten</h2>
+
+            <div class="rule"><strong>Regel 21:</strong> Alle Spieler sind fair und respektvoll zu behandeln.</div>
+            <div class="rule"><strong>Regel 22:</strong> Persönliche Streitigkeiten dürfen nicht auf andere Spieler übertragen werden.</div>
+            <div class="rule"><strong>Regel 23:</strong> Spieler dürfen nicht absichtlich gemobbt werden.</div>
+            <div class="rule"><strong>Regel 24:</strong> Das absichtliche Provozieren anderer Spieler ist verboten.</div>
+            <div class="rule"><strong>Regel 25:</strong> Betrug und Täuschung anderer Spieler sind verboten.</div>
+            <div class="rule"><strong>Regel 26:</strong> Andere Spieler sollen bei Fragen unterstützt werden.</div>
+
+        </section>
+
+
+        <section class="category">
+
+            <h2>🏠 Bauen & Griefing</h2>
+
+            <div class="rule"><strong>Regel 27:</strong> Fremde Gebäude dürfen nicht absichtlich zerstört werden.</div>
+            <div class="rule"><strong>Regel 28:</strong> Fremde Kisten dürfen nicht ohne Erlaubnis geleert werden.</div>
+            <div class="rule"><strong>Regel 29:</strong> Fremde Grundstücke dürfen nicht absichtlich blockiert werden.</div>
+            <div class="rule"><strong>Regel 30:</strong> Keine absichtlichen Lava- oder Wasserfallen an fremden Grundstücken.</div>
+            <div class="rule"><strong>Regel 31:</strong> Keine unnötige Zerstörung der Landschaft.</div>
+            <div class="rule"><strong>Regel 32:</strong> Nicht ohne Erlaubnis in fremde Gebäude bauen.</div>
+            <div class="rule"><strong>Regel 33:</strong> Die Bauwerke anderer Spieler sind zu respektieren.</div>
+
+        </section>
+
+
+        <section class="category">
+
+            <h2>⚔️ PvP</h2>
+
+            <div class="rule"><strong>Regel 34:</strong> PvP darf nur dort stattfinden, wo es erlaubt ist.</div>
+            <div class="rule"><strong>Regel 35:</strong> Kein unerlaubtes Töten anderer Spieler.</div>
+            <div class="rule"><strong>Regel 36:</strong> Kein Spawn-Killing.</div>
+            <div class="rule"><strong>Regel 37:</strong> Keine unerlaubten PvP-Fallen.</div>
+            <div class="rule"><strong>Regel 38:</strong> Kein Ausnutzen von Bugs im Kampf.</div>
+
+        </section>
+
+
+        <section class="category">
+
+            <h2>🌳 SMP</h2>
+
+            <div class="rule"><strong>Regel 39:</strong> Ressourcen dürfen normal gesammelt werden.</div>
+            <div class="rule"><strong>Regel 40:</strong> Keine absichtliche Zerstörung der Landschaft.</div>
+            <div class="rule"><strong>Regel 41:</strong> Bäume sollten vollständig gefällt werden.</div>
+            <div class="rule"><strong>Regel 42:</strong> Keine riesigen sinnlosen Löcher nahe fremder Basen.</div>
+            <div class="rule"><strong>Regel 43:</strong> Fremde Farmen dürfen nicht ohne Erlaubnis benutzt werden.</div>
+            <div class="rule"><strong>Regel 44:</strong> Gemeinschaftsbereiche dürfen nicht absichtlich beschädigt werden.</div>
+
+        </section>
+
+
+        <section class="category">
+
+            <h2>💰 Handel & Wirtschaft</h2>
+
+            <div class="rule"><strong>Regel 45:</strong> Betrug beim Handel ist verboten.</div>
+            <div class="rule"><strong>Regel 46:</strong> Absprachen beim Handel müssen eingehalten werden.</div>
+            <div class="rule"><strong>Regel 47:</strong> Keine duplizierten Gegenstände verwenden.</div>
+            <div class="rule"><strong>Regel 48:</strong> Keine illegal erworbenen Items verkaufen.</div>
+            <div class="rule"><strong>Regel 49:</strong> Keine Fake-Shops oder irreführenden Angebote.</div>
+
+        </section>
+
+
+        <section class="category">
+
+            <h2>🐛 Bugs & Exploits</h2>
+
+            <div class="rule"><strong>Regel 50:</strong> Bugs dürfen nicht absichtlich ausgenutzt werden.</div>
+            <div class="rule"><strong>Regel 51:</strong> Schwere Bugs sollen dem Team gemeldet werden.</div>
+            <div class="rule"><strong>Regel 52:</strong> Keine Duplizierungs-Bugs ausnutzen.</div>
+            <div class="rule"><strong>Regel 53:</strong> Keine Exploits zur Umgehung von Schutzsystemen.</div>
+
+        </section>
+
+
+        <section class="category">
+
+            <h2>🖥️ Mods & Cheats</h2>
+
+            <div class="rule"><strong>Regel 54:</strong> Cheats sind verboten.</div>
+            <div class="rule"><strong>Regel 55:</strong> X-Ray ist verboten.</div>
+            <div class="rule"><strong>Regel 56:</strong> KillAura und vergleichbare Cheats sind verboten.</div>
+            <div class="rule"><strong>Regel 57:</strong> Fly- und Speed-Hacks sind verboten.</div>
+            <div class="rule"><strong>Regel 58:</strong> Keine Programme verwenden, die einen unfairen Vorteil verschaffen.</div>
+
+        </section>
+
+
+        <section class="category">
+
+            <h2>👤 Accounts</h2>
+
+            <div class="rule"><strong>Regel 59:</strong> Das Ausgeben als eine andere Person ist verboten.</div>
+            <div class="rule"><strong>Regel 60:</strong> Das Ausgeben als Teammitglied ist verboten.</div>
+            <div class="rule"><strong>Regel 61:</strong> Das Umgehen eines Banns mit einem Zweitaccount ist verboten.</div>
+            <div class="rule"><strong>Regel 62:</strong> Keine Accounts erstellen, um Strafen zu umgehen.</div>
+
+        </section>
+
+
+        <section class="category">
+
+            <h2>📢 Werbung</h2>
+
+            <div class="rule"><strong>Regel 63:</strong> Keine Werbung für andere Minecraft-Server ohne Erlaubnis.</div>
+            <div class="rule"><strong>Regel 64:</strong> Keine Werbung für fremde Discord-Server ohne Erlaubnis.</div>
+            <div class="rule"><strong>Regel 65:</strong> Keine Spam-Werbung.</div>
+            <div class="rule"><strong>Regel 66:</strong> Keine schädlichen oder betrügerischen Links verbreiten.</div>
+
+        </section>
+
+
+        <section class="category">
+
+            <h2>🔒 Sicherheit</h2>
+
+            <div class="rule"><strong>Regel 67:</strong> Keine persönlichen Daten anderer Spieler veröffentlichen.</div>
+            <div class="rule"><strong>Regel 68:</strong> Keine IP-Adressen anderer Spieler veröffentlichen.</div>
+            <div class="rule"><strong>Regel 69:</strong> Keine Versuche, Accounts anderer Spieler zu übernehmen.</div>
+            <div class="rule"><strong>Regel 70:</strong> Keine schädlichen Dateien oder Links verbreiten.</div>
+
+        </section>
+
+
+        <section class="category">
+
+            <h2>⚖️ Strafen & Sanktionen</h2>
+
+            <div class="rule"><strong>Regel 71:</strong> Je nach Verstoß können Verwarnungen ausgesprochen werden.</div>
+            <div class="rule"><strong>Regel 72:</strong> Wiederholte Regelverstöße können härter bestraft werden.</div>
+            <div class="rule"><strong>Regel 73:</strong> Mutes, Kicks und Banns können je nach Situation eingesetzt werden.</div>
+            <div class="rule"><strong>Regel 74:</strong> Schwere Verstöße können zu einem längeren oder permanenten Bann führen.</div>
+            <div class="rule"><strong>Regel 75:</strong> Strafen dürfen nicht absichtlich umgangen werden.</div>
+
+        </section>
+
+
+        <!-- =========================
+             BUTTONS
+        ========================= -->
+
+        <div class="button-container">
+
+            <a
+                href="index.html"
+                class="back-button"
+            >
+                ⬅️ Zurück zur Startseite
+            </a>
+
+            <button
+                type="button"
+                class="back-button teamler-button"
+                onclick="openLogin()"
+            >
+                👥 Teamler Login
+            </button>
+
+            <!-- NEU -->
+            <button
+                type="button"
+                class="back-button rules-accept-button"
+                onclick="openRulesAccept()"
+            >
+                📜 Regeln akzeptieren
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <!-- =========================
+         TEAMLER LOGIN
+    ========================= -->
+
+    <div
+        id="loginBox"
+        class="login-box"
+    >
+
+        <div class="login-content">
+
+            <h2>
+                👥 Teamler Login
+            </h2>
+
+            <p>
+                Bitte geben Sie das Passwort ein!
+            </p>
+
+            <input
+                type="password"
+                id="teamlerPassword"
+                placeholder="Hier Passwort eingeben!"
+                onkeydown="if(event.key === 'Enter') login()"
+            >
+
+            <button
+                type="button"
+                class="login-submit"
+                onclick="login()"
+            >
+                🔓 Einloggen
+            </button>
+
+            <button
+                type="button"
+                class="login-cancel"
+                onclick="closeLogin()"
+            >
+                ❌ Abbrechen
+            </button>
+
+            <div
+                id="loginError"
+                class="login-error"
+            >
+                ❌ Dieses Passwort ist falsch!
+            </div>
+
+        </div>
 
     </div>
 
 
     <!-- =========================
-         ALLGEMEINE REGELN
+         NEU: REGELN AKZEPTIEREN
     ========================= -->
 
-    <section class="category">
+    <div
+        id="rulesAcceptBox"
+        class="login-box"
+    >
 
-        <h2>
-            📜 Allgemeine Regeln
-        </h2>
+        <div class="login-content">
 
-        <div class="rule">
-            <strong>Regel 1:</strong>
-            Jeder Spieler muss die Serverregeln beachten.
-        </div>
-
-        <div class="rule">
-            <strong>Regel 2:</strong>
-            Unwissenheit über die Regeln schützt nicht vor einer Strafe.
-        </div>
-
-        <div class="rule">
-            <strong>Regel 3:</strong>
-            Ein respektvoller Umgang miteinander ist Pflicht.
-        </div>
-
-        <div class="rule">
-            <strong>Regel 4:</strong>
-            Das absichtliche Ausnutzen von Regel-Lücken ist nicht erlaubt.
-        </div>
-
-        <div class="rule">
-            <strong>Regel 5:</strong>
-            Anweisungen des Serverteams sind zu beachten.
-        </div>
-
-        <div class="rule">
-            <strong>Regel 6:</strong>
-            Absichtliches Provozieren anderer Spieler ist verboten.
-        </div>
-
-        <div class="rule">
-            <strong>Regel 7:</strong>
-            Falsche Meldungen gegen andere Spieler dürfen nicht absichtlich erstellt werden.
-        </div>
-
-        <div class="rule">
-            <strong>Regel 8:</strong>
-            Das Ausgeben als Teammitglied ist verboten.
-        </div>
-
-        <div class="rule">
-            <strong>Regel 9:</strong>
-            Das absichtliche Umgehen von Serverregeln ist verboten.
-        </div>
-
-        <div class="rule">
-            <strong>Regel 10:</strong>
-            Habt Spaß und behandelt andere so, wie ihr selbst behandelt werden möchtet.
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         CHAT
-    ========================= -->
-
-    <section class="category">
-
-        <h2>
-            💬 Chat & Kommunikation
-        </h2>
-
-        <div class="rule">
-            <strong>Regel 11:</strong>
-            Kein Spam.
-        </div>
-
-        <div class="rule">
-            <strong>Regel 12:</strong>
-            Kein Flooding.
-        </div>
-
-        <div class="rule">
-            <strong>Regel 13:</strong>
-            Keine Beleidigungen.
-        </div>
-
-        <div class="rule">
-            <strong>Regel 14:</strong>
-            Kein Mobbing.
-        </div>
-
-        <div class="rule">
-            <strong>Regel 15:</strong>
-            Keine Drohungen.
-        </div>
-
-        <div class="rule">
-            <strong>Regel 16:</strong>
-            Keine diskriminierenden Äußerungen.
-        </div>
-
-        <div class="rule">
-            <strong>Regel 17:</strong>
-            Keine unangemessenen sexuellen Inhalte.
-        </div>
-
-        <div class="rule">
-            <strong>Regel 18:</strong>
-            Keine persönlichen Daten anderer Spieler veröffentlichen.
-        </div>
-
-        <div class="rule">
-            <strong>Regel 19:</strong>
-            Keine absichtlichen Provokationen im Chat.
-        </div>
-
-        <div class="rule">
-            <strong>Regel 20:</strong>
-            Öffentliche Streitigkeiten sollen nicht unnötig im Chat ausgetragen werden.
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         VERHALTEN
-    ========================= -->
-
-    <section class="category">
-
-        <h2>
-            🤝 Verhalten
-        </h2>
-
-        <div class="rule">
-            <strong>Regel 21:</strong>
-            Alle Spieler sind fair und respektvoll zu behandeln.
-        </div>
-
-        <div class="rule">
-            <strong>Regel 22:</strong>
-            Persönliche Streitigkeiten dürfen nicht auf andere Spieler übertragen werden.
-        </div>
-
-        <div class="rule">
-            <strong>Regel 23:</strong>
-            Spieler dürfen nicht absichtlich gemobbt werden.
-        </div>
-
-        <div class="rule">
-            <strong>Regel 24:</strong>
-            Das absichtliche Provozieren anderer Spieler ist verboten.
-        </div>
-
-        <div class="rule">
-            <strong>Regel 25:</strong>
-            Betrug und Täuschung anderer Spieler sind verboten.
-        </div>
-
-        <div class="rule">
-            <strong>Regel 26:</strong>
-            Andere Spieler sollen bei Fragen unterstützt werden.
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         BAUEN
-    ========================= -->
-
-    <section class="category">
-
-        <h2>
-            🏠 Bauen & Griefing
-        </h2>
-
-        <div class="rule">
-            <strong>Regel 27:</strong>
-            Fremde Gebäude dürfen nicht absichtlich zerstört werden.
-        </div>
-
-        <div class="rule">
-            <strong>Regel 28:</strong>
-            Fremde Kisten dürfen nicht ohne Erlaubnis geleert werden.
-        </div>
-
-        <div class="rule">
-            <strong>Regel 29:</strong>
-            Fremde Grundstücke dürfen nicht absichtlich blockiert werden.
-        </div>
-
-        <div class="rule">
-            <strong>Regel 30:</strong>
-            Keine absichtlichen Lava- oder Wasserfallen an fremden Grundstücken.
-        </div>
-
-        <div class="rule">
-            <strong>Regel 31:</strong>
-            Keine unnötige Zerstörung der Landschaft.
-        </div>
-
-        <div class="rule">
-            <strong>Regel 32:</strong>
-            Nicht ohne Erlaubnis in fremde Gebäude bauen.
-        </div>
-
-        <div class="rule">
-            <strong>Regel 33:</strong>
-            Die Bauwerke anderer Spieler sind zu respektieren.
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         PVP
-    ========================= -->
-
-    <section class="category">
-
-        <h2>
-            ⚔️ PvP
-        </h2>
-
-        <div class="rule">
-            <strong>Regel 34:</strong>
-            PvP darf nur dort stattfinden, wo es erlaubt ist.
-        </div>
-
-        <div class="rule">
-            <strong>Regel 35:</strong>
-            Kein unerlaubtes Töten anderer Spieler.
-        </div>
-
-        <div class="rule">
-            <strong>Regel 36:</strong>
-            Kein Spawn-Killing.
-        </div>
-
-        <div class="rule">
-            <strong>Regel 37:</strong>
-            Keine unerlaubten PvP-Fallen.
-        </div>
-
-        <div class="rule">
-            <strong>Regel 38:</strong>
-            Kein Ausnutzen von Bugs im Kampf.
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         SMP
-    ========================= -->
-
-    <section class="category">
+            <h2>
+                📜 Regeln akzeptieren
+            </h2>
 
-        <h2>
-            🌳 SMP
-        </h2>
+            <p>
+                Bitte bestätige, dass du die GAMING.LUXUS Regeln gelesen hast und akzeptierst.
+            </p>
 
-        <div class="rule">
-            <strong>Regel 39:</strong>
-            Ressourcen dürfen normal gesammelt werden.
-        </div>
-
-        <div class="rule">
-            <strong>Regel 40:</strong>
-            Keine absichtliche Zerstörung der Landschaft.
-        </div>
-
-        <div class="rule">
-            <strong>Regel 41:</strong>
-            Bäume sollten vollständig gefällt werden.
-        </div>
-
-        <div class="rule">
-            <strong>Regel 42:</strong>
-            Keine riesigen sinnlosen Löcher nahe fremder Basen.
-        </div>
-
-        <div class="rule">
-            <strong>Regel 43:</strong>
-            Fremde Farmen dürfen nicht ohne Erlaubnis benutzt werden.
-        </div>
-
-        <div class="rule">
-            <strong>Regel 44:</strong>
-            Gemeinschaftsbereiche dürfen nicht absichtlich beschädigt werden.
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         HANDEL
-    ========================= -->
-
-    <section class="category">
-
-        <h2>
-            💰 Handel & Wirtschaft
-        </h2>
-
-        <div class="rule">
-            <strong>Regel 45:</strong>
-            Betrug beim Handel ist verboten.
-        </div>
-
-        <div class="rule">
-            <strong>Regel 46:</strong>
-            Absprachen beim Handel müssen eingehalten werden.
-        </div>
-
-        <div class="rule">
-            <strong>Regel 47:</strong>
-            Keine duplizierten Gegenstände verwenden.
-        </div>
-
-        <div class="rule">
-            <strong>Regel 48:</strong>
-            Keine illegal erworbenen Items verkaufen.
-        </div>
-
-        <div class="rule">
-            <strong>Regel 49:</strong>
-            Keine Fake-Shops oder irreführenden Angebote.
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         BUGS
-    ========================= -->
-
-    <section class="category">
-
-        <h2>
-            🐛 Bugs & Exploits
-        </h2>
-
-        <div class="rule">
-            <strong>Regel 50:</strong>
-            Bugs dürfen nicht absichtlich ausgenutzt werden.
-        </div>
-
-        <div class="rule">
-            <strong>Regel 51:</strong>
-            Schwere Bugs sollen dem Team gemeldet werden.
-        </div>
-
-        <div class="rule">
-            <strong>Regel 52:</strong>
-            Keine Duplizierungs-Bugs ausnutzen.
-        </div>
-
-        <div class="rule">
-            <strong>Regel 53:</strong>
-            Keine Exploits zur Umgehung von Schutzsystemen.
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         CHEATS
-    ========================= -->
-
-    <section class="category">
-
-        <h2>
-            🖥️ Mods & Cheats
-        </h2>
-
-        <div class="rule">
-            <strong>Regel 54:</strong>
-            Cheats sind verboten.
-        </div>
-
-        <div class="rule">
-            <strong>Regel 55:</strong>
-            X-Ray ist verboten.
-        </div>
-
-        <div class="rule">
-            <strong>Regel 56:</strong>
-            KillAura und vergleichbare Cheats sind verboten.
-        </div>
+            <label class="rules-checkbox">
 
-        <div class="rule">
-            <strong>Regel 57:</strong>
-            Fly- und Speed-Hacks sind verboten.
-        </div>
-
-        <div class="rule">
-            <strong>Regel 58:</strong>
-            Keine Programme verwenden, die einen unfairen Vorteil verschaffen.
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         ACCOUNTS
-    ========================= -->
-
-    <section class="category">
-
-        <h2>
-            👤 Accounts
-        </h2>
-
-        <div class="rule">
-            <strong>Regel 59:</strong>
-            Das Ausgeben als eine andere Person ist verboten.
-        </div>
-
-        <div class="rule">
-            <strong>Regel 60:</strong>
-            Das Ausgeben als Teammitglied ist verboten.
-        </div>
-
-        <div class="rule">
-            <strong>Regel 61:</strong>
-            Das Umgehen eines Banns mit einem Zweitaccount ist verboten.
-        </div>
-
-        <div class="rule">
-            <strong>Regel 62:</strong>
-            Keine Accounts erstellen, um Strafen zu umgehen.
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         WERBUNG
-    ========================= -->
-
-    <section class="category">
-
-        <h2>
-            📢 Werbung
-        </h2>
-
-        <div class="rule">
-            <strong>Regel 63:</strong>
-            Keine Werbung für andere Minecraft-Server ohne Erlaubnis.
-        </div>
-
-        <div class="rule">
-            <strong>Regel 64:</strong>
-            Keine Werbung für fremde Discord-Server ohne Erlaubnis.
-        </div>
+                <input
+                    type="checkbox"
+                    id="rulesAccepted"
+                >
 
-        <div class="rule">
-            <strong>Regel 65:</strong>
-            Keine Spam-Werbung.
-        </div>
-
-        <div class="rule">
-            <strong>Regel 66:</strong>
-            Keine schädlichen oder betrügerischen Links verbreiten.
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         SICHERHEIT
-    ========================= -->
-
-    <section class="category">
-
-        <h2>
-            🔒 Sicherheit
-        </h2>
-
-        <div class="rule">
-            <strong>Regel 67:</strong>
-            Keine persönlichen Daten anderer Spieler veröffentlichen.
-        </div>
-
-        <div class="rule">
-            <strong>Regel 68:</strong>
-            Keine IP-Adressen anderer Spieler veröffentlichen.
-        </div>
+                <span>
+                    ☑️ Ich akzeptiere die Regeln.
+                </span>
 
-        <div class="rule">
-            <strong>Regel 69:</strong>
-            Keine Versuche, Accounts anderer Spieler zu übernehmen.
-        </div>
+            </label>
 
-        <div class="rule">
-            <strong>Regel 70:</strong>
-            Keine schädlichen Dateien oder Links verbreiten.
-        </div>
 
-    </section>
+            <input
+                type="text"
+                id="minecraftName"
+                placeholder="Dein Minecraft-Name"
+                maxlength="16"
+            >
 
 
-    <!-- =========================
-         STRAFEN
-    ========================= -->
+            <button
+                type="button"
+                class="login-submit"
+                onclick="acceptRules()"
+            >
+                ✅ Regeln akzeptieren
+            </button>
 
-    <section class="category">
 
-        <h2>
-            ⚖️ Strafen & Sanktionen
-        </h2>
+            <button
+                type="button"
+                class="login-cancel"
+                onclick="closeRulesAccept()"
+            >
+                ❌ Abbrechen
+            </button>
 
-        <div class="rule">
-            <strong>Regel 71:</strong>
-            Je nach Verstoß können Verwarnungen ausgesprochen werden.
-        </div>
 
-        <div class="rule">
-            <strong>Regel 72:</strong>
-            Wiederholte Regelverstöße können härter bestraft werden.
-        </div>
+            <div
+                id="rulesError"
+                class="rules-error"
+            ></div>
 
-        <div class="rule">
-            <strong>Regel 73:</strong>
-            Mutes, Kicks und Banns können je nach Situation eingesetzt werden.
-        </div>
 
-        <div class="rule">
-            <strong>Regel 74:</strong>
-            Schwere Verstöße können zu einem längeren oder permanenten Bann führen.
-        </div>
+            <div
+                id="rulesSuccess"
+                class="rules-success"
+            >
+                ✅ Regeln erfolgreich akzeptiert!
+            </div>
 
-        <div class="rule">
-            <strong>Regel 75:</strong>
-            Strafen dürfen nicht absichtlich umgangen werden.
         </div>
-
-    </section>
-
-
-    <!-- =========================
-         BUTTONS
-    ========================= -->
-
-    <div class="button-container">
-
-        <a
-            href="index.html"
-            class="back-button"
-        >
-            ⬅️ Zurück zur Startseite
-        </a>
-
-
-        <button
-            type="button"
-            class="back-button teamler-button"
-            onclick="openLogin()"
-        >
-            👥 Teamler Login
-        </button>
 
     </div>
 
 
-</main>
+    <footer>
+        © GAMING.LUXUS
+    </footer>
 
 
-<!-- =========================
-     TEAMLER LOGIN
-========================= -->
+    <!-- =========================
+         JAVASCRIPT
+    ========================= -->
 
-<div
-    id="loginBox"
-    class="login-box"
->
+    <script>
 
-    <div class="login-content">
+        /* =========================
+           TEAMLER-PASSWORT
+        ========================= */
 
-        <h2>
-            👥 Teamler Login
-        </h2>
-
-        <p>
-            Bitte geben Sie das Passwort ein!
-        </p>
+        const TEAMLER_PASSWORT = "4155";
 
 
-        <input
-            type="password"
-            id="teamlerPassword"
-            placeholder="Hier Passwort eingeben!"
-            onkeydown="if(event.key === 'Enter') login()"
-        >
+        /* =========================
+           TEAMLER LOGIN ÖFFNEN
+        ========================= */
 
+        function openLogin() {
 
-        <button
-            type="button"
-            class="login-submit"
-            onclick="login()"
-        >
-            🔓 Einloggen
-        </button>
-
-
-        <button
-            type="button"
-            class="login-cancel"
-            onclick="closeLogin()"
-        >
-            ❌ Abbrechen
-        </button>
-
-
-        <div
-            id="loginError"
-            class="login-error"
-        >
-            ❌ Dieses Passwort ist falsch!
-        </div>
-
-    </div>
-
-</div>
-
-<footer>
-
-    © GAMING.LUXUS
-
-</footer>
-<!-- =========================
-     JAVASCRIPT
-========================= -->
-
-<script>
-
-    /* =========================
-       TEAMLER-PASSWORT
-    ========================= */
-
-    const TEAMLER_PASSWORT = "4155";
-
-
-    /* =========================
-       LOGIN ÖFFNEN
-    ========================= */
-
-    function openLogin() {
-
-        document.getElementById("loginBox").style.display = "flex";
-
-        document.getElementById("teamlerPassword").value = "";
-
-        document.getElementById("loginError").style.display = "none";
-
-        setTimeout(function () {
-
-            document
-                .getElementById("teamlerPassword")
-                .focus();
-
-        }, 100);
-
-    }
-
-
-    /* =========================
-       LOGIN SCHLIESSEN
-    ========================= */
-
-    function closeLogin() {
-
-        document.getElementById("loginBox").style.display = "none";
-
-        document.getElementById("teamlerPassword").value = "";
-
-        document.getElementById("loginError").style.display = "none";
-
-    }
-
-
-    /* =========================
-       LOGIN
-    ========================= */
-
-    function login() {
-
-        const eingegebenesPasswort =
-            document.getElementById("teamlerPassword").value;
-
-
-        if (eingegebenesPasswort === TEAMLER_PASSWORT) {
-
-            window.location.href = "team.html";
-
-        } else {
-
-            document.getElementById("loginError").style.display = "block";
+            document.getElementById("loginBox").style.display = "flex";
 
             document.getElementById("teamlerPassword").value = "";
 
-            document
-                .getElementById("teamlerPassword")
-                .focus();
+            document.getElementById("loginError").style.display = "none";
+
+            setTimeout(function () {
+
+                document
+                    .getElementById("teamlerPassword")
+                    .focus();
+
+            }, 100);
 
         }
 
-    }
+
+        /* =========================
+           TEAMLER LOGIN SCHLIESSEN
+        ========================= */
+
+        function closeLogin() {
+
+            document.getElementById("loginBox").style.display = "none";
+
+            document.getElementById("teamlerPassword").value = "";
+
+            document.getElementById("loginError").style.display = "none";
+
+        }
 
 
-    /* =========================
-       HINTERGRUND KLICK
-    ========================= */
+        /* =========================
+           TEAMLER LOGIN
+        ========================= */
 
-    document
-        .getElementById("loginBox")
-        .addEventListener("click", function(event) {
+        function login() {
 
-            if (event.target === this) {
+            const eingegebenesPasswort =
+                document.getElementById("teamlerPassword").value;
 
-                closeLogin();
+
+            if (eingegebenesPasswort === TEAMLER_PASSWORT) {
+
+                window.location.href = "team.html";
+
+            } else {
+
+                document.getElementById("loginError").style.display = "block";
+
+                document.getElementById("teamlerPassword").value = "";
+
+                document
+                    .getElementById("teamlerPassword")
+                    .focus();
+
+            }
+
+        }
+
+
+        /* =========================
+           REGELN AKZEPTIEREN ÖFFNEN
+        ========================= */
+
+        function openRulesAccept() {
+
+            document.getElementById("rulesAcceptBox").style.display = "flex";
+
+            document.getElementById("rulesError").style.display = "none";
+
+            document.getElementById("rulesSuccess").style.display = "none";
+
+            setTimeout(function () {
+
+                document
+                    .getElementById("minecraftName")
+                    .focus();
+
+            }, 100);
+
+        }
+
+
+        /* =========================
+           REGELN AKZEPTIEREN SCHLIESSEN
+        ========================= */
+
+        function closeRulesAccept() {
+
+            document.getElementById("rulesAcceptBox").style.display = "none";
+
+            document.getElementById("rulesError").style.display = "none";
+
+            document.getElementById("rulesSuccess").style.display = "none";
+
+        }
+
+
+        /* =========================
+           REGELN AKZEPTIEREN
+        ========================= */
+
+        function acceptRules() {
+
+            const checkbox =
+                document.getElementById("rulesAccepted");
+
+            const minecraftName =
+                document.getElementById("minecraftName").value.trim();
+
+            const error =
+                document.getElementById("rulesError");
+
+            const success =
+                document.getElementById("rulesSuccess");
+
+
+            error.style.display = "none";
+
+            success.style.display = "none";
+
+
+            /* NICHT AKZEPTIERT */
+
+            if (!checkbox.checked) {
+
+                error.innerText =
+                    "❌ Regeln wurden nicht akzeptiert!";
+
+                error.style.display = "block";
+
+                return;
+
+            }
+
+
+            /* MC-NAME FEHLT */
+
+            if (minecraftName === "") {
+
+                error.innerText =
+                    "❌ Bitte gib deinen Minecraft-Namen ein!";
+
+                error.style.display = "block";
+
+                return;
+
+            }
+
+
+            /* ERFOLGREICH */
+
+            localStorage.setItem(
+                "minecraftName",
+                minecraftName
+            );
+
+            localStorage.setItem(
+                "rulesAccepted",
+                "true"
+            );
+
+            localStorage.setItem(
+                "rulesAcceptedDate",
+                new Date().toLocaleString("de-DE")
+            );
+
+
+            success.innerText =
+                "✅ Regeln erfolgreich akzeptiert!";
+
+
+            success.style.display = "block";
+
+        }
+
+
+        /* =========================
+           HINTERGRUND-KLICK TEAMLER
+        ========================= */
+
+        document
+            .getElementById("loginBox")
+            .addEventListener("click", function(event) {
+
+                if (event.target === this) {
+
+                    closeLogin();
+
+                }
+
+            });
+
+
+        /* =========================
+           HINTERGRUND-KLICK REGELN
+        ========================= */
+
+        document
+            .getElementById("rulesAcceptBox")
+            .addEventListener("click", function(event) {
+
+                if (event.target === this) {
+
+                    closeRulesAccept();
+
+                }
+
+            });
+
+
+        /* =========================
+           GESPEICHERTEN NAMEN LADEN
+        ========================= */
+
+        window.addEventListener("load", function() {
+
+            const gespeicherterName =
+                localStorage.getItem("minecraftName");
+
+            if (gespeicherterName) {
+
+                document.getElementById("minecraftName").value =
+                    gespeicherterName;
 
             }
 
         });
 
-</script>
+    </script>
 
 
 </body>
 
 </html>
+```
