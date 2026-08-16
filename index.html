@@ -21,10 +21,6 @@ body {
     color: white;
 }
 
-/* =========================
-   NAVIGATION
-========================= */
-
 nav {
     background: #1f2937;
     padding: 14px 18px;
@@ -48,10 +44,6 @@ nav a.active {
     background: #374151;
 }
 
-/* =========================
-   LOGO
-========================= */
-
 .logo {
     font-size: 35px;
     font-weight: bold;
@@ -59,19 +51,11 @@ nav a.active {
     padding: 35px 20px 20px;
 }
 
-/* =========================
-   CONTAINER
-========================= */
-
 .container {
     max-width: 1000px;
     margin: auto;
     padding: 20px;
 }
-
-/* =========================
-   INFO BOX
-========================= */
 
 .info-box {
     background: #1f2937;
@@ -89,10 +73,6 @@ nav a.active {
     color: #d1d5db;
     line-height: 1.6;
 }
-
-/* =========================
-   SERVER STATUS
-========================= */
 
 .server-status {
     background: #1f2937;
@@ -153,10 +133,6 @@ nav a.active {
     color: #4ade80;
 }
 
-/* =========================
-   SPIELMODI
-========================= */
-
 .gamemodes {
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -187,10 +163,6 @@ nav a.active {
 .gamemode p {
     color: #9ca3af;
 }
-
-/* =========================
-   BELOHNUNGSSYSTEM
-========================= */
 
 .rewards-box {
     background: #1f2937;
@@ -256,10 +228,6 @@ nav a.active {
     display: none;
 }
 
-/* =========================
-   FORTSCHRITT
-========================= */
-
 .progress-area {
     margin-top: 25px;
 }
@@ -282,10 +250,6 @@ nav a.active {
     margin-top: 10px;
     color: #d1d5db;
 }
-
-/* =========================
-   BELOHNUNGSSTUFEN
-========================= */
 
 .reward-levels {
     display: grid;
@@ -317,10 +281,6 @@ nav a.active {
     color: #9ca3af;
     margin: 5px 0;
 }
-
-/* =========================
-   BUTTON BEREICH
-========================= */
 
 .button-area {
     display: flex;
@@ -355,10 +315,6 @@ nav a.active {
     background: #16a34a;
 }
 
-/* =========================
-   LOGIN FENSTER
-========================= */
-
 .login-box,
 .mc-login-box {
     display: none;
@@ -387,10 +343,6 @@ nav a.active {
     color: #d1d5db;
 }
 
-/* =========================
-   INPUTS
-========================= */
-
 #teamlerPassword,
 #mcName {
     width: 100%;
@@ -404,10 +356,6 @@ nav a.active {
     font-size: 16px;
     outline: none;
 }
-
-/* =========================
-   LOGIN BUTTONS
-========================= */
 
 .login-submit,
 .mc-login-submit,
@@ -436,10 +384,6 @@ nav a.active {
     background: #374151;
 }
 
-/* =========================
-   FEHLER
-========================= */
-
 .login-error {
     display: none;
     margin-top: 15px;
@@ -447,10 +391,6 @@ nav a.active {
     background: #7f1d1d;
     border-radius: 8px;
 }
-
-/* =========================
-   MINECRAFT
-========================= */
 
 .mc-logged {
     display: none;
@@ -461,13 +401,22 @@ nav a.active {
     text-align: center;
 }
 
+/* =========================
+   MINECRAFT PROFIL
+========================= */
+
 .mc-profile {
     display: none;
     margin-top: 25px;
     background: #1f2937;
-    padding: 25px;
+    padding: 30px;
     border-radius: 15px;
     text-align: center;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+
+.mc-profile h2 {
+    margin-top: 0;
 }
 
 .mc-skin {
@@ -482,7 +431,29 @@ nav a.active {
 
 .mc-profile-name {
     font-size: 20px;
-    margin: 10px 0 20px;
+    margin: 10px 0 15px;
+}
+
+.mc-profile-info {
+    background: #111827;
+    padding: 15px;
+    border-radius: 12px;
+    margin: 15px 0 20px;
+}
+
+.mc-profile-info p {
+    color: #d1d5db;
+    margin: 8px 0;
+}
+
+.mc-profile-info strong {
+    color: white;
+}
+
+.profile-rank {
+    color: #facc15 !important;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .logout-button {
@@ -495,9 +466,9 @@ nav a.active {
     cursor: pointer;
 }
 
-/* =========================
-   FOOTER
-========================= */
+.logout-button:hover {
+    background: #b91c1c;
+}
 
 footer {
     text-align: center;
@@ -505,10 +476,6 @@ footer {
     padding: 30px 20px;
     margin-top: 30px;
 }
-
-/* =========================
-   HANDY
-========================= */
 
 @media (max-width:700px) {
 
@@ -550,10 +517,6 @@ footer {
 
 <body>
 
-<!-- =========================
-     NAVIGATION
-========================= -->
-
 <nav>
 
 <a href="index.html" class="active">
@@ -588,10 +551,6 @@ footer {
 
 <main class="container">
 
-<!-- =========================
-     INFO
-========================= -->
-
 <div class="info-box">
 
 <h1>
@@ -610,10 +569,6 @@ deine eigenen Projekte verwirklichen.
 </p>
 
 </div>
-
-<!-- =========================
-     SERVER STATUS
-========================= -->
 
 <div class="server-status">
 
@@ -669,10 +624,6 @@ class="copy-message">
 
 </div>
 
-<!-- =========================
-     SPIELMODI
-========================= -->
-
 <div class="info-box">
 
 <h1>
@@ -682,63 +633,35 @@ class="copy-message">
 <div class="gamemodes">
 
 <div class="gamemode">
-
-<div class="gamemode-icon">
-⚔️
-</div>
-
-<h2>
-PVP
-</h2>
-
+<div class="gamemode-icon">⚔️</div>
+<h2>PVP</h2>
 <p>
 Kämpfe gegen andere Spieler
 und beweise dein Können.
 </p>
-
 </div>
 
 <div class="gamemode">
-
-<div class="gamemode-icon">
-🌳
-</div>
-
-<h2>
-SMP
-</h2>
-
+<div class="gamemode-icon">🌳</div>
+<h2>SMP</h2>
 <p>
 Spiele gemeinsam mit anderen
 und baue deine eigene Welt auf.
 </p>
-
 </div>
 
 <div class="gamemode">
-
-<div class="gamemode-icon">
-🏙️
-</div>
-
-<h2>
-CityBuild
-</h2>
-
+<div class="gamemode-icon">🏙️</div>
+<h2>CityBuild</h2>
 <p>
 Baue deine eigene Stadt und
 gestalte dein Grundstück.
 </p>
-
 </div>
 
 </div>
 
 </div>
-
-<!-- =========================
-     BELOHNUNGSSYSTEM
-========================= -->
 
 <div class="rewards-box">
 
@@ -806,85 +729,33 @@ class="rank-text">
 
 <div class="reward-levels">
 
-<div
-id="level100"
-class="reward-level">
-
-<div class="reward-level-icon">
-🥉
+<div id="level100" class="reward-level">
+<div class="reward-level-icon">🥉</div>
+<h3>Anfänger</h3>
+<p>100 ⭐</p>
 </div>
 
-<h3>
-Anfänger
-</h3>
-
-<p>
-100 ⭐
-</p>
-
+<div id="level250" class="reward-level">
+<div class="reward-level-icon">🥈</div>
+<h3>Spieler</h3>
+<p>250 ⭐</p>
 </div>
 
-<div
-id="level250"
-class="reward-level">
-
-<div class="reward-level-icon">
-🥈
+<div id="level500" class="reward-level">
+<div class="reward-level-icon">🥇</div>
+<h3>Profi</h3>
+<p>500 ⭐</p>
 </div>
 
-<h3>
-Spieler
-</h3>
-
-<p>
-250 ⭐
-</p>
-
-</div>
-
-<div
-id="level500"
-class="reward-level">
-
-<div class="reward-level-icon">
-🥇
-</div>
-
-<h3>
-Profi
-</h3>
-
-<p>
-500 ⭐
-</p>
-
-</div>
-
-<div
-id="level1000"
-class="reward-level">
-
-<div class="reward-level-icon">
-💎
-</div>
-
-<h3>
-LEGENDÄR
-</h3>
-
-<p>
-1000 ⭐
-</p>
-
+<div id="level1000" class="reward-level">
+<div class="reward-level-icon">💎</div>
+<h3>LEGENDÄR</h3>
+<p>1000 ⭐</p>
 </div>
 
 </div>
 
 </div>
-
-<!-- =========================
-     LOGIN BUTTONS
-========================= -->
 
 <div class="button-area">
 
@@ -906,10 +777,6 @@ onclick="openMinecraftLogin()">
 
 </div>
 
-<!-- =========================
-     MINECRAFT EINGELOGGT
-========================= -->
-
 <div
 id="mcLogged"
 class="mc-logged">
@@ -921,7 +788,7 @@ eingeloggt!
 </div>
 
 <!-- =========================
-     MINECRAFT PROFIL
+     DAS IST DAS PROFIL
 ========================= -->
 
 <div
@@ -929,7 +796,7 @@ id="mcProfile"
 class="mc-profile">
 
 <h2>
-👤 Minecraft-Profil
+👤 Mein Minecraft-Profil
 </h2>
 
 <img
@@ -940,8 +807,30 @@ alt="Minecraft Skin">
 
 <div class="mc-profile-name">
 
-Eingeloggt als:
+🎮 Spieler:
 <strong id="mcProfileName"></strong>
+
+</div>
+
+<div class="mc-profile-info">
+
+<p>
+⛏️ Minecraft-Spieler
+</p>
+
+<p class="profile-rank">
+🏆 Rang:
+<span id="profileRank">
+🥉 Anfänger
+</span>
+</p>
+
+<p>
+⭐ Belohnungspunkte:
+<strong id="profilePoints">
+0
+</strong>
+</p>
 
 </div>
 
@@ -956,10 +845,6 @@ onclick="minecraftLogout()">
 </div>
 
 </main>
-
-<!-- =========================
-     TEAMLER LOGIN
-========================= -->
 
 <div
 id="loginBox"
@@ -1009,10 +894,6 @@ class="login-error">
 
 </div>
 
-<!-- =========================
-     MINECRAFT LOGIN
-========================= -->
-
 <div
 id="mcLoginBox"
 class="mc-login-box">
@@ -1061,10 +942,6 @@ onclick="closeMinecraftLogin()">
 </footer>
 
 <script>
-
-/* =========================
-   TEAMLER PASSWORT
-========================= */
 
 const TEAMLER_PASSWORT = "4155";
 
@@ -1162,6 +1039,8 @@ function minecraftLogin() {
         name
     );
 
+    updateProfile();
+
     closeMinecraftLogin();
 
 }
@@ -1179,6 +1058,45 @@ function minecraftLogout() {
     document.getElementById("mcProfileName").textContent = "";
 
     document.getElementById("mcSkin").src = "";
+
+}
+
+
+/* =========================
+   PROFIL AKTUALISIEREN
+========================= */
+
+function updateProfile() {
+
+    const profilePoints =
+        document.getElementById("profilePoints");
+
+    const profileRank =
+        document.getElementById("profileRank");
+
+    if (!profilePoints || !profileRank) {
+        return;
+    }
+
+    profilePoints.textContent = points;
+
+    if (points >= 1000) {
+
+        profileRank.textContent = "💎 LEGENDÄR";
+
+    } else if (points >= 500) {
+
+        profileRank.textContent = "🥇 Profi";
+
+    } else if (points >= 250) {
+
+        profileRank.textContent = "🥈 Spieler";
+
+    } else {
+
+        profileRank.textContent = "🥉 Anfänger";
+
+    }
 
 }
 
@@ -1271,12 +1189,6 @@ function updateRewards() {
         previous = 250;
         next = 500;
 
-    } else {
-
-        rank = "🥉 Anfänger";
-        previous = 0;
-        next = 100;
-
     }
 
     document.getElementById("rankName").textContent = rank;
@@ -1316,8 +1228,7 @@ function updateRewards() {
     updateLevel(500, "level500");
     updateLevel(1000, "level1000");
 
-
-    /* Tagesbelohnung */
+    updateProfile();
 
     const heute =
         new Date().toISOString().split("T")[0];
@@ -1381,11 +1292,9 @@ function claimDailyReward() {
     const error =
         document.getElementById("rewardError");
 
-
     message.style.display = "none";
 
     error.style.display = "none";
-
 
     if (lastDailyReward === heute) {
 
@@ -1398,13 +1307,9 @@ function claimDailyReward() {
 
     }
 
-
-    /* 50 Punkte geben */
-
     points += 50;
 
     lastDailyReward = heute;
-
 
     localStorage.setItem(
         "gamingLuxusPoints",
@@ -1416,12 +1321,10 @@ function claimDailyReward() {
         heute
     );
 
-
     message.textContent =
         "🎉 Glückwunsch! Du hast +50 ⭐ Punkte bekommen!";
 
     message.style.display = "block";
-
 
     updateRewards();
 
@@ -1456,6 +1359,8 @@ window.addEventListener("load", function() {
 
     updateRewards();
 
+    updateProfile();
+
 });
 
 
@@ -1475,7 +1380,6 @@ document.getElementById("loginBox").addEventListener(
 
     }
 );
-
 
 document.getElementById("mcLoginBox").addEventListener(
     "click",
