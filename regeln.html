@@ -1,4 +1,4 @@
-
+```html
 <!DOCTYPE html>
 <html lang="de">
 
@@ -7,7 +7,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>GAMING.LUXUS</title>
+<title>GAMING.LUXUS Regeln</title>
 
 <style>
 
@@ -42,6 +42,7 @@ nav a {
     font-size: 20px;
     padding: 14px 20px;
     border-radius: 10px;
+    transition: 0.2s;
 }
 
 nav a:hover,
@@ -50,295 +51,110 @@ nav a.active {
 }
 
 /* =========================
-   LOGO
-========================= */
-
-.logo {
-    font-size: 35px;
-    font-weight: bold;
-    text-align: center;
-    padding: 35px 20px 20px;
-}
-
-/* =========================
-   CONTAINER
+   HAUPTBEREICH
 ========================= */
 
 .container {
     max-width: 1000px;
     margin: auto;
-    padding: 20px;
+    padding: 35px 20px;
 }
 
-/* =========================
-   INFO BOX
-========================= */
-
-.info-box {
-    background: #1f2937;
-    padding: 25px;
-    border-radius: 15px;
-    margin-bottom: 25px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
-}
-
-.info-box h1 {
-    margin-top: 0;
-}
-
-.info-box p {
-    color: #d1d5db;
-    line-height: 1.6;
-}
-
-/* =========================
-   SERVER STATUS
-========================= */
-
-.server-status {
-    background: #1f2937;
-    padding: 25px;
-    border-radius: 15px;
-    margin-bottom: 25px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+.header {
     text-align: center;
+    margin-bottom: 35px;
 }
 
-.status-offline {
-    display: inline-block;
-    padding: 10px 18px;
-    background: #7f1d1d;
-    color: #f87171;
-    border-radius: 10px;
-    font-weight: bold;
-    margin: 10px 0 20px;
-}
-
-.server-info {
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 15px;
-}
-
-.server-card {
-    background: #111827;
-    padding: 18px;
-    border-radius: 10px;
-}
-
-.server-card h3 {
-    margin-top: 0;
-}
-
-.server-card p {
-    color: #d1d5db;
-}
-
-.copy-button {
-    padding: 10px 18px;
-    background: #2563eb;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 15px;
-}
-
-.copy-button:hover {
-    background: #1d4ed8;
-}
-
-.copy-message {
-    display: none;
-    margin-top: 10px;
-    color: #4ade80;
-}
-
-/* =========================
-   SPIELMODI
-========================= */
-
-.gamemodes {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 20px;
-    margin-top: 25px;
-}
-
-.gamemode {
-    background: #111827;
-    padding: 25px;
-    border-radius: 15px;
-    text-align: center;
-}
-
-.gamemode:hover {
-    background: #273449;
-}
-
-.gamemode-icon {
+.header h1 {
     font-size: 40px;
     margin-bottom: 10px;
 }
 
-.gamemode h2 {
-    margin: 5px 0;
-}
-
-.gamemode p {
-    color: #9ca3af;
+.header p {
+    color: #d1d5db;
+    font-size: 16px;
 }
 
 /* =========================
-   BELOHNUNGSSYSTEM
+   KATEGORIEN
 ========================= */
 
-.rewards-box {
+.category {
     background: #1f2937;
-    padding: 25px;
     border-radius: 15px;
     margin-bottom: 25px;
+    padding: 25px;
     box-shadow: 0 6px 20px rgba(0,0,0,0.25);
-    text-align: center;
 }
 
-.points-display {
-    background: #111827;
-    padding: 20px;
-    border-radius: 12px;
-    margin: 20px 0;
-}
-
-.points-number {
-    font-size: 42px;
-    font-weight: bold;
-    color: #facc15;
-}
-
-.points-label {
-    color: #d1d5db;
-    font-size: 16px;
-}
-
-.reward-button {
-    padding: 14px 24px;
-    background: #f59e0b;
-    color: white;
-    border: none;
-    border-radius: 9px;
-    font-size: 17px;
-    cursor: pointer;
-}
-
-.reward-button:hover {
-    background: #d97706;
-}
-
-.reward-button:disabled {
-    background: #4b5563;
-    cursor: not-allowed;
-}
-
-.reward-message {
-    margin-top: 15px;
-    padding: 12px;
-    background: #14532d;
-    color: #4ade80;
-    border-radius: 9px;
-    display: none;
-}
-
-.reward-error {
-    margin-top: 15px;
-    padding: 12px;
-    background: #7f1d1d;
-    color: #fca5a5;
-    border-radius: 9px;
-    display: none;
+.category h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 25px;
 }
 
 /* =========================
-   FORTSCHRITT
+   REGELN
 ========================= */
 
-.progress-area {
-    margin-top: 25px;
-}
-
-.progress-bar {
-    width: 100%;
-    height: 20px;
-    background: #111827;
-    border-radius: 20px;
-    overflow: hidden;
-}
-
-.progress-fill {
-    height: 100%;
-    width: 0%;
-    background: #facc15;
-}
-
-.rank-text {
-    margin-top: 10px;
-    color: #d1d5db;
-}
-
-/* =========================
-   BELOHNUNGSSTUFEN
-========================= */
-
-.reward-levels {
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 12px;
-    margin-top: 20px;
-}
-
-.reward-level {
-    background: #111827;
+.rule {
+    background: #374151;
     padding: 15px;
+    margin: 10px 0;
     border-radius: 10px;
-    border: 2px solid #374151;
+    line-height: 1.5;
 }
 
-.reward-level.unlocked {
-    border-color: #facc15;
-}
-
-.reward-level-icon {
-    font-size: 30px;
-}
-
-.reward-level h3 {
-    margin: 8px 0;
-}
-
-.reward-level p {
-    color: #9ca3af;
-    margin: 5px 0;
+.rule strong {
+    color: #60a5fa;
 }
 
 /* =========================
-   BUTTON BEREICH
+   BUTTON-BEREICH
 ========================= */
 
-.button-area {
+.button-container {
     display: flex;
+    align-items: center;
+    gap: 15px;
     flex-wrap: wrap;
-    gap: 12px;
+    margin-top: 10px;
+    margin-bottom: 30px;
 }
 
-.teamler-button,
-.minecraft-button {
-    margin-top: 30px;
+.back-button,
+.accept-rules-button {
+    display: inline-block;
     padding: 13px 22px;
     color: white;
-    border: none;
+    text-decoration: none;
     border-radius: 9px;
+    border: none;
     font-size: 16px;
     cursor: pointer;
+    transition: 0.2s;
 }
+
+.back-button {
+    background: #374151;
+}
+
+.back-button:hover {
+    background: #4b5563;
+}
+
+.accept-rules-button {
+    background: #22c55e;
+    font-weight: bold;
+}
+
+.accept-rules-button:hover {
+    background: #16a34a;
+}
+
+/* =========================
+   TEAMLER BUTTON
+========================= */
 
 .teamler-button {
     background: #2563eb;
@@ -348,54 +164,12 @@ nav a.active {
     background: #1d4ed8;
 }
 
-.minecraft-button {
-    background: #22c55e;
-}
-
-.minecraft-button:hover {
-    background: #16a34a;
-}
-
-/* =========================
-   REGELN AKZEPTIEREN BUTTON
-========================= */
-
-.rules-button {
-    margin-top: 30px;
-    padding: 13px 22px;
-    background: #f59e0b;
-    color: white;
-    border: none;
-    border-radius: 9px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.rules-button:hover {
-    background: #d97706;
-}
-
-/* =========================
-   REGELN AKZEPTIERT
-========================= */
-
-.rules-accepted {
-    display: none;
-    margin-top: 20px;
-    padding: 15px;
-    background: #14532d;
-    color: #4ade80;
-    border-radius: 10px;
-    text-align: center;
-}
-
 /* =========================
    LOGIN FENSTER
 ========================= */
 
 .login-box,
-.mc-login-box,
-.rules-login-box {
+.rules-accept-box {
     display: none;
     position: fixed;
     inset: 0;
@@ -403,67 +177,84 @@ nav a.active {
     justify-content: center;
     align-items: center;
     padding: 20px;
-    z-index: 999;
+    z-index: 9999;
 }
 
+/* =========================
+   LOGIN INHALT
+========================= */
+
 .login-content,
-.mc-login-content,
-.rules-login-content {
-    background: #1f2937;
+.rules-accept-content {
     width: 100%;
     max-width: 420px;
+    background: #1f2937;
     padding: 30px;
     border-radius: 15px;
-    text-align: center;
     box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    text-align: center;
+}
+
+.login-content h2,
+.rules-accept-content h2 {
+    margin-top: 0;
+    font-size: 28px;
 }
 
 .login-content p,
-.mc-login-content p,
-.rules-login-content p {
+.rules-accept-content p {
     color: #d1d5db;
+    margin-bottom: 20px;
 }
 
 /* =========================
-   INPUTS
+   INPUT
 ========================= */
 
-#teamlerPassword,
-#mcName,
-#rulesMcName {
+.login-content input,
+.rules-accept-content input {
     width: 100%;
     padding: 13px;
-    margin-top: 10px;
-    margin-bottom: 15px;
-    background: #374151;
-    border: 1px solid #4b5563;
+    border: none;
     border-radius: 8px;
+    background: #374151;
     color: white;
     font-size: 16px;
     outline: none;
+    margin-bottom: 15px;
 }
 
-#rulesMcName:focus {
-    box-shadow: 0 0 0 2px #f59e0b;
+.login-content input:focus,
+.rules-accept-content input:focus {
+    box-shadow: 0 0 0 2px #2563eb;
 }
 
 /* =========================
-   REGELN CHECKBOX
+   CHECKBOX
 ========================= */
 
-.rules-checkbox {
+.accept-checkbox {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 10px;
     text-align: left;
-    margin: 20px 0;
-    color: white;
+    background: #374151;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    cursor: pointer;
 }
 
-.rules-checkbox input {
+.accept-checkbox input {
     width: 20px;
     height: 20px;
+    margin: 0;
     cursor: pointer;
+    flex-shrink: 0;
+}
+
+.accept-checkbox span {
+    line-height: 1.4;
 }
 
 /* =========================
@@ -471,11 +262,9 @@ nav a.active {
 ========================= */
 
 .login-submit,
-.mc-login-submit,
 .login-cancel,
-.mc-login-cancel,
-.rules-accept-submit,
-.rules-cancel {
+.accept-submit,
+.accept-cancel {
     width: 100%;
     padding: 13px;
     color: white;
@@ -490,28 +279,27 @@ nav a.active {
     background: #2563eb;
 }
 
-.mc-login-submit {
-    background: #22c55e;
-}
-
-.rules-accept-submit {
-    background: #22c55e;
-}
-
-.rules-accept-submit:hover {
-    background: #16a34a;
+.login-submit:hover {
+    background: #1d4ed8;
 }
 
 .login-cancel,
-.mc-login-cancel,
-.rules-cancel {
+.accept-cancel {
     background: #374151;
 }
 
 .login-cancel:hover,
-.mc-login-cancel:hover,
-.rules-cancel:hover {
+.accept-cancel:hover {
     background: #4b5563;
+}
+
+.accept-submit {
+    background: #22c55e;
+    font-weight: bold;
+}
+
+.accept-submit:hover {
+    background: #16a34a;
 }
 
 /* =========================
@@ -519,60 +307,40 @@ nav a.active {
 ========================= */
 
 .login-error,
-.rules-error {
+.accept-error {
     display: none;
     margin-top: 15px;
     padding: 10px;
-    background: #7f1d1d;
-    color: #fca5a5;
+    background: #991b1b;
+    color: white;
     border-radius: 8px;
 }
 
 /* =========================
-   MINECRAFT
+   ERFOLG
 ========================= */
 
-.mc-logged {
+.accept-success {
     display: none;
-    margin-top: 20px;
-    padding: 15px;
+    margin-top: 15px;
+    padding: 12px;
     background: #14532d;
-    border-radius: 10px;
-    text-align: center;
+    color: #4ade80;
+    border-radius: 8px;
 }
 
-.mc-profile {
+/* =========================
+   AKZEPTIERT-INFO
+========================= */
+
+.accepted-info {
     display: none;
-    margin-top: 25px;
-    background: #1f2937;
-    padding: 25px;
-    border-radius: 15px;
+    background: #14532d;
+    color: #4ade80;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
     text-align: center;
-}
-
-.mc-skin {
-    width: 120px;
-    height: 180px;
-    object-fit: cover;
-    image-rendering: pixelated;
-    border-radius: 12px;
-    margin: 15px auto;
-    background: #374151;
-}
-
-.mc-profile-name {
-    font-size: 20px;
-    margin: 10px 0 20px;
-}
-
-.logout-button {
-    padding: 12px 22px;
-    background: #dc2626;
-    color: white;
-    border: none;
-    border-radius: 9px;
-    font-size: 16px;
-    cursor: pointer;
 }
 
 /* =========================
@@ -592,35 +360,45 @@ footer {
 
 @media (max-width:700px) {
 
+    nav {
+        padding: 10px;
+    }
+
     nav a {
         font-size: 16px;
         padding: 11px 13px;
     }
 
-    .logo {
-        font-size: 28px;
+    .container {
+        padding: 25px 15px;
     }
 
-    .gamemodes {
-        grid-template-columns: 1fr;
+    .header h1 {
+        font-size: 30px;
     }
 
-    .server-info {
-        grid-template-columns: 1fr;
+    .category {
+        padding: 18px;
     }
 
-    .reward-levels {
-        grid-template-columns: 1fr 1fr;
+    .category h2 {
+        font-size: 21px;
     }
 
-    .button-area {
+    .rule {
+        padding: 13px;
+    }
+
+    .button-container {
         flex-direction: column;
+        align-items: stretch;
     }
 
-    .teamler-button,
-    .minecraft-button,
-    .rules-button {
+    .back-button,
+    .accept-rules-button,
+    .teamler-button {
         width: 100%;
+        text-align: center;
     }
 
 }
@@ -637,7 +415,7 @@ footer {
 
 <nav>
 
-<a href="index.html" class="active">
+<a href="index.html">
 🏠 Startseite
 </a>
 
@@ -645,7 +423,7 @@ footer {
 ⚠️ Wartungszeiten
 </a>
 
-<a href="regeln.html">
+<a href="regeln.html" class="active">
 ❗ Regeln
 </a>
 
@@ -663,402 +441,402 @@ footer {
 
 </nav>
 
-<div class="logo">
-🎮 GAMING.LUXUS 🎮
-</div>
+
+<!-- =========================
+     HAUPTINHALT
+========================= -->
 
 <main class="container">
 
-<!-- =========================
-     INFO
-========================= -->
-
-<div class="info-box">
+<div class="header">
 
 <h1>
-Was ist GAMING.LUXUS?
+📜 GAMING.LUXUS Regeln
 </h1>
 
 <p>
-GAMING.LUXUS ist ein Minecraft-Server mit
-verschiedenen Spielmodi und einer aktiven Community.
-</p>
-
-<p>
-Bei uns kannst du gemeinsam mit anderen Spielern
-spannende Abenteuer erleben, bauen, kämpfen und
-deine eigenen Projekte verwirklichen.
+Regeln für ein faires und angenehmes Spielerlebnis
 </p>
 
 </div>
+
 
 <!-- =========================
-     SERVER STATUS
+     ALLGEMEINE REGELN
 ========================= -->
 
-<div class="server-status">
-
-<h1>
-🖥️ Server Status
-</h1>
-
-<div class="status-offline">
-🔴 SERVER OFFLINE
-</div>
-
-<div class="server-info">
-
-<div class="server-card">
-
-<h3>
-👥 Spieler
-</h3>
-
-<p>
-<strong>0 / 100</strong>
-</p>
-
-</div>
-
-<div class="server-card">
-
-<h3>
-🌐 Server-IP
-</h3>
-
-<p>
-<strong id="serverIP">
-157.90.205.61
-</strong>
-</p>
-
-<button
-class="copy-button"
-onclick="copyServerIP()">
-📋 IP kopieren
-</button>
-
-<div
-id="copyMessage"
-class="copy-message">
-✅ IP wurde kopiert!
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- =========================
-     SPIELMODI
-========================= -->
-
-<div class="info-box">
-
-<h1>
-🎮 Unsere Spielmodi
-</h1>
-
-<div class="gamemodes">
-
-<div class="gamemode">
-
-<div class="gamemode-icon">
-⚔️
-</div>
+<section class="category">
 
 <h2>
-PVP
+📜 Allgemeine Regeln
 </h2>
 
-<p>
-Kämpfe gegen andere Spieler
-und beweise dein Können.
-</p>
+<div class="rule"><strong>Regel 1:</strong> Jeder Spieler muss die Serverregeln beachten.</div>
+<div class="rule"><strong>Regel 2:</strong> Unwissenheit über die Regeln schützt nicht vor einer Strafe.</div>
+<div class="rule"><strong>Regel 3:</strong> Ein respektvoller Umgang miteinander ist Pflicht.</div>
+<div class="rule"><strong>Regel 4:</strong> Das absichtliche Ausnutzen von Regel-Lücken ist nicht erlaubt.</div>
+<div class="rule"><strong>Regel 5:</strong> Anweisungen des Serverteams sind zu beachten.</div>
+<div class="rule"><strong>Regel 6:</strong> Absichtliches Provozieren anderer Spieler ist verboten.</div>
+<div class="rule"><strong>Regel 7:</strong> Falsche Meldungen gegen andere Spieler dürfen nicht absichtlich erstellt werden.</div>
+<div class="rule"><strong>Regel 8:</strong> Das Ausgeben als Teammitglied ist verboten.</div>
+<div class="rule"><strong>Regel 9:</strong> Das absichtliche Umgehen von Serverregeln ist verboten.</div>
+<div class="rule"><strong>Regel 10:</strong> Habt Spaß und behandelt andere so, wie ihr selbst behandelt werden möchtet.</div>
 
-</div>
+</section>
 
-<div class="gamemode">
-
-<div class="gamemode-icon">
-🌳
-</div>
-
-<h2>
-SMP
-</h2>
-
-<p>
-Spiele gemeinsam mit anderen
-und baue deine eigene Welt auf.
-</p>
-
-</div>
-
-<div class="gamemode">
-
-<div class="gamemode-icon">
-🏙️
-</div>
-
-<h2>
-CityBuild
-</h2>
-
-<p>
-Baue deine eigene Stadt und
-gestalte dein Grundstück.
-</p>
-
-</div>
-
-</div>
-
-</div>
 
 <!-- =========================
-     BELOHNUNGSSYSTEM
+     CHAT
 ========================= -->
 
-<div class="rewards-box">
+<section class="category">
 
-<h1>
-🎁 Belohnungssystem
-</h1>
+<h2>
+💬 Chat & Kommunikation
+</h2>
 
-<p>
-Sammle Punkte und schalte neue Belohnungsstufen frei!
-</p>
+<div class="rule"><strong>Regel 11:</strong> Kein Spam.</div>
+<div class="rule"><strong>Regel 12:</strong> Kein Flooding.</div>
+<div class="rule"><strong>Regel 13:</strong> Keine Beleidigungen.</div>
+<div class="rule"><strong>Regel 14:</strong> Kein Mobbing.</div>
+<div class="rule"><strong>Regel 15:</strong> Keine Drohungen.</div>
+<div class="rule"><strong>Regel 16:</strong> Keine diskriminierenden Äußerungen.</div>
+<div class="rule"><strong>Regel 17:</strong> Keine unangemessenen sexuellen Inhalte.</div>
+<div class="rule"><strong>Regel 18:</strong> Keine persönlichen Daten anderer Spieler veröffentlichen.</div>
+<div class="rule"><strong>Regel 19:</strong> Keine absichtlichen Provokationen im Chat.</div>
+<div class="rule"><strong>Regel 20:</strong> Öffentliche Streitigkeiten sollen nicht unnötig im Chat ausgetragen werden.</div>
 
-<div class="points-display">
+</section>
 
-<div class="points-number" id="points">
-0
-</div>
-
-<div class="points-label">
-⭐ Punkte
-</div>
-
-</div>
-
-<button
-id="dailyRewardButton"
-class="reward-button"
-onclick="claimDailyReward()">
-
-🎁 Tagesbelohnung abholen
-
-</button>
-
-<div
-id="rewardMessage"
-class="reward-message">
-</div>
-
-<div
-id="rewardError"
-class="reward-error">
-</div>
-
-<div class="progress-area">
-
-<h3 id="rankName">
-🥉 Anfänger
-</h3>
-
-<div class="progress-bar">
-
-<div
-id="progressFill"
-class="progress-fill">
-</div>
-
-</div>
-
-<div
-id="progressText"
-class="rank-text">
-0 / 100 Punkte
-</div>
-
-</div>
-
-<div class="reward-levels">
-
-<div
-id="level100"
-class="reward-level">
-
-<div class="reward-level-icon">
-🥉
-</div>
-
-<h3>
-Anfänger
-</h3>
-
-<p>
-100 ⭐
-</p>
-
-</div>
-
-<div
-id="level250"
-class="reward-level">
-
-<div class="reward-level-icon">
-🥈
-</div>
-
-<h3>
-Spieler
-</h3>
-
-<p>
-250 ⭐
-</p>
-
-</div>
-
-<div
-id="level500"
-class="reward-level">
-
-<div class="reward-level-icon">
-🥇
-</div>
-
-<h3>
-Profi
-</h3>
-
-<p>
-500 ⭐
-</p>
-
-</div>
-
-<div
-id="level1000"
-class="reward-level">
-
-<div class="reward-level-icon">
-💎
-</div>
-
-<h3>
-LEGENDÄR
-</h3>
-
-<p>
-1000 ⭐
-</p>
-
-</div>
-
-</div>
-
-</div>
 
 <!-- =========================
-     LOGIN BUTTONS
+     VERHALTEN
 ========================= -->
 
-<div class="button-area">
+<section class="category">
+
+<h2>
+🤝 Verhalten
+</h2>
+
+<div class="rule"><strong>Regel 21:</strong> Alle Spieler sind fair und respektvoll zu behandeln.</div>
+<div class="rule"><strong>Regel 22:</strong> Persönliche Streitigkeiten dürfen nicht auf andere Spieler übertragen werden.</div>
+<div class="rule"><strong>Regel 23:</strong> Spieler dürfen nicht absichtlich gemobbt werden.</div>
+<div class="rule"><strong>Regel 24:</strong> Das absichtliche Provozieren anderer Spieler ist verboten.</div>
+<div class="rule"><strong>Regel 25:</strong> Betrug und Täuschung anderer Spieler sind verboten.</div>
+<div class="rule"><strong>Regel 26:</strong> Andere Spieler sollen bei Fragen unterstützt werden.</div>
+
+</section>
+
+
+<!-- =========================
+     BAUEN
+========================= -->
+
+<section class="category">
+
+<h2>
+🏠 Bauen & Griefing
+</h2>
+
+<div class="rule"><strong>Regel 27:</strong> Fremde Gebäude dürfen nicht absichtlich zerstört werden.</div>
+<div class="rule"><strong>Regel 28:</strong> Fremde Kisten dürfen nicht ohne Erlaubnis geleert werden.</div>
+<div class="rule"><strong>Regel 29:</strong> Fremde Grundstücke dürfen nicht absichtlich blockiert werden.</div>
+<div class="rule"><strong>Regel 30:</strong> Keine absichtlichen Lava- oder Wasserfallen an fremden Grundstücken.</div>
+<div class="rule"><strong>Regel 31:</strong> Keine unnötige Zerstörung der Landschaft.</div>
+<div class="rule"><strong>Regel 32:</strong> Nicht ohne Erlaubnis in fremde Gebäude bauen.</div>
+<div class="rule"><strong>Regel 33:</strong> Die Bauwerke anderer Spieler sind zu respektieren.</div>
+
+</section>
+
+
+<!-- =========================
+     PVP
+========================= -->
+
+<section class="category">
+
+<h2>
+⚔️ PvP
+</h2>
+
+<div class="rule"><strong>Regel 34:</strong> PvP darf nur dort stattfinden, wo es erlaubt ist.</div>
+<div class="rule"><strong>Regel 35:</strong> Kein unerlaubtes Töten anderer Spieler.</div>
+<div class="rule"><strong>Regel 36:</strong> Kein Spawn-Killing.</div>
+<div class="rule"><strong>Regel 37:</strong> Keine unerlaubten PvP-Fallen.</div>
+<div class="rule"><strong>Regel 38:</strong> Kein Ausnutzen von Bugs im Kampf.</div>
+
+</section>
+
+
+<!-- =========================
+     SMP
+========================= -->
+
+<section class="category">
+
+<h2>
+🌳 SMP
+</h2>
+
+<div class="rule"><strong>Regel 39:</strong> Ressourcen dürfen normal gesammelt werden.</div>
+<div class="rule"><strong>Regel 40:</strong> Keine absichtliche Zerstörung der Landschaft.</div>
+<div class="rule"><strong>Regel 41:</strong> Bäume sollten vollständig gefällt werden.</div>
+<div class="rule"><strong>Regel 42:</strong> Keine riesigen sinnlosen Löcher nahe fremder Basen.</div>
+<div class="rule"><strong>Regel 43:</strong> Fremde Farmen dürfen nicht ohne Erlaubnis benutzt werden.</div>
+<div class="rule"><strong>Regel 44:</strong> Gemeinschaftsbereiche dürfen nicht absichtlich beschädigt werden.</div>
+
+</section>
+
+
+<!-- =========================
+     HANDEL
+========================= -->
+
+<section class="category">
+
+<h2>
+💰 Handel & Wirtschaft
+</h2>
+
+<div class="rule"><strong>Regel 45:</strong> Betrug beim Handel ist verboten.</div>
+<div class="rule"><strong>Regel 46:</strong> Absprachen beim Handel müssen eingehalten werden.</div>
+<div class="rule"><strong>Regel 47:</strong> Keine duplizierten Gegenstände verwenden.</div>
+<div class="rule"><strong>Regel 48:</strong> Keine illegal erworbenen Items verkaufen.</div>
+<div class="rule"><strong>Regel 49:</strong> Keine Fake-Shops oder irreführenden Angebote.</div>
+
+</section>
+
+
+<!-- =========================
+     BUGS
+========================= -->
+
+<section class="category">
+
+<h2>
+🐛 Bugs & Exploits
+</h2>
+
+<div class="rule"><strong>Regel 50:</strong> Bugs dürfen nicht absichtlich ausgenutzt werden.</div>
+<div class="rule"><strong>Regel 51:</strong> Schwere Bugs sollen dem Team gemeldet werden.</div>
+<div class="rule"><strong>Regel 52:</strong> Keine Duplizierungs-Bugs ausnutzen.</div>
+<div class="rule"><strong>Regel 53:</strong> Keine Exploits zur Umgehung von Schutzsystemen.</div>
+
+</section>
+
+
+<!-- =========================
+     CHEATS
+========================= -->
+
+<section class="category">
+
+<h2>
+🖥️ Mods & Cheats
+</h2>
+
+<div class="rule"><strong>Regel 54:</strong> Cheats sind verboten.</div>
+<div class="rule"><strong>Regel 55:</strong> X-Ray ist verboten.</div>
+<div class="rule"><strong>Regel 56:</strong> KillAura und vergleichbare Cheats sind verboten.</div>
+<div class="rule"><strong>Regel 57:</strong> Fly- und Speed-Hacks sind verboten.</div>
+<div class="rule"><strong>Regel 58:</strong> Keine Programme verwenden, die einen unfairen Vorteil verschaffen.</div>
+
+</section>
+
+
+<!-- =========================
+     ACCOUNTS
+========================= -->
+
+<section class="category">
+
+<h2>
+👤 Accounts
+</h2>
+
+<div class="rule"><strong>Regel 59:</strong> Das Ausgeben als eine andere Person ist verboten.</div>
+<div class="rule"><strong>Regel 60:</strong> Das Ausgeben als Teammitglied ist verboten.</div>
+<div class="rule"><strong>Regel 61:</strong> Das Umgehen eines Banns mit einem Zweitaccount ist verboten.</div>
+<div class="rule"><strong>Regel 62:</strong> Keine Accounts erstellen, um Strafen zu umgehen.</div>
+
+</section>
+
+
+<!-- =========================
+     WERBUNG
+========================= -->
+
+<section class="category">
+
+<h2>
+📢 Werbung
+</h2>
+
+<div class="rule"><strong>Regel 63:</strong> Keine Werbung für andere Minecraft-Server ohne Erlaubnis.</div>
+<div class="rule"><strong>Regel 64:</strong> Keine Werbung für fremde Discord-Server ohne Erlaubnis.</div>
+<div class="rule"><strong>Regel 65:</strong> Keine Spam-Werbung.</div>
+<div class="rule"><strong>Regel 66:</strong> Keine schädlichen oder betrügerischen Links verbreiten.</div>
+
+</section>
+
+
+<!-- =========================
+     SICHERHEIT
+========================= -->
+
+<section class="category">
+
+<h2>
+🔒 Sicherheit
+</h2>
+
+<div class="rule"><strong>Regel 67:</strong> Keine persönlichen Daten anderer Spieler veröffentlichen.</div>
+<div class="rule"><strong>Regel 68:</strong> Keine IP-Adressen anderer Spieler veröffentlichen.</div>
+<div class="rule"><strong>Regel 69:</strong> Keine Versuche, Accounts anderer Spieler zu übernehmen.</div>
+<div class="rule"><strong>Regel 70:</strong> Keine schädlichen Dateien oder Links verbreiten.</div>
+
+</section>
+
+
+<!-- =========================
+     STRAFEN
+========================= -->
+
+<section class="category">
+
+<h2>
+⚖️ Strafen & Sanktionen
+</h2>
+
+<div class="rule"><strong>Regel 71:</strong> Je nach Verstoß können Verwarnungen ausgesprochen werden.</div>
+<div class="rule"><strong>Regel 72:</strong> Wiederholte Regelverstöße können härter bestraft werden.</div>
+<div class="rule"><strong>Regel 73:</strong> Mutes, Kicks und Banns können je nach Situation eingesetzt werden.</div>
+<div class="rule"><strong>Regel 74:</strong> Schwere Verstöße können zu einem längeren oder permanenten Bann führen.</div>
+<div class="rule"><strong>Regel 75:</strong> Strafen dürfen nicht absichtlich umgangen werden.</div>
+
+</section>
+
+
+<!-- =========================
+     AKZEPTIERUNG
+========================= -->
+
+<div class="button-container">
+
+<a href="index.html" class="back-button">
+⬅️ Zurück zur Startseite
+</a>
 
 <button
-class="teamler-button"
-onclick="openLogin()">
-
-👥 Als Teamler einloggen
-
-</button>
-
-<button
-class="minecraft-button"
-onclick="openMinecraftLogin()">
-
-⛏️ Minecraft Login
-
-</button>
-
-<button
-class="rules-button"
-onclick="openRulesLogin()">
+type="button"
+class="accept-rules-button"
+onclick="openRulesAccept()">
 
 📜 Regeln akzeptieren
 
 </button>
 
-</div>
-
-<!-- =========================
-     REGELN STATUS
-========================= -->
-
-<div
-id="rulesAccepted"
-class="rules-accepted">
-
-✅ Regeln wurden akzeptiert!<br>
-Minecraft-Name:
-<strong id="acceptedMcName"></strong>
-
-</div>
-
-<!-- =========================
-     MINECRAFT EINGELOGGT
-========================= -->
-
-<div
-id="mcLogged"
-class="mc-logged">
-
-✅ Du bist mit
-<strong id="mcLoggedName"></strong>
-eingeloggt!
-
-</div>
-
-<!-- =========================
-     MINECRAFT PROFIL
-========================= -->
-
-<div
-id="mcProfile"
-class="mc-profile">
-
-<h2>
-👤 Minecraft-Profil
-</h2>
-
-<img
-id="mcSkin"
-class="mc-skin"
-src=""
-alt="Minecraft Skin">
-
-<div class="mc-profile-name">
-
-Eingeloggt als:
-<strong id="mcProfileName"></strong>
-
-</div>
-
 <button
-class="logout-button"
-onclick="minecraftLogout()">
+type="button"
+class="back-button teamler-button"
+onclick="openLogin()">
 
-🚪 Ausloggen
+👥 Teamler Login
 
 </button>
 
 </div>
 
+
+<div
+id="acceptedInfo"
+class="accepted-info">
+
+✅ Regeln akzeptiert von:
+<strong id="acceptedPlayerName"></strong>
+
+</div>
+
 </main>
+
+
+<!-- =========================
+     REGELN AKZEPTIEREN FENSTER
+========================= -->
+
+<div
+id="rulesAcceptBox"
+class="rules-accept-box">
+
+<div class="rules-accept-content">
+
+<h2>
+📜 Regeln akzeptieren
+</h2>
+
+<p>
+Bitte lies die Regeln vollständig durch und bestätige,
+dass du sie akzeptierst.
+</p>
+
+<label class="accept-checkbox">
+
+<input
+type="checkbox"
+id="rulesCheckbox">
+
+<span>
+Ich habe die Regeln gelesen und akzeptiere
+die Regeln von GAMING.LUXUS.
+</span>
+
+</label>
+
+<input
+type="text"
+id="acceptMcName"
+placeholder="Dein Minecraft-Name"
+maxlength="16">
+
+<button
+type="button"
+class="accept-submit"
+onclick="acceptRules()">
+
+✅ Regeln akzeptieren
+
+</button>
+
+<button
+type="button"
+class="accept-cancel"
+onclick="closeRulesAccept()">
+
+❌ Abbrechen
+
+</button>
+
+<div
+id="acceptError"
+class="accept-error">
+
+❌ Regeln wurden nicht akzeptiert!
+
+</div>
+
+<div
+id="acceptSuccess"
+class="accept-success">
+
+✅ Regeln erfolgreich akzeptiert!
+
+</div>
+
+</div>
+
+</div>
+
 
 <!-- =========================
      TEAMLER LOGIN
@@ -1075,16 +853,17 @@ class="login-box">
 </h2>
 
 <p>
-Bitte gib das Teamler-Passwort ein.
+Bitte geben Sie das Passwort ein.
 </p>
 
 <input
 type="password"
 id="teamlerPassword"
-placeholder="Passwort eingeben"
+placeholder="Hier Passwort eingeben!"
 onkeydown="if(event.key === 'Enter') login()">
 
 <button
+type="button"
 class="login-submit"
 onclick="login()">
 
@@ -1093,6 +872,7 @@ onclick="login()">
 </button>
 
 <button
+type="button"
 class="login-cancel"
 onclick="closeLogin()">
 
@@ -1112,118 +892,11 @@ class="login-error">
 
 </div>
 
-<!-- =========================
-     MINECRAFT LOGIN
-========================= -->
-
-<div
-id="mcLoginBox"
-class="mc-login-box">
-
-<div class="mc-login-content">
-
-<h2>
-⛏️ Minecraft Login
-</h2>
-
-<p>
-Gib deinen Minecraft-Namen ein.
-</p>
-
-<input
-type="text"
-id="mcName"
-placeholder="Minecraft-Name"
-maxlength="16"
-onkeydown="if(event.key === 'Enter') minecraftLogin()">
-
-<button
-class="mc-login-submit"
-onclick="minecraftLogin()">
-
-✅ Einloggen
-
-</button>
-
-<button
-class="mc-login-cancel"
-onclick="closeMinecraftLogin()">
-
-❌ Abbrechen
-
-</button>
-
-</div>
-
-</div>
-
-<!-- =========================
-     REGELN AKZEPTIEREN
-========================= -->
-
-<div
-id="rulesLoginBox"
-class="rules-login-box">
-
-<div class="rules-login-content">
-
-<h2>
-📜 Regeln akzeptieren
-</h2>
-
-<p>
-Bitte bestätige, dass du die GAMING.LUXUS Regeln gelesen hast.
-</p>
-
-<input
-type="text"
-id="rulesMcName"
-placeholder="Minecraft-Name"
-maxlength="16"
-onkeydown="if(event.key === 'Enter') acceptRules()">
-
-<label class="rules-checkbox">
-
-<input
-type="checkbox"
-id="rulesCheckbox">
-
-<span>
-Ich habe die Regeln gelesen und akzeptiere sie.
-</span>
-
-</label>
-
-<button
-class="rules-accept-submit"
-onclick="acceptRules()">
-
-✅ Regeln akzeptieren
-
-</button>
-
-<button
-class="rules-cancel"
-onclick="closeRulesLogin()">
-
-❌ Abbrechen
-
-</button>
-
-<div
-id="rulesError"
-class="rules-error">
-</div>
-
-</div>
-
-</div>
 
 <footer>
-
 © GAMING.LUXUS
-
 </footer>
+
 
 <script>
 
@@ -1246,22 +919,32 @@ function openLogin() {
 
     document.getElementById("loginError").style.display = "none";
 
-    document.getElementById("teamlerPassword").focus();
+    setTimeout(function() {
+
+        document.getElementById("teamlerPassword").focus();
+
+    }, 100);
 
 }
+
 
 function closeLogin() {
 
     document.getElementById("loginBox").style.display = "none";
 
+    document.getElementById("teamlerPassword").value = "";
+
+    document.getElementById("loginError").style.display = "none";
+
 }
+
 
 function login() {
 
-    const password =
+    const eingegebenesPasswort =
         document.getElementById("teamlerPassword").value;
 
-    if (password === TEAMLER_PASSWORT) {
+    if (eingegebenesPasswort === TEAMLER_PASSWORT) {
 
         window.location.href = "team.html";
 
@@ -1271,79 +954,9 @@ function login() {
 
         document.getElementById("teamlerPassword").value = "";
 
-    }
-
-}
-
-
-/* =========================
-   MINECRAFT LOGIN
-========================= */
-
-function openMinecraftLogin() {
-
-    document.getElementById("mcLoginBox").style.display = "flex";
-
-    document.getElementById("mcName").value = "";
-
-    document.getElementById("mcName").focus();
-
-}
-
-function closeMinecraftLogin() {
-
-    document.getElementById("mcLoginBox").style.display = "none";
-
-}
-
-function minecraftLogin() {
-
-    const name =
-        document.getElementById("mcName").value.trim();
-
-    if (name === "") {
-
-        alert("Bitte gib deinen Minecraft-Namen ein!");
-
-        return;
+        document.getElementById("teamlerPassword").focus();
 
     }
-
-    document.getElementById("mcLoggedName").textContent = name;
-
-    document.getElementById("mcProfileName").textContent = name;
-
-    document.getElementById("mcLogged").style.display = "block";
-
-    document.getElementById("mcProfile").style.display = "block";
-
-    document.getElementById("mcSkin").src =
-        "https://mc-heads.net/body/" +
-        encodeURIComponent(name) +
-        "/180";
-
-    localStorage.setItem(
-        "minecraftName",
-        name
-    );
-
-    closeMinecraftLogin();
-
-}
-
-function minecraftLogout() {
-
-    localStorage.removeItem("minecraftName");
-
-    document.getElementById("mcLogged").style.display = "none";
-
-    document.getElementById("mcProfile").style.display = "none";
-
-    document.getElementById("mcLoggedName").textContent = "";
-
-    document.getElementById("mcProfileName").textContent = "";
-
-    document.getElementById("mcSkin").src = "";
 
 }
 
@@ -1352,48 +965,61 @@ function minecraftLogout() {
    REGELN AKZEPTIEREN
 ========================= */
 
-function openRulesLogin() {
+function openRulesAccept() {
 
-    document.getElementById("rulesLoginBox").style.display = "flex";
-
-    document.getElementById("rulesMcName").value = "";
+    document.getElementById("rulesAcceptBox").style.display = "flex";
 
     document.getElementById("rulesCheckbox").checked = false;
 
-    document.getElementById("rulesError").style.display = "none";
+    document.getElementById("acceptMcName").value = "";
 
-    document.getElementById("rulesMcName").focus();
+    document.getElementById("acceptError").style.display = "none";
+
+    document.getElementById("acceptSuccess").style.display = "none";
+
+    setTimeout(function() {
+
+        document.getElementById("acceptMcName").focus();
+
+    }, 100);
 
 }
 
 
-function closeRulesLogin() {
+function closeRulesAccept() {
 
-    document.getElementById("rulesLoginBox").style.display = "none";
+    document.getElementById("rulesAcceptBox").style.display = "none";
+
+    document.getElementById("acceptError").style.display = "none";
+
+    document.getElementById("acceptSuccess").style.display = "none";
 
 }
 
-
-/* =========================
-   REGELN BESTÄTIGEN
-========================= */
 
 function acceptRules() {
 
-    const name =
-        document.getElementById("rulesMcName").value.trim();
+    const checkbox =
+        document.getElementById("rulesCheckbox");
 
-    const accepted =
-        document.getElementById("rulesCheckbox").checked;
+    const mcName =
+        document.getElementById("acceptMcName").value.trim();
 
     const error =
-        document.getElementById("rulesError");
+        document.getElementById("acceptError");
+
+    const success =
+        document.getElementById("acceptSuccess");
 
 
     error.style.display = "none";
 
+    success.style.display = "none";
 
-    if (!accepted) {
+
+    /* Keine Zustimmung */
+
+    if (!checkbox.checked) {
 
         error.textContent =
             "❌ Regeln wurden nicht akzeptiert!";
@@ -1405,7 +1031,9 @@ function acceptRules() {
     }
 
 
-    if (name === "") {
+    /* Kein Minecraft-Name */
+
+    if (mcName === "") {
 
         error.textContent =
             "❌ Bitte gib deinen Minecraft-Namen ein!";
@@ -1417,406 +1045,115 @@ function acceptRules() {
     }
 
 
+    /* Regeln akzeptiert */
+
     localStorage.setItem(
         "gamingLuxusRulesAccepted",
         "true"
     );
 
     localStorage.setItem(
-        "gamingLuxusRulesName",
-        name
+        "gamingLuxusRulesPlayer",
+        mcName
     );
 
 
-    document.getElementById(
-        "acceptedMcName"
-    ).textContent = name;
+    success.textContent =
+        "✅ Regeln erfolgreich akzeptiert!";
+
+    success.style.display = "block";
 
 
-    document.getElementById(
-        "rulesAccepted"
-    ).style.display = "block";
+    document.getElementById("acceptedPlayerName").textContent =
+        mcName;
 
+    document.getElementById("acceptedInfo").style.display =
+        "block";
 
-    closeRulesLogin();
-
-}
-
-
-/* =========================
-   REGELN STATUS LADEN
-========================= */
-
-function loadRulesAcceptance() {
-
-    const accepted =
-        localStorage.getItem(
-            "gamingLuxusRulesAccepted"
-        );
-
-    const name =
-        localStorage.getItem(
-            "gamingLuxusRulesName"
-        );
-
-
-    if (accepted === "true" && name) {
-
-        document.getElementById(
-            "acceptedMcName"
-        ).textContent = name;
-
-        document.getElementById(
-            "rulesAccepted"
-        ).style.display = "block";
-
-    }
-
-}
-
-
-/* =========================
-   IP KOPIEREN
-========================= */
-
-function copyServerIP() {
-
-    const ip =
-        document.getElementById("serverIP").textContent.trim();
-
-    if (navigator.clipboard) {
-
-        navigator.clipboard.writeText(ip)
-        .then(function() {
-
-            showCopyMessage();
-
-        })
-        .catch(function() {
-
-            alert("Bitte kopiere die IP manuell: " + ip);
-
-        });
-
-    } else {
-
-        alert("Bitte kopiere die IP manuell: " + ip);
-
-    }
-
-}
-
-function showCopyMessage() {
-
-    const message =
-        document.getElementById("copyMessage");
-
-    message.style.display = "block";
 
     setTimeout(function() {
 
-        message.style.display = "none";
+        closeRulesAccept();
 
-    }, 2000);
-
-}
-
-
-/* =========================
-   BELOHNUNGSSYSTEM
-========================= */
-
-let points =
-    parseInt(localStorage.getItem("gamingLuxusPoints")) || 0;
-
-let lastDailyReward =
-    localStorage.getItem("gamingLuxusDailyReward") || "";
-
-
-/* =========================
-   PUNKTE ANZEIGEN
-========================= */
-
-function updateRewards() {
-
-    document.getElementById("points").textContent = points;
-
-    let rank = "🥉 Anfänger";
-    let next = 100;
-    let previous = 0;
-
-    if (points >= 1000) {
-
-        rank = "💎 LEGENDÄR";
-        previous = 1000;
-        next = 1000;
-
-    } else if (points >= 500) {
-
-        rank = "🥇 Profi";
-        previous = 500;
-        next = 1000;
-
-    } else if (points >= 250) {
-
-        rank = "🥈 Spieler";
-        previous = 250;
-        next = 500;
-
-    } else {
-
-        rank = "🥉 Anfänger";
-        previous = 0;
-        next = 100;
-
-    }
-
-    document.getElementById("rankName").textContent = rank;
-
-    let progress;
-
-    if (points >= 1000) {
-
-        progress = 100;
-
-    } else {
-
-        progress =
-            ((points - previous) /
-            (next - previous)) * 100;
-
-    }
-
-    if (progress < 0) {
-        progress = 0;
-    }
-
-    if (progress > 100) {
-        progress = 100;
-    }
-
-    document.getElementById("progressFill").style.width =
-        progress + "%";
-
-    document.getElementById("progressText").textContent =
-        points >= 1000
-        ? "🏆 Alle Belohnungsstufen erreicht!"
-        : points + " / " + next + " Punkte";
-
-    updateLevel(100, "level100");
-    updateLevel(250, "level250");
-    updateLevel(500, "level500");
-    updateLevel(1000, "level1000");
-
-
-    const heute =
-        new Date().toISOString().split("T")[0];
-
-    const button =
-        document.getElementById("dailyRewardButton");
-
-    if (lastDailyReward === heute) {
-
-        button.disabled = true;
-
-        button.textContent =
-            "✅ Tagesbelohnung bereits abgeholt";
-
-    } else {
-
-        button.disabled = false;
-
-        button.textContent =
-            "🎁 Tagesbelohnung abholen";
-
-    }
+    }, 1200);
 
 }
 
 
 /* =========================
-   LEVEL AKTUALISIEREN
-========================= */
-
-function updateLevel(requiredPoints, elementID) {
-
-    const element =
-        document.getElementById(elementID);
-
-    if (points >= requiredPoints) {
-
-        element.classList.add("unlocked");
-
-    } else {
-
-        element.classList.remove("unlocked");
-
-    }
-
-}
-
-
-/* =========================
-   TAGESBELOHNUNG
-========================= */
-
-function claimDailyReward() {
-
-    const heute =
-        new Date().toISOString().split("T")[0];
-
-    const message =
-        document.getElementById("rewardMessage");
-
-    const error =
-        document.getElementById("rewardError");
-
-
-    message.style.display = "none";
-
-    error.style.display = "none";
-
-
-    if (lastDailyReward === heute) {
-
-        error.textContent =
-            "❌ Du hast deine Tagesbelohnung heute bereits abgeholt!";
-
-        error.style.display = "block";
-
-        return;
-
-    }
-
-
-    points += 50;
-
-    lastDailyReward = heute;
-
-
-    localStorage.setItem(
-        "gamingLuxusPoints",
-        points
-    );
-
-    localStorage.setItem(
-        "gamingLuxusDailyReward",
-        heute
-    );
-
-
-    message.textContent =
-        "🎉 Glückwunsch! Du hast +50 ⭐ Punkte bekommen!";
-
-    message.style.display = "block";
-
-
-    updateRewards();
-
-}
-
-
-/* =========================
-   MINECRAFT NAME LADEN
+   GESPEICHERTE AKZEPTIERUNG
 ========================= */
 
 window.addEventListener("load", function() {
 
-    const name =
-        localStorage.getItem("minecraftName");
+    const accepted =
+        localStorage.getItem("gamingLuxusRulesAccepted");
 
-    if (name) {
+    const player =
+        localStorage.getItem("gamingLuxusRulesPlayer");
 
-        document.getElementById("mcLoggedName").textContent = name;
 
-        document.getElementById("mcProfileName").textContent = name;
+    if (accepted === "true" && player) {
 
-        document.getElementById("mcSkin").src =
-            "https://mc-heads.net/body/" +
-            encodeURIComponent(name) +
-            "/180";
+        document.getElementById("acceptedPlayerName").textContent =
+            player;
 
-        document.getElementById("mcLogged").style.display = "block";
-
-        document.getElementById("mcProfile").style.display = "block";
+        document.getElementById("acceptedInfo").style.display =
+            "block";
 
     }
-
-    updateRewards();
-
-    loadRulesAcceptance();
 
 });
 
 
 /* =========================
-   LOGIN HINTERGRUND KLICK
+   HINTERGRUND-KLICK
 ========================= */
 
-document.getElementById("loginBox").addEventListener(
-    "click",
-    function(event) {
+document
+.getElementById("loginBox")
+.addEventListener("click", function(event) {
 
-        if (event.target === this) {
+    if (event.target === this) {
 
-            closeLogin();
-
-        }
+        closeLogin();
 
     }
-);
+
+});
 
 
-document.getElementById("mcLoginBox").addEventListener(
-    "click",
-    function(event) {
+document
+.getElementById("rulesAcceptBox")
+.addEventListener("click", function(event) {
 
-        if (event.target === this) {
+    if (event.target === this) {
 
-            closeMinecraftLogin();
-
-        }
-
-    }
-);
-
-
-document.getElementById("rulesLoginBox").addEventListener(
-    "click",
-    function(event) {
-
-        if (event.target === this) {
-
-            closeRulesLogin();
-
-        }
+        closeRulesAccept();
 
     }
-);
+
+});
 
 
 /* =========================
    ESC TASTE
 ========================= */
 
-document.addEventListener(
-    "keydown",
-    function(event) {
+document.addEventListener("keydown", function(event) {
 
-        if (event.key === "Escape") {
+    if (event.key === "Escape") {
 
-            closeLogin();
+        closeLogin();
 
-            closeMinecraftLogin();
-
-            closeRulesLogin();
-
-        }
+        closeRulesAccept();
 
     }
-);
+
+});
 
 </script>
 
 </body>
 </html>
+```
