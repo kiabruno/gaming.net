@@ -1,0 +1,411 @@
+```html
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>GAMING.LUXUS – Links</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #111827;
+    color: white;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav {
+    background: #1f2937;
+    padding: 14px 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 14px 20px;
+    border-radius: 10px;
+}
+
+nav a:hover,
+nav a.active {
+    background: #374151;
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.logo {
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+    padding: 35px 20px 20px;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* =========================
+   TITELBOX
+========================= */
+
+.info-box {
+    background: #1f2937;
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+    text-align: center;
+}
+
+.info-box h1 {
+    margin-top: 0;
+    font-size: 32px;
+}
+
+.info-box p {
+    color: #d1d5db;
+    line-height: 1.6;
+}
+
+/* =========================
+   SOCIAL LINKS
+========================= */
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    background: #1f2937;
+    padding: 22px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+    transition: 0.2s;
+}
+
+.social-link:hover {
+    transform: translateY(-4px);
+    background: #273449;
+}
+
+.social-icon {
+    font-size: 42px;
+    width: 70px;
+    text-align: center;
+}
+
+.social-text {
+    flex: 1;
+    padding-left: 15px;
+}
+
+.social-text h2 {
+    margin: 0 0 6px;
+}
+
+.social-text p {
+    margin: 0;
+    color: #9ca3af;
+}
+
+.arrow {
+    font-size: 28px;
+    color: #9ca3af;
+}
+
+/* =========================
+   DISCORD
+========================= */
+
+.discord {
+    border-left: 5px solid #5865F2;
+}
+
+.discord:hover {
+    background: #20294a;
+}
+
+/* =========================
+   TWITCH
+========================= */
+
+.twitch {
+    border-left: 5px solid #9146FF;
+}
+
+.twitch:hover {
+    background: #30234a;
+}
+
+/* =========================
+   YOUTUBE
+========================= */
+
+.youtube {
+    border-left: 5px solid #FF0000;
+}
+
+.youtube:hover {
+    background: #452020;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+    color: #9ca3af;
+    padding: 30px 20px;
+    margin-top: 30px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    nav a {
+        font-size: 16px;
+        padding: 11px 13px;
+    }
+
+    .logo {
+        font-size: 28px;
+    }
+
+    .social-link {
+        padding: 18px;
+    }
+
+    .social-icon {
+        font-size: 34px;
+        width: 55px;
+    }
+
+    .social-text h2 {
+        font-size: 20px;
+    }
+
+    .social-text p {
+        font-size: 14px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav>
+
+<a href="index.html">
+🏠 Startseite
+</a>
+
+<a href="wartung.html">
+⚠️ Wartungszeiten
+</a>
+
+<a href="regeln.html">
+❗ Regeln
+</a>
+
+<a href="status.html">
+ℹ️ Server Status
+</a>
+
+<a href="bewertung.html">
+⭐ Bewertung
+</a>
+
+<a href="news.html">
+📰 News
+</a>
+
+<a href="links.html" class="active">
+🔗 Links
+</a>
+
+</nav>
+
+<!-- =========================
+     LOGO
+========================= -->
+
+<div class="logo">
+🎮 GAMING.LUXUS 🎮
+</div>
+
+<main class="container">
+
+<!-- =========================
+     TITEL
+========================= -->
+
+<div class="info-box">
+
+<h1>
+🔗 Unsere Links
+</h1>
+
+<p>
+Folge GAMING.LUXUS auf unseren verschiedenen Plattformen!
+</p>
+
+<p>
+Tritt unserem Discord bei, schau uns auf Twitch zu
+oder abonniere unseren YouTube-Kanal.
+</p>
+
+</div>
+
+<!-- =========================
+     LINKS
+========================= -->
+
+<div class="social-links">
+
+<!-- DISCORD -->
+
+<a
+class="social-link discord"
+href="https://discord.gg/VDNRRT3hnj"
+target="_blank"
+rel="noopener noreferrer">
+
+<div class="social-icon">
+💬
+</div>
+
+<div class="social-text">
+
+<h2>
+Discord
+</h2>
+
+<p>
+Tritt unserem GAMING.LUXUS Discord-Server bei!
+</p>
+
+</div>
+
+<div class="arrow">
+›
+</div>
+
+</a>
+
+<!-- TWITCH -->
+
+<a
+class="social-link twitch"
+href="https://www.twitch.tv/gaming.luxus"
+target="_blank"
+rel="noopener noreferrer">
+
+<div class="social-icon">
+🎥
+</div>
+
+<div class="social-text">
+
+<h2>
+Twitch
+</h2>
+
+<p>
+Schau unsere Livestreams auf Twitch!
+</p>
+
+</div>
+
+<div class="arrow">
+›
+</div>
+
+</a>
+
+<!-- YOUTUBE -->
+
+<a
+class="social-link youtube"
+href="https://www.youtube.com/@GAMING.LUXUS"
+target="_blank"
+rel="noopener noreferrer">
+
+<div class="social-icon">
+▶️
+</div>
+
+<div class="social-text">
+
+<h2>
+YouTube
+</h2>
+
+<p>
+Abonniere unseren GAMING.LUXUS YouTube-Kanal!
+</p>
+
+</div>
+
+<div class="arrow">
+›
+</div>
+
+</a>
+
+</div>
+
+</main>
+
+<footer>
+
+© GAMING.LUXUS
+
+</footer>
+
+</body>
+
+</html>
+```
